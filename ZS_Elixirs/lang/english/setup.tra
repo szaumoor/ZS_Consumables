@@ -3,3 +3,64 @@
 
 
 @50 = ~This mod is only available for IWDEE/BGEE/BG2EE/EET.~
+
+@100 = ~Elixir of Angelic Reprieve~
+@101 = ~This elixir forces the imbiber to fall into deep slumber for 3 rounds. If this slumber is not interrupted, the imbiber will be healed by 75% of their hitpoints, and most temporary ailments will be cured. They will also recover 4 to 8 spell slots of up to level 5 spells, both arcane and divine. This elixir will only work outside of combat.
+
+STATISTICS:
+
+Weight: 1~
+
+@110 = ~Elixir of Angelic Slumber~
+@111 = ~This elixir is a more powerful version of Elixir of Angelic Reprieve, which forces the imbiber to fall into comatose slumber for 1 turn, after which they will wake up as it they had a refreshing night of rest, recovering all their hit points and all their spell slots, and even drained levels. This elixir will only work outside of combat.
+
+STATISTICS:
+
+Weight: 1~
+
+@120 = ~Basilisk Oil~
+@121 = ~This oil of a basilisk, when poured over a petrified creature, will restore them to flesh and bone, and to life. It will also additionally protect them from all sources of petrification for 2 hours.
+
+STATISTICS:
+
+Weight: 1~
+
+@130 = ~Bottle of Pixie Dust~
+@131 = ~This bottle contains a bunch of pixie dust, which can be used to throw into the air to make all allies around the user invisible for 1 turn.
+
+STATISTICS:
+
+Special: Invisibility
+Duration: 1 turn
+Area of Effect: 15 ft. radius (allies only)
+
+Weight: 1~
+
+@140 = ~Potion of Remedy~
+@141 = ~This potion is a powerful restorative concoction that will cure the imbiber of all diseases and poisons, as well blindness, silence, paralysis, and stun. It will also restore 10 hit points.
+
+STATISTICS:
+
+Weight: 1~
+
+@150 = ~Elixir of See Invisibility~
+@151 = ~This elixir allows to momentarily have the ability to spot invisible creatures as per the Detect Invisibility wizard spell, revealing them right after.
+
+STATISTICS:
+
+Weight: 1~
+
+@160 = ~Elixir of Viciousness~
+@161 = ~This elixir is a powerful concoction that will makes the wielder 5% more likely to critically hit and increase their damage and THAC0 by 1. This effect lasts for 8 hours and will not stack with itself or other elixirs.
+
+STATISTICS:
+
+Weight: 1~
+
+@170 = ~Elixir of Bloodlust~
+@171 = ~This elixir is a powerful concoction that will make the imbiber restore 6 hit points every time they kill a creature, and 1 HP every time they hit them. Kills will also increase their attacks per round by 1 for the next round (does not stack).
+
+STATISTICS:
+
+Weight: 1~
+
