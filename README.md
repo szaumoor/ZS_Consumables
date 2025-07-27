@@ -14,4 +14,3 @@
 
 
 ## Acknowledgements and credits
-
