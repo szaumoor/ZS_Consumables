@@ -1,0 +1,121 @@
+@0 = ~Install ZS_Concoctions~
+@50 = ~This mod is only available for IWDEE/BGEE/BG2EE/EET.~
+
+@100 = ~Angelic Reprieve Remedy~
+@101 = ~This remedy forces the imbiber to fall into deep slumber for 3 rounds. If this slumber is not interrupted, the imbiber will be healed by 75% of their hitpoints, and most temporary ailments will be cured. They will also recover 4 to 8 spell slots of up to level 5 spells, both arcane and divine. This will only work outside of combat.
+
+STATISTICS:
+
+Weight: 1~
+
+@110 = ~Angelic Slumber Remedy~
+@111 = ~This remedy is a more powerful version of Angelic Reprieve Remedy, which forces the imbiber to fall into comatose slumber for 1 turn, after which they will wake up as it they had a refreshing night of rest, recovering all their hit points and all their spell slots, and even drained levels. This will only work outside of combat.
+
+STATISTICS:
+
+Weight: 1~
+
+@120 = ~Basilisk Oil Remedy~
+@121 = ~This oil of a basilisk, when poured over a petrified creature, will restore them to flesh and bone, and to life. It will also additionally protect them from all sources of petrification for 2 hours.
+
+STATISTICS:
+
+Weight: 1~
+
+@130 = ~Pouch of Pixie Dust~
+@131 = ~This bottle contains a bunch of pixie dust, which can be used to throw into the air to make all allies around the user invisible for 1 turn.
+
+STATISTICS:
+
+Special: Invisibility
+Duration: 1 turn
+Area of Effect: 15 ft. radius (allies only)
+
+Weight: 1~
+
+@140 = ~Remedial Solution~
+@141 = ~This potion is a powerful restorative concoction that will cure the imbiber of all diseases and poisons, as well blindness and silence. It will also restore 12 hit points.
+
+STATISTICS:
+
+Weight: 1~
+
+@150 = ~Elixir of Seeing the Invisible~
+@151 = ~This elixir allows the imbiber to momentarily have the ability to spot invisible creatures as per the Detect Invisibility wizard spell, revealing twice per round for 2 rounds. This effect will not stack with itself or other elixirs.
+
+STATISTICS:
+
+Weight: 1~
+
+@160 = ~Elixir of Viciousness~
+@161 = ~This elixir is a powerful concoction that will makes the wielder 5% more likely to critically hit, which increases to 10% once they score a critical hit (doesn't stack). This effect lasts for 8 hours and will not stack with itself or other elixirs.
+
+STATISTICS:
+
+Weight: 1~
+
+@170 = ~Elixir of Bloodlust~
+@171 = ~This elixir is a powerful concoction that will make the imbiber restore 6 hit points plus 8% of their maximum hit points every time they kill a creature, and 1 hit point every time they hit something. Kills will also increase their attacks per round by 1 for the next 2 rounds (does not stack). This effect lasts for 8 hours and will not stack with itself or other elixirs.
+
+STATISTICS:
+
+Weight: 1~
+
+@180 = ~Alchemist's Fire~
+@181 = ~Alchemist's fire is a sticky, adhesive substance that ignites when exposed to air. Shapes swirl and glow behind the glass, liquid embers folding into and around each other.
+
+When thrown, this will explode on impact, dealing 1d6 fire damage to all creatures in a 10 ft. radius.
+
+STATISTICS:
+
+Weight: 1~
+
+@190 = ~Acid Vial~
+@191 = ~This vial contains a highly corrosive acid that can be thrown at a target to deal 1d6 acid damage on impact. The acid will also continue to burn for 1 round, dealing an additional 1d6 acid damage.
+
+STATISTICS:
+
+Weight: 1~
+
+@200 = ~Grease Bottle~
+@201 = ~This bottle contains a thick, slippery grease that can be thrown on the ground to create a hazardous area. Any creature that moves through this area suffers the effects of the Grease spell.
+
+STATISTICS:
+
+Weight: 1~
+
+@210 = ~Choking Powder~
+@211 = ~This powder can be thrown into the air to create a choking cloud as per the Stinking Cloud wizard spell that will affect all creatures in a 15 ft. radius for 1 turn.
+
+STATISTICS:
+
+Weight: 1~
+
+@220 = ~Web Grenade~
+@221 = ~This grenade can be thrown to create a webbed area as per the Web wizard spell that will affect all creatures in a 15 ft. radius for 1 turn.
+
+STATISTICS:
+
+Weight: 1~
+
+@230 = ~Potion of Minor Levitation~
+@231 = ~This potion allows the imbiber to levitate slightly off the ground, granting them immunity to ground-based effects such as Grease, Web, and similar spells. It also provides immunity to Slow and improves movement speed by 20% for 1 turn.
+
+STATISTICS:
+
+Weight: 1~
+
+
+@240 = ~Elixir of Universal Resistance~
+@241 = ~This elixir provides comprehensive protection for 1 hour, reducing elemental and magical damage by 20% and physical damage by 5%. The drinker also gains a +2 bonus to Armor Class and all saving throws. These protective effects will not stack with other elixirs.
+
+STATISTICS:
+
+Weight: 1~
+
+@250 = ~Elixir of Arcane Cultivation~
+@251 = ~This elixir enhances spellcasting abilities for 1 hour, granting a +2 bonus to casting speed and effective caster level, while increasing elemental and magical damage by 10%. Additionally, it allows the memorization of one extra spell per level for 24 hours. These benefits only affect spellcasters and will not stack with other elixirs or themselves.
+
+STATISTICS:
+
+Weight: 1~

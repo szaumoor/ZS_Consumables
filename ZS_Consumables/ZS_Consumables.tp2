@@ -1,0 +1,17 @@
+BACKUP "weidu_external/backup/ZS_Consumables"
+SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
+VERSION "1.0.0"
+README ~ZS_Consumables/README.md~
+AUTO_EVAL_STRINGS
+ALWAYS
+    INCLUDE ~%MOD_FOLDER%/libs/zs_always.tph~
+END
+LANGUAGE
+"English"
+"english"
+"ZS_Consumables/lang/english/setup.tra"
+
+BEGIN @100 DESIGNATED 100
+REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @50
+
+///////////////////////////////////////////////////////////////////////////////////////////////
