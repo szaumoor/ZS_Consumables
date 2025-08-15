@@ -48,7 +48,7 @@ STATISTICS:
 Weight: 1~
 
 @160 = ~Elixir of Viciousness~
-@161 = ~This elixir is a powerful concoction that will makes the wielder 5% more likely to critically hit, which increases to 10% once they score a critical hit (doesn't stack). This effect lasts for 8 hours and will not stack with itself or other elixirs.
+@161 = ~This elixir is a powerful concoction that will makes the wielder 5% more likely to critically hit, and critical hits will increase their damage and THAC0 by 2 for 2 rounds (does not stack). This effect lasts for 8 hours and will not stack with itself or other elixirs.
 
 STATISTICS:
 
@@ -99,7 +99,7 @@ STATISTICS:
 Weight: 1~
 
 @230 = ~Potion of Minor Levitation~
-@231 = ~This potion allows the imbiber to levitate slightly off the ground, granting them immunity to ground-based effects such as Grease, Web, and similar spells. It also provides immunity to Slow and improves movement speed by 20% for 1 turn.
+@231 = ~This potion allows the imbiber to levitate slightly off the ground, granting them immunity to ground-based effects such as Grease, Web, and similar spells. It also provides immunity to Slow and improves movement speed by 20% for 3 turns.
 
 STATISTICS:
 
@@ -107,15 +107,18 @@ Weight: 1~
 
 
 @240 = ~Elixir of Universal Resistance~
-@241 = ~This elixir provides comprehensive protection for 1 hour, reducing elemental and magical damage by 20% and physical damage by 5%. The drinker also gains a +2 bonus to Armor Class and all saving throws. These protective effects will not stack with other elixirs.
+@241 = ~This elixir provides comprehensive protection for 4 hours, reducing elemental, poison, and magical damage taken by 25% and physical damage by 7%. The drinker also gains a +2 bonus to Armor Class and all saving throws. These protective effects will not stack with other elixirs.
 
 STATISTICS:
 
 Weight: 1~
 
-@250 = ~Elixir of Arcane Cultivation~
-@251 = ~This elixir enhances spellcasting abilities for 1 hour, granting a +2 bonus to casting speed and effective caster level, while increasing elemental and magical damage by 10%. Additionally, it allows the memorization of one extra spell per level for 24 hours. These benefits only affect spellcasters and will not stack with other elixirs or themselves.
+@250 = ~Elixir of Mystic Cultivation~
+@251 = ~This elixir empowers spellcasters for 24 hours. It grants +2 casting speed, +2 effective caster level, and +10% elemental and magical spell damage. It also provides one temporary bonus spell slot for each spell level the caster can normally prepare. A caster may drink it, adjust spell selections to fill the extra slots, then rest to prepare them. These benefits apply only to spellcasters and do not stack with themselves or with other elixirs.
 
 STATISTICS:
 
 Weight: 1~
+
+@260 = ~Tanglefoot Bag~
+@261 = ~This bag can be thrown to create a sticky area that ensnares creatures, as per the Entangle spell, affecting all creatures in a 15 ft. radius for 1 turn.
