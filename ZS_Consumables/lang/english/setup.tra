@@ -1,5 +1,5 @@
-@0 = ~Install ZS_Concoctions~
-@50 = ~This mod is only available for IWDEE/BGEE/BG2EE/EET.~
+@0 = ~Install consumables and spread them all through the world~
+@50 = ~This mod is only available for BGEE/BG2EE/EET.~
 
 @100 = ~Angelic Reprieve Remedy~
 @101 = ~This remedy forces the imbiber to fall into deep slumber for 3 rounds. If this slumber is not interrupted, the imbiber will be healed by 75% of their hitpoints, and most temporary ailments will be cured. They will also recover 4 to 8 spell slots of up to level 5 spells, both arcane and divine. This will only work outside of combat.
@@ -122,3 +122,171 @@ Weight: 1~
 
 @260 = ~Tanglefoot Bag~
 @261 = ~This bag can be thrown to create a sticky area that ensnares creatures, as per the Entangle spell, affecting all creatures in a 15 ft. radius for 1 turn.
+
+STATISTICS:
+
+Weight: 1~
+
+// igneous oil
+@1000 = ~Igneous Oil~
+@1001 = ~This searing concoction ignites your weapons upon contact, scorching enemies with intense flames, bypassing magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: 1d2+1 fire damage (Save vs. Breath for half)
+Duration: 8 rounds
+
+Weight: 1~
+
+// caustic oil
+@1002 = ~Caustic Oil~
+@1003 = ~This corrosive blend, derived from potent acidic extracts, coats weapons and dissolves flesh or armor upon impact. It also bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: 1d2+1 acid damage (Save vs. Breath for half)
+Duration: 8 rounds
+
+Weight: 1~
+
+// gelid oil
+@1004 = ~Gelid Oil~
+@1005 = ~This chilling concoction channels the power of pure frost to coat your weapons in biting cold. It bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: 1d2+1 cold damage (Save vs. Breath for half)
+Duration: 8 rounds
+
+Weight: 1~
+
+// scintillating oil
+@1006 = ~Scintillating Oil~
+@1007 = ~This electrically charged oil crackles with raw energy, making your weapons inflict shocking electric damage upon contact. It bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: 1d2+1 electric damage (Save vs. Breath for half)
+Duration: 8 rounds
+
+Weight: 1~
+
+// arcane oil
+@1008 = ~Arcane Oil~
+@1009 = ~Imbued with potent magical energies, this oil empowers your weapons to inflict pure magic damage. Each strike resonates with arcane force, though magic resistance may stop it.
+
+STATISTICS:
+
+Damage: 1d4+2 magic damage
+Duration: 8 rounds
+
+Weight: 1~
+
+// poisonous oil
+@1010 = ~Noxious Oil~
+@1011 = ~A vile concoction brewed from toxic flora, this oil coats a weapon in a layer of poison which seeps into the victim's bloodstream with each strike. Handling this substance is perilous; only those with exceptional dexterity can apply it without accidentally poisoning themselves. It bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: 1d2+1 poison damage
+Poisoning: Save vs. Death at +2 or suffer 6 points of poison damage over 2 rounds
+Self-damage: User suffers the same effect if their Dexterity is below 16. Blackguards and assassins are immune to this effect. Other thieves have a 50% chance of being affected; bards have a 70% chance.
+Duration: 8 rounds
+
+Weight: 1~
+
+// drow poisonous oil
+@1012 = ~Drow Soporific Oil~
+@1013 = ~Originally crafted by the drow, this refined oil endows weapons with a soporific effect, lulling foes into a deep sleep for 1 turn upon exposure. Its volatile nature demands exceptional dexterity to avoid self-affliction, and it bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: None
+Poisoning: Save vs. Death or fall into a deep slumber for 1 turn. Receiving further damage will awaken the target.
+Self-damage: User suffers the same effect if their Dexterity is below 16. Blackguards and assassins are immune to this effect. Other thieves have a 50% chance of being affected; bards have a 70% chance.
+Duration: 8 rounds
+
+Weight: 1~
+
+// blessed oil
+@1014 = ~Sanctified Oil~
+@1015 = ~This oil has been ritually blessed to combat the undead. When applied, it imbues weapons with a radiance that sears undead foes, disregarding their defenses and magic resistance. Its holy power can also sap the strength and vitality of these unnatural creatures, making them easier to defeat.
+
+STATISTICS:
+
+Damage: +4 irresistible damage vs. the undead
+Special: Undead targets must Save vs. Death at +2 or become Slowed and weakened (-3 Strength, -2 Armor Class) for 10 seconds. This effect doesn't stack with itself.
+Duration: 8 rounds
+
+Weight: 1~
+
+// unholy oil
+@1016 = ~Profane Oil~
+@1017 = ~Created through dark rituals and infused with energies from the Negative Plane, this oil corrupts any weapon it coats. When used against the living, it inflicts wounds that weaken and slow the target, and its unnatural power is unaffected by defenses and magical resistance.
+
+STATISTICS:
+
+Damage: +4 irresistible damage vs. the living
+Special: Living targets must Save vs. Death at +2 or become Slowed and weakened (-3 Strength, -2 Armor Class) for 10 seconds. This effect doesn't stack with itself.
+Duration: 8 rounds
+
+Weight: 1~
+
+// kuotoan oil
+@1018 = ~Kuo-Toan Oil of Stunning~
+@1019 = ~This greenish oil was originally created by Kuo-Toan alchemists, who use it to subdue prey in their aquatic domains. When applied to a weapon, it leaves a viscous coating that overwhelms the victim's body, rendering them temporarily helpless. It emits a faint, briny odor and is highly volatile - requiring exceptional manual dexterity to apply without accidentally numbing one's own fingers and risking self-exposure. It bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: None
+Poisoning: Save vs. Spell at +2 or become stunned for 2 rounds.
+Self-damage: User suffers the same effect if their Dexterity is below 16. Blackguards and assassins are immune to this effect. Other thieves have a 50% chance of being affected; bards have a 70% chance.
+Duration: 8 rounds
+
+Weight: 1~
+
+// dragon bile
+@1020 = ~Dragon Bile Extract~
+@1021 = ~Harvested from the gallbladder of slain dragons, this viscous, emerald-hued fluid is among the most coveted and expensive poisons in the realms. When applied to a weapon, it creates a potent coating that seeps into wounds and rapidly deteriorates the victim's muscular strength. Only those with exceptional dexterity can safely apply it without risking self-exposure. It bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: +1 poison damage (non-dragons)
+Poisoning: Save vs. Death or have Strength and movement speed reduced by half for 5 rounds. Only true dragons are unaffected by this effect, and as such, close relatives like faerie dragons, dragonborn, half-dragons and wyvern will be affected.
+Self-damage: User suffers the same effect if their Dexterity is below 16. Blackguards and assassins are immune to this effect. Other thieves have a 50% chance of being affected; bards have a 70% chance.
+Duration: 8 rounds
+
+Weight: 1~
+
+// dragonsbane oil
+@1022 = ~Dragonsbane Oil~
+@1023 = ~This rare poison was made with a single purpose: to bring down even the mightiest of dragons. The blend of natural toxins specifically target draconic physiology, inflicting agony and sapping their strength. While very harmful to dragons, half-dragons, and wyverns, its effects on others are less pronounced. Only those with exceptional dexterity can safely apply it, as a single misstep can result in self-inflicted harm. It bypasses magical resistance due to its natural composition.
+
+STATISTICS:
+
+Damage: 1d3+1 poison damage (non-draconic only), or 1d6+2 poison damage (draconic only)
+Weakening: Dragons, half-dragons, and wyverns suffer the following effects once per three rounds if save vs. Spell at -1 is failed:
+  – Attacks per round reduced to 1/2 for 1 round
+  – Strength is reduced by 40% for 2 rounds
+  – Casting speed, THAC0, and Armor Class are damaged by 4 points for 3 rounds
+The pain it causes may affect concentration: 50% chance of disrupting Stoneskin or any kind of Invisibility.
+Self-damage: User suffers the same effect if their Dexterity is below 16. Blackguards and assassins are immune to this effect. Other thieves have a 50% chance of being affected; bards have a 70% chance.
+Duration: 8 rounds
+
+Weight: 1~
+@1024 = ~Weakened by Dragonsbane Oil~
+
+@2000 = ~Weapons coated with Arcane Oil~
+@2001 = ~Weapons coated with Caustic Oil~
+@2002 = ~Weapons coated with Dragon Bile~
+@2003 = ~Weapons coated with Dragonsbane Oil~
+@2004 = ~Weapons coated with Soporific Oil~
+@2005 = ~Weapons coated with Gelid Oil~
+@2006 = ~Weapons coated with Igneous Oil~
+@2007 = ~Weapons coated with Kuo-Toan Oil~
+@2008 = ~Weapons coated with Noxious Oil~
+@2009 = ~Weapons coated with Profane Oil~
+@2010 = ~Weapons coated with Scintillating Oil~
+@2011 = ~Weapons coated with Sanctified Oil~
+
+
