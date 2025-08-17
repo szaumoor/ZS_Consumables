@@ -34,7 +34,7 @@ Area of Effect: 15 ft. radius (allies only)
 Weight: 1~
 
 @140 = ~Remedial Solution~
-@141 = ~This potion is a powerful restorative concoction that will cure the imbiber of all diseases and poisons, as well blindness and silence. It will also restore 12 hit points.
+@141 = ~This potion is a powerful restorative concoction that will cure the imbiber of all diseases and poisons, as well blindness, silence, and deafness. It will also restore 24 hit points: half of that immediately, the other half through regeneration over 2 turns.
 
 STATISTICS:
 
@@ -114,7 +114,7 @@ STATISTICS:
 Weight: 1~
 
 @250 = ~Elixir of Mystic Cultivation~
-@251 = ~This elixir empowers spellcasters for 24 hours. It grants +2 casting speed, +2 effective caster level, and +10% elemental and magical spell damage. It also provides one temporary bonus spell slot for each spell level the caster can normally prepare. A caster may drink it, adjust spell selections to fill the extra slots, then rest to prepare them. These benefits apply only to spellcasters and do not stack with themselves or with other elixirs.
+@251 = ~This elixir empowers spellcasters for 24 hours. It grants +1 casting speed, +2 effective caster level, and +10% elemental and magical spell damage. It also provides one temporary bonus spell slot for each spell level the caster can normally prepare. A caster may drink it, adjust spell selections to fill the extra slots, then rest to prepare them. These benefits apply only to spellcasters and do not stack with themselves or with other elixirs.
 
 STATISTICS:
 
