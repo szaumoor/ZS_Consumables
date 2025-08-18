@@ -1,15 +1,15 @@
 COPY_EXISTING ~UDPRINCE.CRE~ ~override~ // kuotoan prince
-    ADD_CRE_ITEM ~ZSWOPS05~ #10 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS05~ #10 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~KUOLIE01.CRE~ ~override~ // kuotoan lieutenant
               ~UDKUO01.CRE~  ~override~ // kuotoan leader
-    ADD_CRE_ITEM ~ZSWOPS05~ #3 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS05~ #3 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~KUOCAP01.CRE~ ~override~ // kuotoan captain (fighter)
               ~KUOCLE20.CRE~ ~override~ // kuotoan captain (cleric)
-    ADD_CRE_ITEM ~ZSWOPS05~ #2 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS05~ #2 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
@@ -22,40 +22,40 @@ COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
               ~DADROW8.CRE~  ~override~ // drow torturer
               ~DADROW9.CRE~  ~override~ // drow torturer
               ~DADROW6.CRE~  ~override~ // drow leader
-    ADD_CRE_ITEM ~ZSWOPS02~ #2 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS02~ #2 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~bddrowas.CRE~ ~override~ // SOD drow assassin
-    ADD_CRE_ITEM ~ZSWOPS02~ #5 #0 #0 ~none~ ~inv~
-    ADD_CRE_ITEM ~ZSWOPS01~ #3 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS02~ #5 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS01~ #3 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~bmugg1.CRE~ ~override~
-    ADD_CRE_ITEM ~ZSWOPS02~ #1 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS02~ #1 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~bdgass1.CRE~ ~override~
-    ADD_CRE_ITEM ~ZSWOPS01~ #1 #0 #0 ~none~ ~inv~
-    ADD_CRE_ITEM ~ZSWOPS02~ #1 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS01~ #1 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS02~ #1 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~CULTT3.CRE~ ~override~
-    ADD_CRE_ITEM ~ZSWOPS01~ #2 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS01~ #2 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~SLYTHE.CRE~ ~override~
               ~KRYSTI.CRE~ ~override~ // KRYSTIN
-    ADD_CRE_ITEM ~ZSWOPS01~ #2 #0 #0 ~none~ ~inv~
-    ADD_CRE_ITEM ~ZSWOPS03~ #1 #0 #0 ~none~ ~inv~ // dragon bile
+    ADD_CRE_ITEM ~ZSCSPS01~ #2 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS03~ #1 #0 #0 ~none~ ~inv~ // dragon bile
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~SEVPAT05.CRE~ ~override~
-    ADD_CRE_ITEM ~ZSWOPS01~ #3 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS01~ #3 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~CHALCY02.CRE~ ~override~
-    ADD_CRE_ITEM ~ZSWOPS01~ #5 #0 #0 ~none~ ~inv~
-    ADD_CRE_ITEM ~ZSWOPS03~ #2 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS01~ #5 #0 #0 ~none~ ~inv~
+    ADD_CRE_ITEM ~ZSCSPS03~ #2 #0 #0 ~none~ ~inv~
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~DRAGBLUE.CRE~ ~override~
@@ -69,9 +69,9 @@ COPY_EXISTING ~DRAGBLUE.CRE~ ~override~
               ~FIRKRA02.CRE~ ~override~
               ~UDSILVER.CRE~ ~override~
               ~BAZDRA02.CRE~ ~override~
-    ADD_CRE_ITEM ~ZSWOPS03~ #5 #0 #0 ~unstealable~ ~inv~ // dragon bile
+    ADD_CRE_ITEM ~ZSCSPS03~ #5 #0 #0 ~unstealable~ ~inv~ // dragon bile
 BUT_ONLY IF_EXISTS
 
 COPY_EXISTING ~bdmorent.CRE~ ~override~
-    ADD_CRE_ITEM ~ZSWOPS03~ #3 #0 #0 ~unstealable~ ~inv~ // dragon bile
+    ADD_CRE_ITEM ~ZSCSPS03~ #3 #0 #0 ~unstealable~ ~inv~ // dragon bile
 BUT_ONLY IF_EXISTS

@@ -1,4 +1,4 @@
-ACTION_IF zswo_allow_random_redistribution_cre BEGIN
+ACTION_IF zs_cons_allow_random_redistribution_cre BEGIN
     WITH_SCOPE BEGIN
         OUTER_SET thief           = IDS_OF_SYMBOL(class THIEF)
         OUTER_SET fighter_thief   = IDS_OF_SYMBOL(class FIGHTER_THIEF)
@@ -37,18 +37,18 @@ ACTION_IF zswo_allow_random_redistribution_cre BEGIN
                 BEGIN
                     SET kit = SHORT_AT 0x246 | (SHORT_AT 0x244) << 16
                     SET chance = RANDOM(1 100)
-                    PATCH_IF chance > (100 - zswo_thief_noxious_oil_assignment_chances) BEGIN
+                    PATCH_IF chance > (100 - zs_cons_thief_noxious_oil_assignment_chances) BEGIN
                         SET amount = RANDOM(1 3)
                         PATCH_IF kit = assasin BEGIN
                             amount = amount * 2
                         END
-                        ADD_CRE_ITEM ~ZSWOPS01~ (amount) (0) (0) ~none~ ~inv~ // poison oil
+                        ADD_CRE_ITEM ~ZSCSPS01~ (amount) (0) (0) ~none~ ~inv~ // poison oil
                         SET chance_drow_poison = RANDOM(1 100)
-                        PATCH_IF chance_drow_poison <= zswo_thief_drow_poison_assignment_chances BEGIN
-                            ADD_CRE_ITEM ~ZSWOPS02~ (1) (0) (0) ~none~ ~inv~ // drow soporific oil
+                        PATCH_IF chance_drow_poison <= zs_cons_thief_drow_poison_assignment_chances BEGIN
+                            ADD_CRE_ITEM ~ZSCSPS02~ (1) (0) (0) ~none~ ~inv~ // drow soporific oil
                         END
-                    END ELSE PATCH_IF chance <= zswo_thief_caustic_oil_assignment_chances BEGIN
-                        ADD_CRE_ITEM ~ZSWOAC01~ (amount) (0) (0) ~none~ ~inv~ // acid oil
+                    END ELSE PATCH_IF chance <= zs_cons_thief_caustic_oil_assignment_chances BEGIN
+                        ADD_CRE_ITEM ~ZSCSAC01~ (amount) (0) (0) ~none~ ~inv~ // acid oil
                     END
                 END
 
@@ -57,15 +57,15 @@ ACTION_IF zswo_allow_random_redistribution_cre BEGIN
                 BEGIN
                     SET kit = SHORT_AT 0x246 | (SHORT_AT 0x244) << 16
                     SET chance = RANDOM(1 100)
-                    PATCH_IF chance <= zswo_fighter_elemental_assignment_chances BEGIN
+                    PATCH_IF chance <= zs_cons_fighter_elemental_assignment_chances BEGIN
                         SET oil_type = RANDOM(1 3)
                         SET amount = RANDOM(1 2)
                         PATCH_IF oil_type = 1 BEGIN
-                            ADD_CRE_ITEM ~ZSWOFR01~ (amount) (0) (0) ~none~ ~inv~
+                            ADD_CRE_ITEM ~ZSCSFR01~ (amount) (0) (0) ~none~ ~inv~
                         END ELSE PATCH_IF oil_type = 2 BEGIN
-                            ADD_CRE_ITEM ~ZSWOCD01~ (amount) (0) (0) ~none~ ~inv~
+                            ADD_CRE_ITEM ~ZSCSCD01~ (amount) (0) (0) ~none~ ~inv~
                         END ELSE PATCH_IF oil_type = 3 BEGIN
-                            ADD_CRE_ITEM ~ZSWOEL01~ (amount) (0) (0) ~none~ ~inv~
+                            ADD_CRE_ITEM ~ZSCSEL01~ (amount) (0) (0) ~none~ ~inv~
                         END
                     END
                 END
@@ -83,13 +83,13 @@ ACTION_IF zswo_allow_random_redistribution_cre BEGIN
                         PATCH_IF kit = blackguard BEGIN // poison OR profane
                             SET chance = RANDOM(1 100)
                             PATCH_IF chance <= 50 BEGIN
-                                ADD_CRE_ITEM ~ZSWOPS01~ (1) (0) (0) ~none~ ~inv~
+                                ADD_CRE_ITEM ~ZSCSPS01~ (1) (0) (0) ~none~ ~inv~
                             END
                         END
 
                         SET chance = RANDOM(1 100)
                         PATCH_IF chance <= 20 BEGIN
-                            ADD_CRE_ITEM ~ZSWOUL01~ (1) (0) (0) ~none~ ~inv~
+                            ADD_CRE_ITEM ~ZSCSUL01~ (1) (0) (0) ~none~ ~inv~
                         END
 
                     END ELSE PATCH_IF alignment = chaotic_neutral OR // random chance of profane or sanctified
@@ -101,12 +101,12 @@ ACTION_IF zswo_allow_random_redistribution_cre BEGIN
                         PATCH_IF chance <= 50 BEGIN
                             SET chance = RANDOM(1 100)
                             PATCH_IF chance <= 15 BEGIN
-                                ADD_CRE_ITEM ~ZSWOHL01~ (1) (0) (0) ~none~ ~inv~
+                                ADD_CRE_ITEM ~ZSCSHL01~ (1) (0) (0) ~none~ ~inv~
                             END
                         END ELSE BEGIN
                             SET chance = RANDOM(1 100)
                             PATCH_IF chance <= 15 BEGIN
-                                ADD_CRE_ITEM ~ZSWOUL01~ (1) (0) (0) ~none~ ~inv~
+                                ADD_CRE_ITEM ~ZSCSUL01~ (1) (0) (0) ~none~ ~inv~
                             END
                         END
 
@@ -116,7 +116,7 @@ ACTION_IF zswo_allow_random_redistribution_cre BEGIN
                     BEGIN
                         SET chance = RANDOM(1 100)
                         PATCH_IF chance <= 20 BEGIN
-                            ADD_CRE_ITEM ~ZSWOHL01~ (1) (0) (0) ~none~ ~inv~
+                            ADD_CRE_ITEM ~ZSCSHL01~ (1) (0) (0) ~none~ ~inv~
                         END
                     END
 
@@ -129,8 +129,8 @@ ACTION_IF zswo_allow_random_redistribution_cre BEGIN
                               class = mage_thief
                 BEGIN
                     SET chance = RANDOM(1 100)
-                    PATCH_IF chance <= zswo_mage_arcane_oil_assignment_chances BEGIN
-                        ADD_CRE_ITEM ~ZSWOMD01~ (1) (0) (0) ~none~ ~inv~
+                    PATCH_IF chance <= zs_cons_mage_arcane_oil_assignment_chances BEGIN
+                        ADD_CRE_ITEM ~ZSCSMD01~ (1) (0) (0) ~none~ ~inv~
                     END
                 END
             END
