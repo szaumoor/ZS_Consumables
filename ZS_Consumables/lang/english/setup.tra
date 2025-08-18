@@ -23,12 +23,12 @@ STATISTICS:
 Weight: 1~
 
 @130 = ~Pouch of Pixie Dust~
-@131 = ~This bottle contains a bunch of pixie dust, which can be used to throw into the air to make all allies around the user invisible for 1 turn.
+@131 = ~This bottle contains a bunch of pixie dust, which can be used to throw into the air to make all allies invisible for 2 turns.
 
 STATISTICS:
 
 Special: Invisibility
-Duration: 1 turn
+Duration: 2 turns
 Area of Effect: 15 ft. radius (allies only)
 
 Weight: 1~
