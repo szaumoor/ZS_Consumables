@@ -2,16 +2,20 @@
 @50 = ~This mod is only available for BGEE/BG2EE/EET.~
 
 @100 = ~Angelic Reprieve Remedy~
-@101 = ~This remedy forces the imbiber to fall into deep slumber for 3 rounds. If this slumber is not interrupted, the imbiber will be healed by 75% of their hitpoints, and most temporary ailments will be cured. They will also recover 4 to 8 spell slots of up to level 5 spells, both arcane and divine. This will only work outside of combat.
+@101 = ~This rare remedy forces the imbiber to fall into deep slumber for a relatively short time, after which they wake up relatively more refreshed and ready to continue the adventure.
 
 STATISTICS:
+
+Special: User is put to sleep for 3 rounds. If by the end of three rounds their sleep was not interrupted, they wake up more refreshed, restoring 65% of their hit points and recovering one spell slot from levels 1-5 (if available, otherwise they recover one from a previous level if found).
 
 Weight: 1~
 
 @110 = ~Angelic Slumber Remedy~
-@111 = ~This remedy is a more powerful version of Angelic Reprieve Remedy, which forces the imbiber to fall into comatose slumber for 1 turn, after which they will wake up as it they had a refreshing night of rest, recovering all their hit points and all their spell slots, and even drained levels. This will only work outside of combat.
+@111 = ~This incredibly rare remedy forces the imbiber to fall into a relatively long comatose slumber after which they will wake up as if they had a refreshing night of rest.
 
 STATISTICS:
+
+Special: User is put to sleep for 1 turn. If by the end of the turn their sleep was not interrupted, they wake up refreshed as if they had a full night's rest and have all their hit points restored.
 
 Weight: 1~
 
@@ -20,10 +24,13 @@ Weight: 1~
 
 STATISTICS:
 
+Restores a petrified creature to flesh
+Protects against petrification for 2 hours
+
 Weight: 1~
 
 @130 = ~Pouch of Pixie Dust~
-@131 = ~This bottle contains a bunch of pixie dust, which can be used to throw into the air to make all allies invisible for 2 turns.
+@131 = ~This pouch contains a bunch of pixie dust, which can be used to throw into the air to make all allies invisible for 2 turns.
 
 STATISTICS:
 
@@ -34,46 +41,64 @@ Area of Effect: 15 ft. radius (allies only)
 Weight: 1~
 
 @140 = ~Remedial Solution~
-@141 = ~This potion is a powerful restorative concoction that will cure the imbiber of all diseases and poisons, as well blindness, silence, and deafness. It will also restore 24 hit points: half of that immediately, the other half through regeneration over 2 turns.
+@141 = ~This potion is a very powerful restorative concoction that will cure the imbiber of most ailments and heal their wounds.
 
 STATISTICS:
+
+Cures diseases, poison, blindness, silence, deafness, paralysis and feeblemindedness.
+Heals 12 Hit Points
+Regenerates 12 extra Hit Points over 2 turns.
+Special: May be given to others
 
 Weight: 1~
 
 @150 = ~Elixir of Seeing the Invisible~
-@151 = ~This elixir allows the imbiber to momentarily have the ability to spot invisible creatures as per the Detect Invisibility wizard spell, revealing twice per round for 2 rounds. This effect will not stack with itself or other elixirs.
+@151 = ~This elixir allows the imbiber to momentarily have the ability to spot invisible creatures six times over three rounds. This effect will not stack with itself or other elixirs.
 
 STATISTICS:
+
+Detect invisibility twice per round for 3 rounds as per the Detect Invisibility wizard spell.
+Duration: 3 rounds
 
 Weight: 1~
 
 @160 = ~Elixir of Viciousness~
-@161 = ~This elixir is a powerful concoction that will makes the wielder 5% more likely to critically hit, and critical hits will increase their damage and THAC0 by 2 for 2 rounds (does not stack). This effect lasts for 8 hours and will not stack with itself or other elixirs.
+@161 = ~This elixir is a powerful concoction that allows the imbiber to deal more vicious attack against foes, which increases whenever they critically hit. This effect will not stack with itself or other elixirs.
 
 STATISTICS:
+
+Critical hit chances: +5%
+Critical hit effects: +2 damage and THAC0 for 2 rounds (does not stack)
 
 Weight: 1~
 
 @170 = ~Elixir of Bloodlust~
-@171 = ~This elixir is a powerful concoction that will make the imbiber restore 6 hit points plus 8% of their maximum hit points every time they kill a creature, and 1 hit point every time they hit something. Kills will also increase their attacks per round by 1 for the next 2 rounds (does not stack). This effect lasts for 8 hours and will not stack with itself or other elixirs.
+@171 = ~This elixir is a powerful concoction that will make the imbiber restore each time they spill blood from their enemies, becoming more frenzied each time a foe is killed. This effect will not stack with itself or other elixirs.
 
 STATISTICS:
+
+Life-steal: Heal 1 HP each time a target is hit.
+Bloodlust: Kills restore 6 HP plus 8% of maximum HP and increase attacks per round by 1 for the next 2 rounds (does not stack)
+Duration: 8 hours
 
 Weight: 1~
 
 @180 = ~Alchemist's Fire~
-@181 = ~Alchemist's fire is a sticky, adhesive substance that ignites when exposed to air. Shapes swirl and glow behind the glass, liquid embers folding into and around each other.
-
-When thrown, this will explode on impact, dealing 1d6 fire damage to all creatures in a 10 ft. radius.
+@181 = ~Alchemist's fire is a sticky, adhesive substance that ignites when exposed to air. Shapes swirl and glow behind the glass, liquid embers folding into and around each other. When thrown, it will explode on impact, dealing 1d6 fire damage to all creatures in a 10 ft. radius. Alchemist's Fire is highly priced as a troll-killing tool.
 
 STATISTICS:
+
+Damage: 1d6+1 fire damage, double vs. targets affected by Grease
 
 Weight: 1~
 
 @190 = ~Acid Vial~
-@191 = ~This vial contains a highly corrosive acid that can be thrown at a target to deal 1d6 acid damage on impact. The acid will also continue to burn for 1 round, dealing an additional 1d6 acid damage.
+@191 = ~This vial contains a highly corrosive acid that can be thrown at a target to deal acid damage on impact, which
+may continue briefly afterwards. These vials are highly priced as troll-killing tools.
 
 STATISTICS:
+
+Damage: 1d6+1 acid damage (no save), and again after one round (save vs. Breath at +2)
 
 Weight: 1~
 
@@ -82,12 +107,18 @@ Weight: 1~
 
 STATISTICS:
 
+Area: Create a slippery area in a 15 ft. radius, affecting all creatures within it for 1 turn, which may cause them to fall prone if they fail their saves vs. Breath at +2.
+Special: Magic resistance does not affect this.
+
 Weight: 1~
 
 @210 = ~Choking Powder~
 @211 = ~This powder can be thrown into the air to create a choking cloud as per the Stinking Cloud wizard spell that will affect all creatures in a 15 ft. radius for 1 turn.
 
 STATISTICS:
+
+Area: Create a choking cloud in a 15 ft. radius, affecting all creatures within it for 1 turn, which may knock them unconscious if they fail their saves vs. Death at +2.
+Special: Magic resistance does not affect this.
 
 Weight: 1~
 
@@ -96,27 +127,46 @@ Weight: 1~
 
 STATISTICS:
 
+Area: Create a webbed area in a field, ensnaring creatures within it if they fail their saves as per the wizard spell Web. Special: Magic resistance does not affect this.
+
 Weight: 1~
 
 @230 = ~Potion of Minor Levitation~
-@231 = ~This potion allows the imbiber to levitate slightly off the ground, granting them immunity to ground-based effects such as Grease, Web, and similar spells. It also provides immunity to Slow and improves movement speed by 20% for 3 turns.
+@231 = ~This potion allows the imbiber to levitate slightly off the ground, granting them immunity to many ground-based hazard and allow them to gracefully glide with increased speed temporarily.
 
 STATISTICS:
+
+Immunity to ground-based effects (Grease, Web, etc.)
+Immunity to Slow
+Movement speed: +35%
+Duration: 2 hours
 
 Weight: 1~
 
 
 @240 = ~Elixir of Universal Resistance~
-@241 = ~This elixir provides comprehensive protection for 4 hours, reducing elemental, poison, and magical damage taken by 25% and physical damage by 7%. The drinker also gains a +2 bonus to Armor Class and all saving throws. These protective effects will not stack with other elixirs.
+@241 = ~This elixir provides comprehensive protection to the imbiber, reducing all damage they take and increasing their chances at avoiding harmful effects. These protective effects will not stack with themselves or other elixirs.
 
 STATISTICS:
+
+Physical damage resistance: +8%
+Other damage resistances: +25%
+Armor Class: +2
+Saving Throws: +2
+Duration: 4 hours
 
 Weight: 1~
 
 @250 = ~Elixir of Mystic Cultivation~
-@251 = ~This elixir empowers spellcasters for 24 hours. It grants +1 casting speed, +2 effective caster level, and +10% elemental and magical spell damage. It also provides one temporary bonus spell slot for each spell level the caster can normally prepare. A caster may drink it, adjust spell selections to fill the extra slots, then rest to prepare them. These benefits apply only to spellcasters and do not stack with themselves or with other elixirs.
+@251 = ~This elixir empowers spellcasters granting them amazing abilities for a full day, as well as the ability to memorize or cast more spells per day. A caster may drink it, adjust spell selections to fill the extra slots, then rest to prepare them. These benefits apply only to spellcasters and do not stack with themselves or with other elixirs.
 
 STATISTICS:
+
+Casting speed: +1
+Casting level: +2
+Spell slots: +1 per spell level
+Elemental and magical damage: +10%
+Duration: 24 hours
 
 Weight: 1~
 
@@ -125,7 +175,25 @@ Weight: 1~
 
 STATISTICS:
 
+Area: Throw into an area, creating an entangling field as per the Entangle spell
+Single-target: Throw at a single creature to ensnare it (save vs. Breath to avoid) for 1 turn
+Special: Magic resistance does not affect this.
+
 Weight: 1~
+
+@270 = ~Holy Water~
+@271 = ~This blessed water is effective against undead and fiends, dealing damage on impact, with a chance at weakening them. Living beings are unaffected by this, unless they are really bothered by being splashed with water.
+
+STATISTICS:
+
+Special: Partially deals radiant damage, which cannot be resisted
+Damage: 4d4 vs. undead and fiends (3d4 magic, 1d4 radiant)
+Weakening: Fiends and undead must save vs. Death at -2 or take 15% more physical damage for 3 rounds (non-stacking)
+
+Weight: 1~
+@272 = ~Takes %p1% radiant damage~
+@273 = ~Undead weakened~
+@274 = ~Fiend weakened~
 
 // igneous oil
 @1000 = ~Igneous Oil~

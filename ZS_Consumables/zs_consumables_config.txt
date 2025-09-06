@@ -1,50 +1,76 @@
-// allow random distribution of oils to various creatures
-OUTER_SET zs_cons_allow_random_redistribution_cre = "1"
+// Redistribution variables \\
+
+// random distribution of oils to various creatures
+OUTER_SET zs_cons_add_random_redistribution_cre = "1"
 
 // probabilities a thief gets at least noxious oil
 OUTER_SET zs_cons_thief_noxious_oil_assignment_chances = "25"
 
-// probabilities a thief gets drow soporific oil, *IF* the thief gets matched for noxious oil
-OUTER_SET zs_cons_thief_drow_poison_assignment_chances = "15"
-
-// probabilities a thief gets caustic oil *ONLY IF* they don't get noxious oil; in order words, this probability should be balanced around the probabilities of noxious oil. For example, if noxious oil chances are 60%, caustic oil chances should be 40 *at most* (may be lowered so there's a chance the creature gets nothing); or if noxious oil is 10%, caustic oil chances should be 90% *at most*. If this is not done, it will be possible for the assignments to not work correctly
+// probabilities a thief gets caustic oil *ONLY IF* they don't get noxious oil;
+// The number should be balanced around
 OUTER_SET zs_cons_thief_caustic_oil_assignment_chances = "10"
 
+// probabilities a thief gets drow soporific oil too, *IF* the thief gets matched for noxious oil. This is rolled separately
+OUTER_SET zs_cons_thief_drow_poison_assignment_chances = "15"
+
+// probabilities of injecting one elemental or arcane oil to pure warrior classes and classes with mage classes, sorcerers, and bards, respectively
 OUTER_SET zs_cons_fighter_elemental_assignment_chances = "15"
 OUTER_SET zs_cons_mage_arcane_oil_assignment_chances   = "25"
 
-// price configurations
-OUTER_SET zs_cons_price_caustic       = "500"
-OUTER_SET zs_cons_price_gelid         = "500"
-OUTER_SET zs_cons_price_igneous       = "500"
-OUTER_SET zs_cons_price_scintillating = "500"
-OUTER_SET zs_cons_price_arcane        = "1000"
-OUTER_SET zs_cons_price_noxious       = "1200"
-OUTER_SET zs_cons_price_soporific     = "1750"
-OUTER_SET zs_cons_price_sanctified    = "2500"
-OUTER_SET zs_cons_price_profane       = "2500"
-OUTER_SET zs_cons_price_dragonbile    = "3000"
-OUTER_SET zs_cons_price_kuotoa        = "2000"
-OUTER_SET zs_cons_price_dragonbane    = "5000"
+// Price configurations \\
+OUTER_SET zs_cons_oil_price_caustic       = "500"
+OUTER_SET zs_cons_oil_price_gelid         = "500"
+OUTER_SET zs_cons_oil_price_igneous       = "500"
+OUTER_SET zs_cons_oil_price_scintillating = "500"
+OUTER_SET zs_cons_oil_price_arcane        = "1000"
+OUTER_SET zs_cons_oil_price_noxious       = "1200"
+OUTER_SET zs_cons_oil_price_soporific     = "1750"
+OUTER_SET zs_cons_oil_price_sanctified    = "2500"
+OUTER_SET zs_cons_oil_price_profane       = "2500"
+OUTER_SET zs_cons_oil_price_dragonbile    = "3000"
+OUTER_SET zs_cons_oil_price_kuotoa        = "2000"
+OUTER_SET zs_cons_oil_price_dragonbane    = "5000"
 
+OUTER_SET zs_cons_elixir_price_bloodlust            = "5000"
+OUTER_SET zs_cons_elixir_price_mystic_cultivation   = "5000"
+OUTER_SET zs_cons_elixir_price_see_invisibility     = "5000"
+OUTER_SET zs_cons_elixir_price_universal_resistance = "5000"
+OUTER_SET zs_cons_elixir_price_viciousness          = "5000"
+
+OUTER_SET zs_cons_potion_price_minor_levitation = "5000"
+
+OUTER_SET zs_cons_remedy_price_angelic_reprieve  = "5000"
+OUTER_SET zs_cons_remedy_price_angelic_slumber   = "5000"
+OUTER_SET zs_cons_remedy_price_basilisk_oil      = "5000"
+OUTER_SET zs_cons_remedy_price_remedial_solution = "5000"
+
+OUTER_SET zs_cons_throwable_price_acid_vial      = "5000"
+OUTER_SET zs_cons_throwable_price_alchemist_fire = "5000"
+OUTER_SET zs_cons_throwable_price_choking_powder = "5000"
+OUTER_SET zs_cons_throwable_price_grease_bottle  = "5000"
+OUTER_SET zs_cons_throwable_price_holy_water     = "5000"
+OUTER_SET zs_cons_throwable_price_pixie_dust     = "5000"
+OUTER_SET zs_cons_throwable_price_tanglefoot_bag = "5000"
+OUTER_SET zs_cons_throwable_price_web_grenade    = "5000"
+// end prices
 
 //// Pits of Despair store config \\\\
 
-OUTER_SET zs_cons_pod_patch = "1" // allow the patching
+OUTER_SET zs_cons_add_pod_patch = "1" //
 
-// allow oils to be added to the store
-OUTER_SET zs_cons_pod_allow_caustic       = "1"
-OUTER_SET zs_cons_pod_allow_gelid         = "1"
-OUTER_SET zs_cons_pod_allow_igneous       = "1"
-OUTER_SET zs_cons_pod_allow_scintillating = "1"
-OUTER_SET zs_cons_pod_allow_arcane        = "1"
-OUTER_SET zs_cons_pod_allow_noxious       = "1"
-OUTER_SET zs_cons_pod_allow_soporific     = "1"
-OUTER_SET zs_cons_pod_allow_sanctified    = "1"
-OUTER_SET zs_cons_pod_allow_profane       = "1"
-OUTER_SET zs_cons_pod_allow_dragonbile    = "1"
-OUTER_SET zs_cons_pod_allow_kuotoa        = "1"
-OUTER_SET zs_cons_pod_allow_dragonbane    = "1"
+// add oils to be added to the store
+OUTER_SET zs_cons_pod_add_caustic       = "1"
+OUTER_SET zs_cons_pod_add_gelid         = "1"
+OUTER_SET zs_cons_pod_add_igneous       = "1"
+OUTER_SET zs_cons_pod_add_scintillating = "1"
+OUTER_SET zs_cons_pod_add_arcane        = "1"
+OUTER_SET zs_cons_pod_add_noxious       = "1"
+OUTER_SET zs_cons_pod_add_soporific     = "1"
+OUTER_SET zs_cons_pod_add_sanctified    = "1"
+OUTER_SET zs_cons_pod_add_profane       = "1"
+OUTER_SET zs_cons_pod_add_dragonbile    = "1"
+OUTER_SET zs_cons_pod_add_kuotoa        = "1"
+OUTER_SET zs_cons_pod_add_dragonbane    = "1"
 
 // Amount of oils available in the store
 OUTER_SET zs_cons_pod_caustic_store       = "20"
@@ -60,53 +86,54 @@ OUTER_SET zs_cons_pod_dragonbile_store    = "6"
 OUTER_SET zs_cons_pod_kuotoa_store        = "3"
 OUTER_SET zs_cons_pod_dragonbane_store    = "3"
 //
+// end of pod variables
 
 //// item categories to install \\\\
 
 // elixirs
-OUTER_SET zs_cons_include_elixirs            = "1"
-OUTER_SET zs_cons_allow_bloodlust            = "1"
-OUTER_SET zs_cons_allow_mystic_cultivation   = "1"
-OUTER_SET zs_cons_allow_see_invisibility     = "1"
-OUTER_SET zs_cons_allow_universal_resistance = "1"
-OUTER_SET zs_cons_allow_viciousness          = "1"
+OUTER_SET zs_cons_install_elixirs          = "1"
+OUTER_SET zs_cons_add_bloodlust            = "1"
+OUTER_SET zs_cons_add_mystic_cultivation   = "1"
+OUTER_SET zs_cons_add_see_invisibility     = "1"
+OUTER_SET zs_cons_add_universal_resistance = "1"
+OUTER_SET zs_cons_add_viciousness          = "1"
 //
 
 // oils
-OUTER_SET zs_cons_include_oils            = "1"
-OUTER_SET zs_cons_allow_arcane_oil        = "1"
-OUTER_SET zs_cons_allow_caustic_oil       = "1"
-OUTER_SET zs_cons_allow_dragon_bile       = "1"
-OUTER_SET zs_cons_allow_dragonsbane       = "1"
-OUTER_SET zs_cons_allow_gelid_oil         = "1"
-OUTER_SET zs_cons_allow_igneous_oil       = "1"
-OUTER_SET zs_cons_allow_kuotoan_oil       = "1"
-OUTER_SET zs_cons_allow_noxious_oil       = "1"
-OUTER_SET zs_cons_allow_profane_oil       = "1"
-OUTER_SET zs_cons_allow_sanctified_oil    = "1"
-OUTER_SET zs_cons_allow_scintillating_oil = "1"
-OUTER_SET zs_cons_allow_soporific_oil     = "1"
+OUTER_SET zs_cons_install_oils          = "1"
+OUTER_SET zs_cons_add_arcane_oil        = "1"
+OUTER_SET zs_cons_add_caustic_oil       = "1"
+OUTER_SET zs_cons_add_dragon_bile       = "1"
+OUTER_SET zs_cons_add_dragonsbane       = "1"
+OUTER_SET zs_cons_add_gelid_oil         = "1"
+OUTER_SET zs_cons_add_igneous_oil       = "1"
+OUTER_SET zs_cons_add_kuotoan_oil       = "1"
+OUTER_SET zs_cons_add_noxious_oil       = "1"
+OUTER_SET zs_cons_add_profane_oil       = "1"
+OUTER_SET zs_cons_add_sanctified_oil    = "1"
+OUTER_SET zs_cons_add_scintillating_oil = "1"
+OUTER_SET zs_cons_add_soporific_oil     = "1"
 //
 
 // potions
-OUTER_SET zs_cons_include_potions        = "1"
-OUTER_SET zs_cons_allow_minor_levitation = "1"
+OUTER_SET zs_cons_install_potions      = "1"
+OUTER_SET zs_cons_add_minor_levitation = "1"
 //
 
 // remedies
-OUTER_SET zs_cons_include_remedies        = "1"
-OUTER_SET zs_cons_allow_angelic           = "1"
-OUTER_SET zs_cons_allow_basilisk_oil      = "1"
-OUTER_SET zs_cons_allow_remedial_solution = "1"
+OUTER_SET zs_cons_install_remedies      = "1"
+OUTER_SET zs_cons_add_angelic           = "1"
+OUTER_SET zs_cons_add_basilisk_oil      = "1"
+OUTER_SET zs_cons_add_remedial_solution = "1"
 //
 
 // throwables
-OUTER_SET zs_cons_allow_throwables     = "1"
-OUTER_SET zs_cons_allow_acid_vial      = "1"
-OUTER_SET zs_cons_allow_alchemist_fire = "1"
-OUTER_SET zs_cons_allow_choking_powder = "1"
-OUTER_SET zs_cons_allow_grease_bottle  = "1"
-OUTER_SET zs_cons_allow_pixie_dust     = "1"
-OUTER_SET zs_cons_allow_tanglefoot_bag = "1"
-OUTER_SET zs_cons_allow_web_grenade    = "1"
+OUTER_SET zs_cons_install_throwables = "1"
+OUTER_SET zs_cons_add_acid_vial      = "1"
+OUTER_SET zs_cons_add_alchemist_fire = "1"
+OUTER_SET zs_cons_add_choking_powder = "1"
+OUTER_SET zs_cons_add_grease_bottle  = "1"
+OUTER_SET zs_cons_add_pixie_dust     = "1"
+OUTER_SET zs_cons_add_tanglefoot_bag = "1"
+OUTER_SET zs_cons_add_web_grenade    = "1"
 //

@@ -4,33 +4,12 @@ VERSION "1.0.0"
 README ~ZS_Consumables/README.md~
 AUTO_EVAL_STRINGS
 ALWAYS
-    INCLUDE ~%MOD_FOLDER%/libs/zs_always.tph~
+    INCLUDE ~%MOD_FOLDER%/libs/preambles/zs_always.tph~
 END
 LANGUAGE
 "English"
 "english"
 "ZS_Consumables/lang/english/setup.tra"
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
 BEGIN @0 DESIGNATED 0 // install consumables
 REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @500
-
-INCLUDE ~%MOD_FOLDER%/libs/zs_alter_functions.tpa~
-INCLUDE ~%MOD_FOLDER%/libs/zs_checks.tpa~
-INCLUDE ~%MOD_FOLDER%/zs_cons_config.txt~
-
-ACTION_IF (ABS zs_cons_thief_noxious_oil_assignment_chances) - (ABS zs_cons_thief_caustic_oil_assignment_chances) < 0 BEGIN
-    FAIL "Revise probabilities, one of them is stepping over the other: %zs_cons_thief_noxious_oil_assignment_chances% vs %zs_cons_thief_caustic_oil_assignment_chances%"
-END
-
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils.tph~ // inserting oils into the game files
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils_stores.tph~ // inserting oils into the stores
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils_cre_manual.tph~ // inserting oils into the creatures' inventories
-PRINT "Adding oils automatically"
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils_cre_auto.tph~
-
-ACTION_IF zs_cons_pod_patch AND MOD_IS_INSTALLED "zbpod.tp2" "0" BEGIN
-    PRINT "Pits of Despair detected, adding oils to the store."
-    INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_patch_pod.tph~ // adding oils to the Pits of Despair store
-END
-/////////////////////////////////////////////////////////////////////////////////////////////////////

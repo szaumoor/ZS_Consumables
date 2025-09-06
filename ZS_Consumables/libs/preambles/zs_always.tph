@@ -1,0 +1,15 @@
+// Library inclusion
+INCLUDE ~%MOD_FOLDER%/libs/functions/zs_alter_functions.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/functions/zs_checks.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/functions/zs_regexp_filters.tpa~
+
+// Configuration variables
+INCLUDE ~%MOD_FOLDER%/zs_cons_config.txt~
+
+// Preamble setup scripts
+INCLUDE ~%MOD_FOLDER%/libs/preambles/fragments/zs_preinstall_check.tph~
+INCLUDE ~%MOD_FOLDER%/libs/preambles/fragments/zs_ids_setup.tph~
+INCLUDE ~%MOD_FOLDER%/libs/preambles/fragments/zs_npc_array.tph~
+
+// Main script containing all the content of the mod
+INCLUDE ~%MOD_FOLDER%/libs/scripts/zs_main.tph~
