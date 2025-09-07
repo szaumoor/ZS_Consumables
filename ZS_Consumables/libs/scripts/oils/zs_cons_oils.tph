@@ -2,12 +2,12 @@ ACTION_IF (ABS zs_cons_thief_noxious_oil_assignment_chances) - (ABS zs_cons_thie
     FAIL "Revise probabilities for oil distribution, one of them is stepping over the other: %zs_cons_thief_noxious_oil_assignment_chances% vs %zs_cons_thief_caustic_oil_assignment_chances%"
 END
 
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils.tph~ // inserting oils into the game files
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils_stores.tph~ // inserting oils into the stores
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils_cre_manual.tph~ // inserting oils into the creatures' inventories
-INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_incl_oils_cre_auto.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils_stores.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils_cre_manual.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils_cre_auto.tph~
 
 ACTION_IF zs_cons_pod_patch AND MOD_IS_INSTALLED "zbpod.tp2" "0" BEGIN
     PRINT "Pits of Despair detected, adding oils to the store."
-    INCLUDE ~%MOD_FOLDER%/libs/fragments/zs_patch_pod.tph~ // adding oils to the Pits of Despair store
+    INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/patches/zs_patch_pod.tph~
 END

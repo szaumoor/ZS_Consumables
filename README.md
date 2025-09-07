@@ -48,6 +48,12 @@ All consumables are distributed and priced in a way that tries to serve as balan
 
 Should be compatible with everything as far as I know. Please offer feedback on balance and the supply of oils throughout the game if you try this. One caveat to mention is that it might be philosophically incompatible with other mods. For example, it might add bonuses that add up to too much if you have mods that give you insane bonuses already; or you might have a mod that also introduces "oils" or some such items, which would interfere in the sense that it would stack with my oils, when they shouldn't, as far as my design decisions.
 
+Recommendations for install order:
+
+- After any mods add content quest and new joinable NPCs
+- After IWDification, if you install the spells, or SCS/ToF, if you use that source for the spells (but you shouldn't use that one)
+- Before tweak mods, including my own ZSTweaks mod, if you use it
+
 ## Known issues
 
 The noxious oil sometimes seems to not offer log feedback indicating whether the poisoning was resisted or not. I don't think it affects functionality though.

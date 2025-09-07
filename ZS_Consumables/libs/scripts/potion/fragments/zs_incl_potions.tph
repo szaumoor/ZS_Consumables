@@ -1,0 +1,21 @@
+COPY ~%MOD_FOLDER%/items/potions/minor_levitation~ ~override~
+
+COPY ~ZSCSMNL0.ITM~ ~override~ // minor levitation
+    LPF ALTER_ITEM INT_VAR id_ref_name = RESOLVE_STR_REF(@230) id_ref_desc = RESOLVE_STR_REF(@231) END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@232) END
+
+    PATCH_IF spell_spike_growth > 0 BEGIN
+        LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_SPIKE_GROWTH" RET spell_res END
+        LPF CLONE_EFFECT INT_VAR match_opcode = 206 STR_VAR resource = "%spell_res%" END
+    END
+
+    PATCH_IF spell_spike_stones > 0 BEGIN
+        LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_SPIKE_STONES" RET spell_res END
+        LPF CLONE_EFFECT INT_VAR match_opcode = 206 STR_VAR resource = "%spell_res%" END
+    END
+
+    PATCH_IF spell_produce_fire > 0 BEGIN
+        LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = "CLERIC_PRODUCE_FIRE" RET spell_res END
+        LPF CLONE_EFFECT INT_VAR match_opcode = 206 STR_VAR resource = "%spell_res%" END
+    END
+

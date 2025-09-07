@@ -136,12 +136,14 @@ Weight: 1~
 
 STATISTICS:
 
-Immunity to ground-based effects (Grease, Web, etc.)
+Immunity to ground-based effects (Grease, Web, Spike Growth, etc.)
 Immunity to Slow
 Movement speed: +35%
 Duration: 2 hours
 
 Weight: 1~
+
+@232 = ~Levitating~
 
 
 @240 = ~Elixir of Universal Resistance~
