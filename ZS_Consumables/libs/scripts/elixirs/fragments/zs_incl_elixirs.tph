@@ -1,0 +1,19 @@
+COPY ~%MOD_FOLDER%/items/elixirs/bloodlust~ ~override~
+COPY_EXISTING ~ZSCSBLD0.ITM~ ~override~
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@170) id_ref_desc=RESOLVE_STR_REF(171) END
+
+COPY ~%MOD_FOLDER%/items/elixirs/mystic_cultivation~ ~override~
+COPY_EXISTING ~ZSCSMYS0.ITM~ ~override~
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@250) id_ref_desc=RESOLVE_STR_REF(251) END
+
+COPY ~%MOD_FOLDER%/items/elixirs/see_invisibility~ ~override~
+COPY_EXISTING ~ZSCSSIV0.ITM~ ~override~
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@150) id_ref_desc=RESOLVE_STR_REF(151) END
+
+COPY ~%MOD_FOLDER%/items/elixirs/universal_resistance~ ~override~
+COPY_EXISTING ~ZSCSUVRI.ITM~ ~override~
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@150) id_ref_desc=RESOLVE_STR_REF(151) END
+
+COPY ~%MOD_FOLDER%/items/elixirs/viciousness~ ~override~
+COPY_EXISTING ~ZSCSVIC0.ITM~ ~override~
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@160) id_ref_desc=RESOLVE_STR_REF(161) END

@@ -1,0 +1,4 @@
+INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs_stores.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs_cre_manual.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs_cre_auto.tph~

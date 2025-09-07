@@ -104,7 +104,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BHELM.STO~ BEGIN //helm's temple
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~ULGOTH.STO~ BEGIN //helm's temple
+ACTION_IF FILE_EXISTS_IN_GAME ~ULGOTH.STO~ BEGIN //ulgoth's inn
     COPY_EXISTING ~ULGOTH.STO~ ~override~ //helm's temple
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 7 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil
