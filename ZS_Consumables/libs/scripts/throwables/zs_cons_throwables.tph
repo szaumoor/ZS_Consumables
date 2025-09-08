@@ -1,0 +1,4 @@
+INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/fragments/zs_incl_throwables.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/fragments/zs_incl_throwables_stores.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/fragments/zs_incl_throwables_cre_manual.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/fragments/zs_incl_throwables_cre_auto.tph~
