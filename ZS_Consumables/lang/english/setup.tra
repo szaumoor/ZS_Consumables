@@ -20,7 +20,7 @@ Special: User is put to sleep for 1 turn. If by the end of the turn their sleep 
 Weight: 1~
 
 @120 = ~Basilisk Oil Remedy~
-@121 = ~This oil of a basilisk, when poured over a petrified creature, will restore them to flesh and bone, and to life. It will also additionally protect them from all sources of petrification for 2 hours.
+@121 = ~This oil of a basilisk, when poured over a petrified creature, will restore them to flesh and bone, and to life. It will also additionally protect them from all sources of petrification and gaze attacks for 2 hours.
 
 STATISTICS:
 

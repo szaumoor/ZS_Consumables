@@ -1,0 +1,172 @@
+ACTION_IF FILE_EXISTS_IN_GAME ~PPSTOR01.STO~ BEGIN // storekeep brynnlaw
+    COPY_EXISTING ~PPSTOR01.STO~ ~override~ // storekeep brynnlaw
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TRMER02.STO~ BEGIN // MERCHANT TRADEMEET
+    COPY_EXISTING ~TRMER02.STO~ ~override~ // MERCHANT TRADEMEET
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~MURCRAG.STO~ BEGIN // MRS CRAGMOON
+    COPY_EXISTING ~MURCRAG.STO~ ~override~ // MRS CRAGMOON
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BHELM.STO~ BEGIN //helm's temple
+    COPY_EXISTING ~BHELM.STO~   ~override~ //helm's temple
+                  ~TEMHELM.STO~ ~override~ //helm's temple
+                  ~TEM4802.STO~ ~override~ //helm's temple
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~ULGOTH.STO~ BEGIN //ulgoth's inn
+    COPY_EXISTING ~ULGOTH.STO~ ~override~ //helm's temple
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TEM3402.STO~ BEGIN //helm's temple
+    COPY_EXISTING ~TEM3402.STO~ ~override~ //helm's temple
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~DAWNMAS.STO~ BEGIN // DAWNMASTER's temple
+    COPY_EXISTING ~DAWNMAS.STO~ ~override~ //DAWNMASTER's temple
+                  ~TEMLATH.STO~ ~override~ //LATHANDER's temple
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TRGENI01.STO~ BEGIN // trademeet genie
+    COPY_EXISTING ~TRGENI01.STO~ ~override~ //trademeet genie
+                  ~TRCAR04.STO~ ~override~ // caravan merchant
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TEMSUP.STO~ BEGIN // waukeen's temple
+    COPY_EXISTING ~TEMSUP.STO~   ~override~ //waukeen's temple
+                  ~AMCLER02.STO~ ~override~ // waukeen's temple (tob)
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~FRIEND.STO~ BEGIN // friendly arm inn
+    COPY_EXISTING ~FRIEND.STO~ ~override~ // friendly arm inn
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~RIBALD3.STO~ BEGIN // ribald's shop
+    COPY_EXISTING ~RIBALD3.STO~ ~override~ // ribald's shop
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~UDDUER02.STO~ BEGIN // duergar merchant (when encountered as a drow)
+    COPY_EXISTING ~UDDUER02.STO~ ~override~ // duergar merchant (when encountered as a drow)
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.STO~ BEGIN // SOD QUARTERMASTER
+    COPY_EXISTING ~bdbeleg3.STO~ ~override~ // sod quartermaster
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 14 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdnazram.STO~ BEGIN // SOD GENIE
+    COPY_EXISTING ~bdnazram.STO~ ~override~ // sod genie
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdsorcsc.STO~ BEGIN // SOD SORCEROUS SUNDRIES
+    COPY_EXISTING ~bdsorcsc.STO~ ~override~ // sod sorcerous sundries
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~HIGHHEDG.STO~ BEGIN // HIGH HEDGE
+    COPY_EXISTING ~HIGHHEDG.STO~ ~override~ // HIGH HEDGE
+                  ~STO0703.STO~  ~override~ // SORCEROUS SUNDRIES
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~INN3351.STO~ BEGIN // FELDEPOST INN
+    COPY_EXISTING ~INN3351.STO~ ~override~ // FELDEPOST INN
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~AMSMUG01.STO~ BEGIN // AMEKTHRAN SMUGGLERS
+    COPY_EXISTING ~AMSMUG01.STO~ ~override~ // AMEKTHRAN SMUGGLERS
+                  ~AMSMUG02.STO~ ~override~ // AMEKTHRAN SMUGGLERS
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~HGKAR01.STO~ BEGIN // Karthis al-Hezzar
+    COPY_EXISTING ~HGKAR01.STO~  ~override~ // Karthis al-Hezzar
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+
+ACTION_IF FILE_EXISTS_IN_GAME ~OHNPOTME.STO~ BEGIN // POTION MERCHANT (NEERA'S QUEST)
+    COPY_EXISTING ~OHNPOTME.STO~ ~override~ // POTION MERCHANT (NEERA'S QUEST)
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~GARLENA.STO~ BEGIN // GARLENA (watcher's keep)
+    COPY_EXISTING ~GARLENA.STO~ ~override~ // GARLENA (watcher's keep)
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSBSK0~ END // basilisk oil
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~SUELF10.STO~ BEGIN // SULDANESSELAR MERCHANT
+    COPY_EXISTING ~SUELF10.STO~ ~override~ // SULDANESSELAR MERCHANT
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSRMS0~ END // angelic slumber
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TEM2304.STO~ BEGIN // gellana mirrorshade
+    COPY_EXISTING ~TEM2304.STO~ ~override~ // gellana mirrorshade
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSARP0~ END // angelic reprieve
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSRMS0~ END // remedial solution
+    BUT_ONLY
+END

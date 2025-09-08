@@ -1,0 +1,28 @@
+ACTION_IF zs_cons_allow_random_redistribution_cre BEGIN
+    WITH_SCOPE BEGIN
+
+        ACTION_PHP_EACH NPC_ARRAY AS file => dv BEGIN
+            ACTION_IF IS_AN_INT dv BEGIN // non-joinable NPC
+                COPY_EXISTING ~%file%~ ~override~
+                    LPF IS_SUMMON RET is_summon = result END // not a summon either
+                    LPF CAN_DROP_STUFF RET can_drop_stuff = result END // and has droppable items, i.e. can hold oil
+
+                    PATCH_IF NOT is_summon AND can_drop_stuff BEGIN
+
+                        PATCH_IF BYTE_AT(0x271) = general_humanoid BEGIN
+
+                            SET chance = RANDOM(1 100)
+                            PATCH_IF chance <= 5 BEGIN
+                                ADD_CRE_ITEM ~ZSCSRMS0~ (1) (0) (0) ~none~ ~inv~ // remedial solution
+                            END
+
+                        END
+
+                    END
+            END
+
+        END
+
+    END
+
+END
