@@ -103,7 +103,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BMTHIEF.STO~ BEGIN // BLACK MARKET THIEF
     BUT_ONLY
 END
 
-F FILE_EXISTS_IN_GAME ~bdbeleg3.STO~ BEGIN // SOD QUARTERMASTER
+ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.STO~ BEGIN // SOD QUARTERMASTER
     COPY_EXISTING ~bdbeleg3.STO~ ~override~ // sod quartermaster
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness

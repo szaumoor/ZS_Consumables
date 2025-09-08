@@ -1,4 +1,4 @@
-ACTION_IF zs_cons_allow_random_redistribution_cre BEGIN
+ACTION_IF zs_cons_add_random_redistribution_cre BEGIN
     WITH_SCOPE BEGIN
 
         ACTION_PHP_EACH NPC_ARRAY AS file => dv BEGIN
@@ -19,6 +19,7 @@ ACTION_IF zs_cons_allow_random_redistribution_cre BEGIN
                         END
 
                     END
+                BUT_ONLY
             END
 
         END

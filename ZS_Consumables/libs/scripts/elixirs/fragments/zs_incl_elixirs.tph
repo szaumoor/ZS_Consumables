@@ -11,7 +11,7 @@ COPY_EXISTING ~ZSCSSIV0.ITM~ ~override~
     LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@150) id_ref_desc=RESOLVE_STR_REF(151) END
 
 COPY ~%MOD_FOLDER%/items/elixirs/universal_resistance~ ~override~
-COPY_EXISTING ~ZSCSUVRI.ITM~ ~override~
+COPY_EXISTING ~ZSCSUVR0.ITM~ ~override~
     LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@150) id_ref_desc=RESOLVE_STR_REF(151) END
 
 COPY ~%MOD_FOLDER%/items/elixirs/viciousness~ ~override~

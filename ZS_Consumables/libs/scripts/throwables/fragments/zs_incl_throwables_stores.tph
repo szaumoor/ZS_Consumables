@@ -114,8 +114,9 @@ ACTION_IF FILE_EXISTS_IN_GAME ~TRGENI01.STO~ BEGIN // trademeet genie
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSALF0~ END // alchemist fire
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSPXD0~  END // pixie dust
     BUT_ONLY
+END
 
-    ACTION_IF FILE_EXISTS_IN_GAME ~TEMSUP.STO~ BEGIN // waukeen's temple
+ACTION_IF FILE_EXISTS_IN_GAME ~TEMSUP.STO~ BEGIN // waukeen's temple
     COPY_EXISTING ~TEMSUP.STO~   ~override~ //waukeen's temple
                   ~AMCLER02.STO~ ~override~ // waukeen's temple (tob)
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSHLW0~  END // holy water

@@ -19,6 +19,7 @@ RET
 BEGIN
     LPF CHECK_EXTENSION STR_VAR extension = "CRE" END
     READ_LONG 0x2c0 items_count
+    SET result = 0
     PATCH_IF items_count > 0 BEGIN
 
         READ_LONG 0x2bc items_offset

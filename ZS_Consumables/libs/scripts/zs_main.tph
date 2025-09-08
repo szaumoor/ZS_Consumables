@@ -1,5 +1,5 @@
 INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/zs_cons_oils.tph~
 INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/zs_cons_elixirs.tph~
 INCLUDE ~%MOD_FOLDER%/libs/scripts/potions/zs_cons_potions.tph~
-INCLUDE ~%MOD_FOLDER%/libs/scripts/remedy/zs_cons_remedies.tph~
+INCLUDE ~%MOD_FOLDER%/libs/scripts/remedies/zs_cons_remedies.tph~
 INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/zs_cons_throwables.tph~
