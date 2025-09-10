@@ -1,5 +1,19 @@
-INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/zs_cons_oils.tph~
-INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/zs_cons_elixirs.tph~
-INCLUDE ~%MOD_FOLDER%/libs/scripts/potions/zs_cons_potions.tph~
-INCLUDE ~%MOD_FOLDER%/libs/scripts/remedies/zs_cons_remedies.tph~
-INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/zs_cons_throwables.tph~
+ACTION_IF zs_cons_install_oils
+    INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/zs_cons_oils.tph~
+END
+
+ACTION_IF zs_cons_install_elixirs
+    INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/zs_cons_elixirs.tph~
+END
+
+ACTION_IF zs_cons_install_potions
+    INCLUDE ~%MOD_FOLDER%/libs/scripts/potions/zs_cons_potions.tph~
+END
+
+ACTION_IF zs_cons_install_remedies
+    INCLUDE ~%MOD_FOLDER%/libs/scripts/remedies/zs_cons_remedies.tph~
+END
+
+ACTION_IF zs_cons_install_throwables
+    INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/zs_cons_throwables.tph~
+END

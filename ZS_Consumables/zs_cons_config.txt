@@ -31,27 +31,27 @@ OUTER_SET zs_cons_oil_price_dragonbile    = "3000"
 OUTER_SET zs_cons_oil_price_kuotoa        = "2000"
 OUTER_SET zs_cons_oil_price_dragonbane    = "5000"
 
-OUTER_SET zs_cons_elixir_price_bloodlust            = "5000"
-OUTER_SET zs_cons_elixir_price_mystic_cultivation   = "5000"
-OUTER_SET zs_cons_elixir_price_see_invisibility     = "5000"
-OUTER_SET zs_cons_elixir_price_universal_resistance = "5000"
-OUTER_SET zs_cons_elixir_price_viciousness          = "5000"
+OUTER_SET zs_cons_elixir_price_bloodlust            = "2000"
+OUTER_SET zs_cons_elixir_price_mystic_cultivation   = "3000"
+OUTER_SET zs_cons_elixir_price_see_invisibility     = "1000"
+OUTER_SET zs_cons_elixir_price_universal_resistance = "1500"
+OUTER_SET zs_cons_elixir_price_viciousness          = "2250"
 
-OUTER_SET zs_cons_potion_price_minor_levitation = "5000"
+OUTER_SET zs_cons_potion_price_minor_levitation = "850"
 
 OUTER_SET zs_cons_remedy_price_angelic_reprieve  = "5000"
-OUTER_SET zs_cons_remedy_price_angelic_slumber   = "5000"
-OUTER_SET zs_cons_remedy_price_basilisk_oil      = "5000"
-OUTER_SET zs_cons_remedy_price_remedial_solution = "5000"
+OUTER_SET zs_cons_remedy_price_angelic_slumber   = "2500"
+OUTER_SET zs_cons_remedy_price_basilisk_oil      = "950"
+OUTER_SET zs_cons_remedy_price_remedial_solution = "350"
 
-OUTER_SET zs_cons_throwable_price_acid_vial      = "5000"
-OUTER_SET zs_cons_throwable_price_alchemist_fire = "5000"
-OUTER_SET zs_cons_throwable_price_choking_powder = "5000"
-OUTER_SET zs_cons_throwable_price_grease_bottle  = "5000"
-OUTER_SET zs_cons_throwable_price_holy_water     = "5000"
-OUTER_SET zs_cons_throwable_price_pixie_dust     = "5000"
-OUTER_SET zs_cons_throwable_price_tanglefoot_bag = "5000"
-OUTER_SET zs_cons_throwable_price_web_grenade    = "5000"
+OUTER_SET zs_cons_throwable_price_acid_vial      = "125"
+OUTER_SET zs_cons_throwable_price_alchemist_fire = "100"
+OUTER_SET zs_cons_throwable_price_choking_powder = "250"
+OUTER_SET zs_cons_throwable_price_grease_bottle  = "125"
+OUTER_SET zs_cons_throwable_price_holy_water     = "350"
+OUTER_SET zs_cons_throwable_price_pixie_dust     = "900"
+OUTER_SET zs_cons_throwable_price_tanglefoot_bag = "90"
+OUTER_SET zs_cons_throwable_price_web_grenade    = "550"
 // end prices
 
 //// Pits of Despair store config \\\\
@@ -103,8 +103,8 @@ OUTER_SET zs_cons_add_viciousness          = "1"
 OUTER_SET zs_cons_install_oils          = "1"
 OUTER_SET zs_cons_add_arcane_oil        = "1"
 OUTER_SET zs_cons_add_caustic_oil       = "1"
-OUTER_SET zs_cons_add_dragon_bile       = "1"
-OUTER_SET zs_cons_add_dragonsbane       = "1"
+OUTER_SET zs_cons_add_dragon_bile_oil   = "1"
+OUTER_SET zs_cons_add_dragonsbane_oil   = "1"
 OUTER_SET zs_cons_add_gelid_oil         = "1"
 OUTER_SET zs_cons_add_igneous_oil       = "1"
 OUTER_SET zs_cons_add_kuotoan_oil       = "1"
@@ -116,8 +116,8 @@ OUTER_SET zs_cons_add_soporific_oil     = "1"
 //
 
 // potions
-OUTER_SET zs_cons_install_potions      = "1"
-OUTER_SET zs_cons_add_minor_levitation = "1"
+OUTER_SET zs_cons_install_potions       = "1"
+OUTER_SET zs_cons_add_levitation_potion = "1"
 //
 
 // remedies

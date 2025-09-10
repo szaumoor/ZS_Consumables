@@ -3,77 +3,178 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SHTHSTOR.STO~ BEGIN // shadow thief fence RATELL
                   ~ROGER.STO~     ~override~  // roger the fence
                   ~JAYES.STO~     ~override~  // JAYES the fence
                   ~TRTHF02.STO~   ~override~  // KICH fence (trademeet)
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSAC01~  END // CAUSTIC oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~  END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSAC01~  END // CAUSTIC oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~BSHOP01.STO~ BEGIN // cutpurse shop
     COPY_EXISTING ~BSHOP01.STO~ ~override~ //shadow thief fence RATELL
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR  item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSAC01~  END // CAUSTIC oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPSO3~  END // dragon bile
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR  item_name = ~ZSCSPS01~  END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSAC01~  END // CAUSTIC oil
+        END
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPSO3~  END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SLSHOP01.STO~ BEGIN // black market thief
     COPY_EXISTING ~SLSHOP01.STO~ ~override~ // black market thief
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR  item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR  item_name = ~ZSCSPS01~  END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~PPSTOR01.STO~ BEGIN // storekeep brynnlaw
     COPY_EXISTING ~PPSTOR01.STO~ ~override~ // storekeep brynnlaw
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil 2 units
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSEL01~ END // SCINTILLATING damage oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSCD01~ END // GELID OIL
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TRMER02.STO~ BEGIN // MERCHANT TRADEMEET
     COPY_EXISTING ~TRMER02.STO~ ~override~ // MERCHANT TRADEMEET
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO3~  END // dragon bile
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~MURCRAG.STO~ BEGIN // MRS CRAGMOON
     COPY_EXISTING ~MURCRAG.STO~ ~override~ // MRS CRAGMOON
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO1~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSMD01~ END // magic damage oil 5 units
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~ARLED.STO~ BEGIN
     COPY_EXISTING ~ARLED.STO~ ~override~ //shadow thief fence arledrian
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSPS01~ END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~UHMER01.STO~ BEGIN
     COPY_EXISTING ~UHMER01.STO~ ~override~ // elence fielding umar hills
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPSO4~ END // Dragonsbane oil
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil 2
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPSO4~ END // Dragonsbane oil
+        END
+
     BUT_ONLY
 
     COPY_EXISTING ~UHMER02.STO~ ~override~ // MIN MINLING umar hills
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil 5 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil 1 unit
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil 1 unit
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil 1 unit
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil 1 unit
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil 1
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil 1
+        END
+
     BUT_ONLY
 END
 
@@ -86,12 +187,31 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BERNARD.STO~ BEGIN // copper coronet bernard
                   ~BERNARD6.STO~ ~override~
                   ~HENDAK.STO~   ~override~ //hendak
                   ~LEHTINAN.STO~ ~override~ //lehtinan
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
@@ -99,409 +219,1071 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BHELM.STO~ BEGIN //helm's temple
     COPY_EXISTING ~BHELM.STO~   ~override~ //helm's temple
                   ~TEMHELM.STO~ ~override~ //helm's temple
                   ~TEM4802.STO~ ~override~ //helm's temple
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil 10 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~ULGOTH.STO~ BEGIN //ulgoth's inn
-    COPY_EXISTING ~ULGOTH.STO~ ~override~ //helm's temple
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 7 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+    COPY_EXISTING ~ULGOTH.STO~ ~override~ // ulgoth's inn
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 7 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TEM3402.STO~ BEGIN //helm's temple
     COPY_EXISTING ~TEM3402.STO~ ~override~ //helm's temple
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~ERDANE.STO~ BEGIN //helm's temple (fake one)
     COPY_EXISTING ~ERDANE.STO~ ~override~ //helm's temple
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSPS01~  END // normal poison oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSHL01~  END // sanctified oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSUL01~  END // profane oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSPS01~ END // normal poison oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
+        PATCH_IF zs_cons_add_profane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSUL01~ END // profane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~DAWNMAS.STO~ BEGIN // DAWNMASTER's temple
     COPY_EXISTING ~DAWNMAS.STO~ ~override~ //DAWNMASTER's temple
                   ~TEMLATH.STO~ ~override~ //LATHANDER's temple
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 18 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 18 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TALMISS.STO~ BEGIN // TALOS's temple
     COPY_EXISTING ~TALMISS.STO~  ~override~ //TALOS's temple
                   ~TEMTALOS.STO~ ~override~ //TALOS's temple
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 18 STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS01~  END // POISON damage oil 3 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 18 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // poison damage oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TRRAK01.STO~ BEGIN // THUMB
     COPY_EXISTING ~TRRAK01.STO~ ~override~ //THUMB
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TRGENI01.STO~ BEGIN // trademeet genie
     COPY_EXISTING ~TRGENI01.STO~ ~override~ //trademeet genie
                   ~TRCAR04.STO~ ~override~ // caravan merchant
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSPS01~ END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS03~ END// dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TEMSUP.STO~ BEGIN // waukeen's temple
     COPY_EXISTING ~TEMSUP.STO~   ~override~ //waukeen's temple
                   ~AMCLER02.STO~ ~override~ // waukeen's temple (tob)
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~FRIEND.STO~ BEGIN // friendly arm inn
     COPY_EXISTING ~FRIEND.STO~ ~override~ // friendly arm inn
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSCD01~ END // cold damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSAC01~ END // acid damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~RIBALD.STO~ BEGIN // ribald's shop
     COPY_EXISTING ~RIBALD.STO~ ~override~ // ribald's shop
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSCD01~ END // cold damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSAC01~ END // acid damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
+         PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~RIBALD3.STO~ BEGIN // ribald's shop
     COPY_EXISTING ~RIBALD3.STO~ ~override~ // ribald's shop
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4   STR_VAR item_name = ~ZSCSPS04~  END // Dragonsbane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5   STR_VAR item_name = ~ZSCSPS05~  END // kuotoan oil
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~UDDUER02.STO~ BEGIN // duergar merchant (when encountered as a drow)
     COPY_EXISTING ~UDDUER02.STO~ ~override~ // duergar merchant (when encountered as a drow)
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1   STR_VAR item_name = ~ZSCSPS04~  END // Dragonsbane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1   STR_VAR item_name = ~ZSCSPS05~  END // kuotoan oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // cold damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSAC01~ END // acid damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TAEROM.STO~ BEGIN // TAEROM
     COPY_EXISTING ~TAEROM.STO~ ~override~ // TAEROM
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSFR01~ END // fire damage oil
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~STOBLACK.STO~ BEGIN // BLACK LILY
     COPY_EXISTING ~STOBLACK.STO~ ~override~ // black lily
                   ~STOSILEN.STO~ ~override~ // silence
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSUL01~  END // profane oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_profane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSUL01~ END // profane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~BMTHIEF.STO~ BEGIN // BLACK MARKET THIEF
     COPY_EXISTING ~BMTHIEF.STO~ ~override~ // BLACK MARKET THIEF
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSUL01~  END // profane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_profane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSUL01~ END // profane oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.STO~ BEGIN // SOD QUARTERMASTER
     COPY_EXISTING ~bdbeleg3.STO~ ~override~ // sod quartermaster
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdnazram.STO~ BEGIN // SOD GENIE
     COPY_EXISTING ~bdnazram.STO~ ~override~ // sod genie
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPS04~  END // Dragonsbane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdonoro.STO~ BEGIN // SOD ONOROTH
     COPY_EXISTING ~bdonoro.STO~ ~override~ // sod onoroth
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS01~ END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdpolvi.STO~ BEGIN // SOD CRUSADER POLVI
     COPY_EXISTING ~bdpolvi.STO~ ~override~ // sod crusader polvi
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdherod.STO~ BEGIN // SOD HEROD MERCHANT
     COPY_EXISTING ~bdherod.STO~ ~override~ // sod herod merchant
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdsorcsc.STO~ BEGIN // SOD SORCEROUS SUNDRIES
     COPY_EXISTING ~bdsorcsc.STO~ ~override~ // sod sorcerous sundries
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS04~  END // Dragonsbane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~HIGHHEDG.STO~ BEGIN // HIGH HEDGE
     COPY_EXISTING ~HIGHHEDG.STO~ ~override~ // HIGH HEDGE
                   ~STO0703.STO~  ~override~ // SORCEROUS SUNDRIES
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~INN3351.STO~ BEGIN // FELDEPOST INN
+
     COPY_EXISTING ~INN3351.STO~ ~override~ // FELDEPOST INN
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~UDDROW24.STO~ BEGIN // DROW VENDOR
     COPY_EXISTING ~UDDROW24.STO~ ~override~ //DROW VENDOR
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~AMSMUG01.STO~ BEGIN // AMEKTHRAN SMUGGLERS
     COPY_EXISTING ~AMSMUG01.STO~ ~override~ // AMEKTHRAN SMUGGLERS
                   ~AMSMUG02.STO~ ~override~ // AMEKTHRAN SMUGGLERS
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 14 STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS04~  END // Dragonsbane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS05~  END // kuotoan oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSUL01~  END // profane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSHL01~  END // sanctified oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 14 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
+        PATCH_IF zs_cons_add_profane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSUL01~ END // profane oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~25SPELL.STO~ BEGIN // ARCANA ARCHIVES
     COPY_EXISTING ~25SPELL.STO~  ~override~ // ARCANA ARCHIVES
                   ~25SPELL2.STO~ ~override~ // ARCANA ARCHIVES
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 16 STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR  item_name = ~ZSCSPS03~  END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR  item_name = ~ZSCSPS05~  END // kuotoan oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR  item_name = ~ZSCSUL01~  END // profane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR  item_name = ~ZSCSHL01~  END // sanctified oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSPS04~  END // Dragonsbane oil
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 16 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
+        PATCH_IF zs_cons_add_profane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSUL01~ END // profane oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~HGKAR01.STO~ BEGIN // Karthis al-Hezzar
     COPY_EXISTING ~HGKAR01.STO~  ~override~ // Karthis al-Hezzar
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSPS02~   END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSPS03~   END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS04~   END // Dragonsbane oil
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~UDDROW23.STO~ BEGIN // DROW VENDOR
     COPY_EXISTING ~UDDROW23.STO~ ~override~ //DROW VENDOR
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSPS01~  END // poisonous oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSMD01~  END // magic damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSPS01~ END // noxious oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~OHNPOTME.STO~ BEGIN // POTION MERCHANT (NEERA'S QUEST)
     COPY_EXISTING ~OHNPOTME.STO~ ~override~ // POTION MERCHANT (NEERA'S QUEST)
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSMD01~ END // magic damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS01~ END // POISON damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSUL01~  END // profane oil
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_arcane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSMD01~ END // arcane oil
+        END
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS01~ END // POISON damage oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
+        PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
+        END
+
+        PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS03~ END // dragon bile
+        END
+
+        PATCH_IF zs_cons_add_profane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSUL01~ END // profane oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SAHPR1.STO~ BEGIN //SAUHAGIN's PRIESTESS
-    COPY_EXISTING ~SAHPR1.STO~ ~override~ //SAUHAGIN's PRIESTESS
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSEL01~ END // ELECTRICAL damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSPS01~ END // POISON damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+    COPY_EXISTING ~SAHPR1.STO~ ~override~ //SAUHAGIN PRIESTESS
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil 20
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil 20
+        END
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~ZSCSPS01~ END // POISON damage oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~GARLENA.STO~ BEGIN // GARLENA (watcher's keep)
     COPY_EXISTING ~GARLENA.STO~ ~override~ // GARLENA (watcher's keep)
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSEL01~  END // ELECTRICAL damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSCD01~  END // COLD damage oil 20 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSFR01~  END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~ZSCSAC01~  END // ACID damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSHL01~  END // sanctified oil
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSEL01~ END // scintillating oil 20
+        END
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil 20
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
+        PATCH_IF zs_cons_add_profane_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~ZSCSUL01~ END // profane oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SUELF10.STO~ BEGIN // SULDANESSELAR MERCHANT
     COPY_EXISTING ~SUELF10.STO~ ~override~ // SULDANESSELAR MERCHANT
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~TEM2304.STO~ BEGIN // gellana mirrorshade
     COPY_EXISTING ~TEM2304.STO~ ~override~ // gellana mirrorshade
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~ZSCSHL01~ END // sanctified oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SHOP03.STO~ BEGIN // MAHEER
     COPY_EXISTING ~SHOP03.STO~ ~override~ // MAHEER
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil 2 units
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
     BUT_ONLY
 END
 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SHOP04.STO~ BEGIN // potion merchant
     COPY_EXISTING ~SHOP04.STO~ ~override~ // potion merchant
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // COLD damage oil 2 units
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // FIRE damage oil
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSCD01~ END // GELID damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSFR01~ END // IGNEOUS damage oil
+        END
+
     BUT_ONLY
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~BDWAIZAH.STO~ BEGIN // THIEF MERCHANT (SOD)
     COPY_EXISTING ~BDWAIZAH.STO~ ~override~ // THIEF MERCHANT (SOD)
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 7 STR_VAR item_name = ~ZSCSPS01~ END // POISON damage oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
-        LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSAC01~ END // ACID damage oil
+
+        PATCH_IF zs_cons_add_noxious_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 7 STR_VAR item_name = ~ZSCSPS01~ END // POISON damage oil
+        END
+
+        PATCH_IF zs_cons_add_soporific_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
+        END
+
+        PATCH_IF zs_cons_add_kuotoan_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~ZSCSPS05~ END // kuotoan oil
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~ZSCSAC01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY
 END

@@ -1,15 +1,15 @@
 COPY ~%MOD_FOLDER%/items/remedies/angelic_reprieve~ ~override~
 COPY_EXISTING ~ZSCSARP0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@100) id_ref_desc=RESOLVE_STR_REF(@101) END
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@100) id_ref_desc=RESOLVE_STR_REF(@101) price = zs_cons_remedy_price_angelic_reprieve END
 
 COPY ~%MOD_FOLDER%/items/remedies/angelic_slumber~ ~override~
 COPY_EXISTING ~ZSCSASL0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@110) id_ref_desc=RESOLVE_STR_REF(@111) END
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@110) id_ref_desc=RESOLVE_STR_REF(@111) price = zs_cons_remedy_price_angelic_slumber END
 
 COPY ~%MOD_FOLDER%/items/remedies/basilisk_oil~ ~override~
 COPY_EXISTING ~ZSCSBSK0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@120) id_ref_desc=RESOLVE_STR_REF(@121) END
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@120) id_ref_desc=RESOLVE_STR_REF(@121) price = zs_cons_remedy_price_basilisk_oil END
 
 COPY ~%MOD_FOLDER%/items/remedies/remedial_solution~ ~override~
 COPY_EXISTING ~ZSCSRMS0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@140) id_ref_desc=RESOLVE_STR_REF(@141) END
+    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@140) id_ref_desc=RESOLVE_STR_REF(@141) price = zs_cons_remedy_price_remedial_solution END

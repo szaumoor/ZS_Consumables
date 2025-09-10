@@ -73,12 +73,12 @@ Critical hit effects: +2 damage and THAC0 for 2 rounds (does not stack)
 Weight: 1~
 
 @170 = ~Elixir of Bloodlust~
-@171 = ~This elixir is a powerful concoction that will make the imbiber restore each time they spill blood from their enemies, becoming more frenzied each time a foe is killed. This effect will not stack with itself or other elixirs.
+@171 = ~This elixir is a powerful concoction that will make the imbiber restore health each time they spill blood from their enemies, becoming more frenzied each time a foe is killed. This effect will not stack with itself or other elixirs.
 
 STATISTICS:
 
-Life-steal: Heal 1 HP each time a target is hit.
-Bloodlust: Kills restore 6 HP plus 8% of maximum HP and increase attacks per round by 1 for the next 2 rounds (does not stack)
+Life-steal: Heal 1 or 2 Hit Points each time a target is hit
+Bloodlust: Kills restore 6 Hit Points plus 8% of maximum Hit Points and increase attacks per round by 1 for the next 2 rounds (does not stack)
 Duration: 8 hours
 
 Weight: 1~

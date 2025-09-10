@@ -1,73 +1,97 @@
 COPY_EXISTING ~ohbconco.sto~  ~override~ //bellowgup
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_arcane" BEGIN
-        ADD_STORE_ITEM ~ZSCSMD01~ #1 #0 #0 ~IDENTIFIED~ (15)
-    END ELSE PATCH_IF zs_cons_pod_allow_arcane BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_arcane" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSMD01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSMD01~ #1 #0 #0 ~IDENTIFIED~ (15)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_arcane BEGIN
         ADD_STORE_ITEM ~ZSCSMD01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_arcane_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_caustic" BEGIN
-        ADD_STORE_ITEM ~ZSCSAC01~ #1 #0 #0 ~IDENTIFIED~ (20)
-    END ELSE PATCH_IF zs_cons_pod_allow_caustic BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_caustic" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSAC01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSAC01~ #1 #0 #0 ~IDENTIFIED~ (20)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_caustic BEGIN
         ADD_STORE_ITEM ~ZSCSAC01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_caustic_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_gelid" BEGIN
-        ADD_STORE_ITEM ~ZSCSCD01~ #1 #0 #0 ~IDENTIFIED~ (20)
-    END ELSE PATCH_IF zs_cons_pod_allow_gelid BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_gelid" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSCD01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSCD01~ #1 #0 #0 ~IDENTIFIED~ (20)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_gelid BEGIN
         ADD_STORE_ITEM ~ZSCSCD01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_gelid_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_scintillating" BEGIN
-        ADD_STORE_ITEM ~ZSCSEL01~ #1 #0 #0 ~IDENTIFIED~ (20)
-    END ELSE PATCH_IF zs_cons_pod_allow_scintillating BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_scintillating" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSEL01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSEL01~ #1 #0 #0 ~IDENTIFIED~ (20)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_scintillating BEGIN
         ADD_STORE_ITEM ~ZSCSEL01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_scintillating_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_igneous" BEGIN
-        ADD_STORE_ITEM ~ZSCSFR01~ #1 #0 #0 ~IDENTIFIED~ (20)
-    END ELSE PATCH_IF zs_cons_pod_allow_igneous BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_igneous" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSFR01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSFR01~ #1 #0 #0 ~IDENTIFIED~ (20)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_igneous BEGIN
         ADD_STORE_ITEM ~ZSCSFR01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_igneous_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_noxious" BEGIN
-        ADD_STORE_ITEM ~ZSCSPS01~ #1 #0 #0 ~IDENTIFIED~ (15)
-    END ELSE PATCH_IF zs_cons_pod_allow_noxious BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_noxious" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSPS01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSPS01~ #1 #0 #0 ~IDENTIFIED~ (15)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_noxious BEGIN
         ADD_STORE_ITEM ~ZSCSPS01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_noxious_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_soporific" BEGIN
-        ADD_STORE_ITEM ~ZSCSPS02~ #1 #0 #0 ~IDENTIFIED~ (10)
-    END ELSE PATCH_IF zs_cons_pod_allow_soporific BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_soporific" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSPS02.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSPS02~ #1 #0 #0 ~IDENTIFIED~ (10)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_soporific BEGIN
         ADD_STORE_ITEM ~ZSCSPS02~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_soporific_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_kuotoa" BEGIN
-        ADD_STORE_ITEM ~ZSCSPS05~ #1 #0 #0 ~IDENTIFIED~ (3)
-    END ELSE PATCH_IF zs_cons_pod_allow_kuotoa BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_kuotoa" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSPS05.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSPS05~ #1 #0 #0 ~IDENTIFIED~ (3)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_kuotoa BEGIN
         ADD_STORE_ITEM ~ZSCSPS05~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_kuotoa_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_dragonbane" BEGIN
-        ADD_STORE_ITEM ~ZSCSPS04~ #1 #0 #0 ~IDENTIFIED~ (3)
-    END ELSE PATCH_IF zs_cons_pod_allow_dragonbane BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_dragonbane" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSPS04.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSPS04~ #1 #0 #0 ~IDENTIFIED~ (3)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_dragonbane BEGIN
         ADD_STORE_ITEM ~ZSCSPS04~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_dragonbane_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_dragonbile" BEGIN
-        ADD_STORE_ITEM ~ZSCSPS03~ #1 #0 #0 ~IDENTIFIED~ (6)
-    END ELSE PATCH_IF zs_cons_pod_allow_dragonbile BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_dragonbile" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSPS03.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSPS03~ #1 #0 #0 ~IDENTIFIED~ (6)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_dragonbile BEGIN
         ADD_STORE_ITEM ~ZSCSPS03~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_dragonbile_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_sanctified" BEGIN
-        ADD_STORE_ITEM ~ZSCSHL01~ #1 #0 #0 ~IDENTIFIED~ (8)
-    END ELSE PATCH_IF zs_cons_pod_allow_sanctified BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_sanctified" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSHL01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSHL01~ #1 #0 #0 ~IDENTIFIED~ (8)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_sanctified BEGIN
         ADD_STORE_ITEM ~ZSCSHL01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_sanctified_store)
     END
 
-    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_allow_profane" BEGIN
-        ADD_STORE_ITEM ~ZSCSUL01~ #1 #0 #0 ~IDENTIFIED~ (8)
-    END ELSE PATCH_IF zs_cons_pod_allow_profane BEGIN
+    PATCH_IF !VARIABLE_IS_SET "zs_cons_pod_add_profane" BEGIN
+        PATCH_IF FILE_EXISTS_IN_GAME ~ZSCSUL01.itm~ BEGIN
+            ADD_STORE_ITEM ~ZSCSUL01~ #1 #0 #0 ~IDENTIFIED~ (8)
+        END
+    END ELSE PATCH_IF zs_cons_pod_add_profane BEGIN
         ADD_STORE_ITEM ~ZSCSUL01~ #1 #0 #0 ~IDENTIFIED~ (zs_cons_pod_profane_store)
     END
