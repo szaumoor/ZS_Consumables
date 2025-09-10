@@ -122,7 +122,8 @@ OUTER_SET zs_cons_add_levitation_potion = "1"
 
 // remedies
 OUTER_SET zs_cons_install_remedies      = "1"
-OUTER_SET zs_cons_add_angelic           = "1"
+OUTER_SET zs_cons_add_angelic_reprieve  = "1"
+OUTER_SET zs_cons_add_angelic_slumber   = "1"
 OUTER_SET zs_cons_add_basilisk_oil      = "1"
 OUTER_SET zs_cons_add_remedial_solution = "1"
 //

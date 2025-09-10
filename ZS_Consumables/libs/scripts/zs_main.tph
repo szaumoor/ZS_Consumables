@@ -1,19 +1,19 @@
-ACTION_IF zs_cons_install_oils
+ACTION_IF zs_cons_install_oils BEGIN
     INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/zs_cons_oils.tph~
 END
 
-ACTION_IF zs_cons_install_elixirs
+ACTION_IF zs_cons_install_elixirs BEGIN
     INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/zs_cons_elixirs.tph~
 END
 
-ACTION_IF zs_cons_install_potions
+ACTION_IF zs_cons_install_potions BEGIN
     INCLUDE ~%MOD_FOLDER%/libs/scripts/potions/zs_cons_potions.tph~
 END
 
-ACTION_IF zs_cons_install_remedies
+ACTION_IF zs_cons_install_remedies BEGIN
     INCLUDE ~%MOD_FOLDER%/libs/scripts/remedies/zs_cons_remedies.tph~
 END
 
-ACTION_IF zs_cons_install_throwables
+ACTION_IF zs_cons_install_throwables BEGIN
     INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/zs_cons_throwables.tph~
 END
