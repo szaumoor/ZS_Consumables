@@ -9,17 +9,21 @@ END
 ACTION_IF zs_cons_add_alchemist_fire BEGIN
 
     COPY ~%MOD_FOLDER%/items/throwables/alchemist_fire~ ~override~
+    ADD_PROJECTILE ~%MOD_FOLDER%/pro/alchemist_fire/ZSCSALFZ.PRO~
     COPY_EXISTING ~ZSCSALF0.ITM~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@180) id_ref_desc=RESOLVE_STR_REF(@181) price = zs_cons_throwable_price_alchemist_fire END
+        LPF ALTER_HEADER INT_VAR projectile = %ZSCSALFZ% END
 
 END
 
 ACTION_IF zs_cons_add_choking_powder BEGIN
 
     COPY ~%MOD_FOLDER%/items/throwables/choking_powder~ ~override~
+    ADD_PROJECTILE ~%MOD_FOLDER%/pro/acid_vial/ZSCSACVZ.PRO~
     COPY_EXISTING ~ZSCSCKP0.ITM~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@210) id_ref_desc=RESOLVE_STR_REF(@211) price = zs_cons_throwable_price_choking_powder END
-        
+        LPF ALTER_HEADER INT_VAR projectile = %ZSCSACVZ% END
+
 END
 
 ACTION_IF zs_cons_add_grease_bottle BEGIN

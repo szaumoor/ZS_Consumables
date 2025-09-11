@@ -1,6 +1,12 @@
 @0 = ~Install consumables and spread them all through the world~
 @50 = ~This mod is only available for BGEE/BG2EE/EET.~
 
+@98 = ~Remedy~
+@99 = ~Remedies are specially crafted concoctions intended to cure ailments, restore health, or alleviate harmful effects. Each remedy provides unique benefits to help recover from injuries or negative conditions.
+
+STATISTICS:
+
+Weight: 1~
 @100 = ~Angelic Reprieve Remedy~
 @101 = ~This rare remedy forces the imbiber to fall into deep slumber for a relatively short time, after which they wake up relatively more refreshed and ready to continue the adventure.
 
@@ -52,6 +58,11 @@ Special: May be given to others
 
 Weight: 1~
 
+@148 = ~Elixir~
+@149 = ~Elixirs are powerful concoctions that provide various temporary enhancements to the imbiber. Each elixir offers unique benefits, but their effects do not stack with themselves or with other elixirs. Only one elixir can be active at a time.
+
+Weight: 1~
+
 @150 = ~Elixir of Seeing the Invisible~
 @151 = ~This elixir allows the imbiber to momentarily have the ability to spot invisible creatures six times over three rounds. This effect will not stack with itself or other elixirs.
 
@@ -84,21 +95,20 @@ Duration: 8 hours
 Weight: 1~
 
 @180 = ~Alchemist's Fire~
-@181 = ~Alchemist's fire is a sticky, adhesive substance that ignites when exposed to air. Shapes swirl and glow behind the glass, liquid embers folding into and around each other. When thrown, it will explode on impact, dealing 1d6 fire damage to all creatures in a 10 ft. radius. Alchemist's Fire is highly priced as a troll-killing tool.
+@181 = ~Alchemist's fire is a sticky, adhesive substance that ignites when exposed to air. Shapes swirl and glow behind the glass, liquid embers folding into and around each other. When thrown, it will explode on impact, dealing 1d6+1 fire damage to all creatures in a 10 ft. radius, igniting the area around it for 1 round. Alchemist's Fire is highly priced as a troll-killing tool.
 
 STATISTICS:
 
-Damage: 1d6+1 fire damage, double vs. targets affected by Grease
+Damage: 1d6+1 fire damage in a small area. Targets remaining in the fiery area may take 1d6+1 fire damage again.
 
 Weight: 1~
 
 @190 = ~Acid Vial~
-@191 = ~This vial contains a highly corrosive acid that can be thrown at a target to deal acid damage on impact, which
-may continue briefly afterwards. These vials are highly priced as troll-killing tools.
+@191 = ~This vial contains a highly corrosive acid that can be thrown at a target to deal acid damage on impact, which may continue briefly afterwards. These vials are highly priced as troll-killing tools.
 
 STATISTICS:
 
-Damage: 1d6+1 acid damage (no save), and again after one round (save vs. Breath at +2)
+Damage: 1d6+1 acid damage (no save), and again after one round (save vs. Breath at +2 to take half)
 
 Weight: 1~
 

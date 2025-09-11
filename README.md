@@ -15,7 +15,7 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - Elixir of **Universal Resistance**: for 8 hours, resist 25% of all elemental, poison, and magical damage, as well as 7% physical damage resistance. The user also is granted +2 bonus to Armor Class and saving throws.
   - Elixir of **Mystic Cultivation**: For 24 hours, spell casters gain +1 to all spell slots, and cast spells with a +1 bonus to casting speed, and +2 bonus to casting level, and deal 10% more elemental and magical damage. Does not stack. Only spellcasters can drink it.
 - **Potion**: regular potion like vanilla ones. No restrictions.
-  - Potion of **Minor Levitation**: allows the user to slightly hover above the ground, which grants immunity to most ground-based effects like web and grease. It also grants immunity to Slow and 20% faster movement speed for 3 turns
+  - Potion of **Minor Levitation**: allows the user to slightly hover above the ground, which grants immunity to most ground-based effects like web and grease. It also grants immunity to Slow and 35% faster movement speed for 3 turns
 - **Oil**: a new category of consumables that provide various effects when applied to weapons for 8 rounds. This is taken straight from my old ZS_WeaponOils (now deprecated). Poisonous oils can cause self-poisoning, except blackguards and assassins are always immune. Others need to have at least 16 dexterity to avoid it, but thieves have a 50% chance of avoiding the damage either way; bards have a 30% chance. Only one oil may be active at once
   - **Arcane** oil: deal 1d4+2 magic damage per hit for 8 rounds. Does not allow saving throw but is stopped by magic resistance.
   - **Caustic** oil: deal 1d2+1 acid damage per hit. Save vs. Breath for half, bypasses magic resistance.
@@ -23,7 +23,7 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - **Scintillating** oil: deal 1d2+1 electric damage per hit. Save vs. Breath for half, bypasses magic resistance.
   - **Igneous** oil: deal 1d2+1 fire damage per hit. Save vs. Breath for half, bypasses magic resistance.
   - **Noxious** Oil: deal 1d2+1 poison damage per hit. Save vs. Poison to avoid poisoning: 6 poison damage over 2 rounds.
-  - Drow **Soporiferous** Oil: save vs. Death and fall into a deep slumber for 1 turn. Damage wakes them up.
+  - Drow **Soporific** Oil: save vs. Death and fall into a deep slumber for 1 turn. Damage wakes them up.
   - **Kuo-Toan** Oil of **Stunning**: Save vs. Spell at +2 or become stunned for 1 round. Considered a poison.
   - **Dragon Bile** Extract: non-dragons take 1 poison damage, and have their movement speed and strength reduced to half for 5 rounds if save vs. Death is failed.
   - **Dragonsbane** oil: a very expensive oil which causes 1d6+2 poison damage to dragons on hit (half to others) which severely weakens dragons for 3 rounds. This weakness can only apply once per 3 rounds, and fades progressively round by round. The pain it causes also has a 50% chance of disrupting their improved invisibility or stoneskin.
@@ -43,6 +43,8 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - **Grease** bottle: this bottle contains a thick, slippery grease that can be thrown on the ground to create a hazardous area. Any creature that moves through this area suffers the effects of the Grease spell.
   - **Pixie Dust**: you can throw a bunch of pixie dust into the air, making all targets in a small area invisible for 1 turn
   - **Holy Water**: throwable container that deals 3d4 magic damage plus 1d4 radiant damage to undead and fiends on a hit. Radiant damage cannot be resisted. They may be weakened if they fail a save vs. Death at +2, taking 15% more physical damage on hit for a few rounds. Magic resistance also doesn't affect it.
+
+When assessing durations, bear in mind that when an item says "hours", it means in-game hours, which in real-time are 5 minutes each. So an elixir that lasts for 4 hours lasts for 20 real-time minutes. This is how it works in vanilla as well. Only seconds, rounds, and turns refer to real-time.
 
 ## Compatibility
 

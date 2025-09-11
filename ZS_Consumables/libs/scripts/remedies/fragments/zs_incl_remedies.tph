@@ -2,7 +2,14 @@ ACTION_IF zs_cons_add_angelic_reprieve BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/angelic_reprieve~ ~override~
     COPY_EXISTING ~ZSCSARP0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@100) id_ref_desc=RESOLVE_STR_REF(@101) price = zs_cons_remedy_price_angelic_reprieve END
+        LPF ALTER_ITEM
+        INT_VAR
+            unid_ref_name = RESOLVE_STR_REF(@98)
+            unid_ref_desc = RESOLVE_STR_REF(@99)
+            id_ref_name=RESOLVE_STR_REF(@100)
+            id_ref_desc=RESOLVE_STR_REF(@101)
+            price = zs_cons_remedy_price_angelic_reprieve
+        END
 
 END
 
@@ -10,7 +17,14 @@ ACTION_IF zs_cons_add_angelic_slumber BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/angelic_slumber~ ~override~
     COPY_EXISTING ~ZSCSASL0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@110) id_ref_desc=RESOLVE_STR_REF(@111) price = zs_cons_remedy_price_angelic_slumber END
+    LPF ALTER_ITEM
+    INT_VAR
+        unid_ref_name = RESOLVE_STR_REF(@98)
+        unid_ref_desc = RESOLVE_STR_REF(@99)
+        id_ref_name=RESOLVE_STR_REF(@110)
+        id_ref_desc=RESOLVE_STR_REF(@111)
+        price = zs_cons_remedy_price_angelic_slumber
+    END
 
 END
 
@@ -18,7 +32,14 @@ ACTION_IF zs_cons_add_basilisk_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/basilisk_oil~ ~override~
     COPY_EXISTING ~ZSCSBSK0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@120) id_ref_desc=RESOLVE_STR_REF(@121) price = zs_cons_remedy_price_basilisk_oil END
+        LPF ALTER_ITEM
+        INT_VAR
+            unid_ref_name = RESOLVE_STR_REF(@98)
+            unid_ref_desc = RESOLVE_STR_REF(@99)
+            id_ref_name=RESOLVE_STR_REF(@120)
+            id_ref_desc=RESOLVE_STR_REF(@121)
+            price = zs_cons_remedy_price_basilisk_oil
+        END
 
 END
 
@@ -26,6 +47,13 @@ ACTION_IF zs_cons_add_remedial_solution BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/remedial_solution~ ~override~
     COPY_EXISTING ~ZSCSRMS0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@140) id_ref_desc=RESOLVE_STR_REF(@141) price = zs_cons_remedy_price_remedial_solution END
+        LPF ALTER_ITEM
+        INT_VAR
+            unid_ref_name = RESOLVE_STR_REF(@98)
+            unid_ref_desc = RESOLVE_STR_REF(@99)
+            id_ref_name=RESOLVE_STR_REF(@140)
+            id_ref_desc=RESOLVE_STR_REF(@141)
+            price = zs_cons_remedy_price_remedial_solution
+        END
 
 END
