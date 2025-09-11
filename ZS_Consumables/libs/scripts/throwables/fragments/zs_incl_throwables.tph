@@ -1,31 +1,63 @@
-COPY ~%MOD_FOLDER%/items/throwables/acid_vial~ ~override~
-COPY_EXISTING ~ZSCSACV0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@190) id_ref_desc=RESOLVE_STR_REF(@191) price = zs_cons_throwable_price_acid_vial END
+ACTION_IF zs_cons_add_acid_vial BEGIN
 
-COPY ~%MOD_FOLDER%/items/throwables/alchemist_fire~ ~override~
-COPY_EXISTING ~ZSCSALF0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@180) id_ref_desc=RESOLVE_STR_REF(@181) price = zs_cons_throwable_price_alchemist_fire END
+    COPY ~%MOD_FOLDER%/items/throwables/acid_vial~ ~override~
+    COPY_EXISTING ~ZSCSACV0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@190) id_ref_desc=RESOLVE_STR_REF(@191) price = zs_cons_throwable_price_acid_vial END
 
-COPY ~%MOD_FOLDER%/items/throwables/choking_powder~ ~override~
-COPY_EXISTING ~ZSCSCKP0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@210) id_ref_desc=RESOLVE_STR_REF(@211) price = zs_cons_throwable_price_choking_powder END
+END
 
-COPY ~%MOD_FOLDER%/items/throwables/grease_bottle~ ~override~
-COPY_EXISTING ~ZSCSGRS0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@200) id_ref_desc=RESOLVE_STR_REF(@201) price = zs_cons_throwable_price_grease_bottle END
+ACTION_IF zs_cons_add_alchemist_fire BEGIN
 
-COPY ~%MOD_FOLDER%/items/throwables/holy_water~ ~override~
-COPY_EXISTING ~ZSCSHLW0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@270) id_ref_desc=RESOLVE_STR_REF(@271) price = zs_cons_throwable_price_holy_water END
+    COPY ~%MOD_FOLDER%/items/throwables/alchemist_fire~ ~override~
+    COPY_EXISTING ~ZSCSALF0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@180) id_ref_desc=RESOLVE_STR_REF(@181) price = zs_cons_throwable_price_alchemist_fire END
 
-COPY ~%MOD_FOLDER%/items/throwables/pixie_dust~ ~override~
-COPY_EXISTING ~ZSCSPXD0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@130) id_ref_desc=RESOLVE_STR_REF(@131) price = zs_cons_throwable_price_pixie_dust END
+END
 
-COPY ~%MOD_FOLDER%/items/throwables/tanglefoot_bag~ ~override~
-COPY_EXISTING ~ZSCSTGF0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@260) id_ref_desc=RESOLVE_STR_REF(@261) price = zs_cons_throwable_price_tanglefoot_bag END
+ACTION_IF zs_cons_add_choking_powder BEGIN
 
-COPY ~%MOD_FOLDER%/items/throwables/web_grenade~ ~override~
-COPY_EXISTING ~ZSCSWEB0.ITM~ ~override~
-    LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@220) id_ref_desc=RESOLVE_STR_REF(@221) price = zs_cons_throwable_price_web_grenade END
+    COPY ~%MOD_FOLDER%/items/throwables/choking_powder~ ~override~
+    COPY_EXISTING ~ZSCSCKP0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@210) id_ref_desc=RESOLVE_STR_REF(@211) price = zs_cons_throwable_price_choking_powder END
+        
+END
+
+ACTION_IF zs_cons_add_grease_bottle BEGIN
+
+    COPY ~%MOD_FOLDER%/items/throwables/grease_bottle~ ~override~
+    COPY_EXISTING ~ZSCSGRS0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@200) id_ref_desc=RESOLVE_STR_REF(@201) price = zs_cons_throwable_price_grease_bottle END
+
+END
+
+ACTION_IF zs_cons_add_holy_water BEGIN
+
+    COPY ~%MOD_FOLDER%/items/throwables/holy_water~ ~override~
+    COPY_EXISTING ~ZSCSHLW0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@270) id_ref_desc=RESOLVE_STR_REF(@271) price = zs_cons_throwable_price_holy_water END
+
+END
+
+ACTION_IF zs_cons_add_pixie_dust BEGIN
+
+    COPY ~%MOD_FOLDER%/items/throwables/pixie_dust~ ~override~
+    COPY_EXISTING ~ZSCSPXD0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@130) id_ref_desc=RESOLVE_STR_REF(@131) price = zs_cons_throwable_price_pixie_dust END
+
+END
+
+ACTION_IF zs_cons_add_tanglefoot_bag BEGIN
+
+    COPY ~%MOD_FOLDER%/items/throwables/tanglefoot_bag~ ~override~
+    COPY_EXISTING ~ZSCSTGF0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@260) id_ref_desc=RESOLVE_STR_REF(@261) price = zs_cons_throwable_price_tanglefoot_bag END
+
+END
+
+ACTION_IF zs_cons_add_web_grenade BEGIN
+
+    COPY ~%MOD_FOLDER%/items/throwables/web_grenade~ ~override~
+    COPY_EXISTING ~ZSCSWEB0.ITM~ ~override~
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@220) id_ref_desc=RESOLVE_STR_REF(@221) price = zs_cons_throwable_price_web_grenade END
+
+END

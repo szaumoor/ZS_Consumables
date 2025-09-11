@@ -27,7 +27,7 @@ ACTION_IF zs_cons_add_universal_resistance BEGIN
 
     COPY ~%MOD_FOLDER%/items/elixirs/universal_resistance~ ~override~
     COPY_EXISTING ~ZSCSUVR0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@150) id_ref_desc=RESOLVE_STR_REF(151) price = zs_cons_elixir_price_universal_resistance END
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@240) id_ref_desc=RESOLVE_STR_REF(241) price = zs_cons_elixir_price_universal_resistance END
 
 END
 

@@ -20,7 +20,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~PPSTOR01.STO~ BEGIN // storekeep brynnlaw
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
     BUT_ONLY
@@ -35,7 +35,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~TRMER02.STO~ BEGIN // MERCHANT TRADEMEET
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
@@ -53,7 +53,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~MURCRAG.STO~ BEGIN // MRS CRAGMOON
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
@@ -77,7 +77,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BHELM.STO~ BEGIN //helm's temple
                   ~TEM4802.STO~ ~override~ //helm's temple
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
     BUT_ONLY
@@ -87,7 +87,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~ULGOTH.STO~ BEGIN //ulgoth's inn
     COPY_EXISTING ~ULGOTH.STO~ ~override~ //ulgoth's inn
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
     BUT_ONLY
@@ -97,7 +97,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~TEM3402.STO~ BEGIN //helm's temple
     COPY_EXISTING ~TEM3402.STO~ ~override~ //helm's temple
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
     BUT_ONLY
@@ -108,7 +108,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~DAWNMAS.STO~ BEGIN // DAWNMASTER's temple
                   ~TEMLATH.STO~ ~override~ //LATHANDER's temple
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
     BUT_ONLY
@@ -131,7 +131,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~TRGENI01.STO~ BEGIN // trademeet genie
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -157,7 +157,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~RIBALD.STO~ BEGIN // ribald's shop
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -234,7 +234,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.STO~ BEGIN // SOD QUARTERMASTER
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -260,7 +260,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdnazram.STO~ BEGIN // SOD GENIE
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -286,7 +286,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdsorcsc.STO~ BEGIN // SOD SORCEROUS SUNDRIES
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -313,7 +313,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~HIGHHEDG.STO~ BEGIN // HIGH HEDGE
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -354,7 +354,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~AMSMUG01.STO~ BEGIN // AMEKTHRAN SMUGGLERS
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
     BUT_ONLY
@@ -369,7 +369,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~25SPELL.STO~ BEGIN // ARCANA ARCHIVES
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -396,7 +396,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~OHNPOTME.STO~ BEGIN // POTION MERCHANT (NEERA'S Q
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -436,7 +436,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~GARLENA.STO~ BEGIN // GARLENA (watcher's keep)
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
@@ -450,7 +450,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~TEM2304.STO~ BEGIN // gellana mirrorshade
     COPY_EXISTING ~TEM2304.STO~ ~override~ // gellana mirrorshade
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
     BUT_ONLY
@@ -460,7 +460,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SHOP04.STO~ BEGIN // potion merchant
     COPY_EXISTING ~SHOP04.STO~ ~override~ // potion merchant
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSUVRI~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN

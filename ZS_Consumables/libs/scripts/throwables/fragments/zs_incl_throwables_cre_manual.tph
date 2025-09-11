@@ -1,1 +1,25 @@
-PRINT "No manual placement of elixirs on creatures so far."
+<<<<<<<<./zs_consumables/macro.tph
+DEFINE_PATCH_MACRO stuff BEGIN
+//replaceme
+END
+>>>>>>>>
+COPY ~./zs_consumables/macro.tph~ ~./zs_consumables/macro.tph~
+    REPLACE_TEXTUALLY ~\(//replaceme\)~ ~ADD_CRE_ITEM "ZSCSWEB0" "#%random%" "#0" "#0" "none" "inv" %WNL%\1~
+
+REINCLUDE ~./zs_consumables/macro.tph~
+
+COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
+              ~UDPHAE02.CRE~ ~override~ // phaere
+              ~CUPHAER.CRE~ ~override~ // phaere
+              ~UDSOLA01.CRE~ ~override~ // solaufein
+              ~UDSOLA02.CRE~ ~override~ // solaufein
+              ~DADROW10.CRE~ ~override~ // drow torturer
+              ~DADROW11.CRE~ ~override~ // drow torturer
+              ~DADROW8.CRE~  ~override~ // drow torturer
+              ~DADROW9.CRE~  ~override~ // drow torturer
+              ~DADROW6.CRE~  ~override~ // drowleader
+
+        SET random = RANDOM(0 3)
+        LPM stuff
+
+BUT_ONLY IF_EXISTS

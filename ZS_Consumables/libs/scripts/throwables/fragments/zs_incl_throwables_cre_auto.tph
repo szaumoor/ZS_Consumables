@@ -1,1 +1,35 @@
-PRINT "No automatic placement of elixirs in creature inventories so far."
+ACTION_IF zs_cons_add_random_redistribution_cre BEGIN
+    WITH_SCOPE BEGIN
+
+        ACTION_PHP_EACH NPC_ARRAY AS file => dv BEGIN
+            ACTION_IF IS_AN_INT dv BEGIN // non-joinable NPC
+                COPY_EXISTING ~%file%~ ~override~
+                    LPF IS_SUMMON RET is_summon = result END // not a summon either
+                    LPF CAN_DROP_STUFF RET can_drop_stuff = result END // and has droppable items, i.e. can hold oil
+
+                    PATCH_IF NOT is_summon AND can_drop_stuff BEGIN
+
+                        PATCH_IF BYTE_AT(0x273) = class_druid BEGIN
+
+                            SET chance_pixie = RANDOM(1 100)
+                            PATCH_IF chance_pixie <= 5 BEGIN
+                                ADD_CRE_ITEM ~ZSCSPXD0~ (1) (0) (0) ~none~ ~inv~ // pixie dust
+                            END
+
+                            SET chance_tanglefoot = RANDOM(1 100)
+                            PATCH_IF chance_tanglefoot <= 15 BEGIN
+                                SET amount = RANDOM(1 3)
+                                ADD_CRE_ITEM ~ZSCSTGF0~ (amount) (0) (0) ~none~ ~inv~ // tanglefoot bag
+                            END
+
+                        END
+
+                    END
+                BUT_ONLY
+            END
+
+        END
+
+    END
+
+END

@@ -19,15 +19,15 @@ END
 ACTION_IF zs_cons_add_soporific_oil BEGIN
 
     COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
-                ~UDPHAE02.CRE~ ~override~ // phaere
-                ~CUPHAER.CRE~ ~override~ // phaere
-                ~UDSOLA01.CRE~ ~override~ // solaufein
-                ~UDSOLA02.CRE~ ~override~ // solaufein
-                ~DADROW10.CRE~ ~override~ // drow torturer
-                ~DADROW11.CRE~ ~override~ // drow torturer
-                ~DADROW8.CRE~  ~override~ // drow torturer
-                ~DADROW9.CRE~  ~override~ // drow torturer
-                ~DADROW6.CRE~  ~override~ // drow leader
+                  ~UDPHAE02.CRE~ ~override~ // phaere
+                  ~CUPHAER.CRE~ ~override~ // phaere
+                  ~UDSOLA01.CRE~ ~override~ // solaufein
+                  ~UDSOLA02.CRE~ ~override~ // solaufein
+                  ~DADROW10.CRE~ ~override~ // drow torturer
+                  ~DADROW11.CRE~ ~override~ // drow torturer
+                  ~DADROW8.CRE~  ~override~ // drow torturer
+                  ~DADROW9.CRE~  ~override~ // drow torturer
+                  ~DADROW6.CRE~  ~override~ // drow leader
         ADD_CRE_ITEM ~ZSCSPS02~ #2 #0 #0 ~none~ ~inv~
     BUT_ONLY IF_EXISTS
 
