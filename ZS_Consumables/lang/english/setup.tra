@@ -301,7 +301,7 @@ Weight: 1~
 STATISTICS:
 
 Damage: +4 irresistible damage vs. the undead
-Special: Undead targets must Save vs. Death at +2 or become Slowed and weakened (-3 Strength, -2 Armor Class) for 10 seconds. This effect doesn't stack with itself.
+Special: Undead targets must Save vs. Death at +1 or become Slowed (1 round) and weakened (-3 Strength, -2 Armor Class) for 2 rounds (non-stacking)
 Duration: 8 rounds
 
 Weight: 1~
@@ -313,7 +313,7 @@ Weight: 1~
 STATISTICS:
 
 Damage: +4 irresistible damage vs. the living
-Special: Living targets must Save vs. Death at +2 or become Slowed and weakened (-3 Strength, -2 Armor Class) for 10 seconds. This effect doesn't stack with itself.
+Special: Living targets must Save vs. Death at +1 or become Slowed (1 round) and weakened (-3 Strength, -2 Armor Class) for 2 rounds (non-stacking)
 Duration: 8 rounds
 
 Weight: 1~
