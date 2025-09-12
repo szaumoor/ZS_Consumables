@@ -68,22 +68,23 @@ Weight: 1~
 Weight: 1~
 
 @150 = ~Elixir of Seeing the Invisible~
-@151 = ~This elixir allows the imbiber to momentarily have the ability to spot invisible creatures six times over three rounds. This effect will not stack with itself or other elixirs.
+@151 = ~This elixir allows the imbiber to momentarily have the ability to spot invisible creatures for a brief time. This effect will not stack with itself or other elixirs.
 
 STATISTICS:
 
-Detect invisibility twice per round for 3 rounds as per the Detect Invisibility wizard spell.
-Duration: 3 rounds
+Detect invisibility twice per round
+Duration: 5 rounds
 
 Weight: 1~
 
 @160 = ~Elixir of Viciousness~
-@161 = ~This elixir is a powerful concoction that allows the imbiber to deal more vicious attack against foes, which increases whenever they critically hit. This effect will not stack with itself or other elixirs.
+@161 = ~This potent elixir enhances the imbiber's ability to deliver devastating attacks, increasing their chance to land critical hits. Each critical hit further boosts their combat prowess temporarily. This effect does not stack with itself or other elixirs.
 
 STATISTICS:
 
-Critical hit chances: +5%
-Critical hit effects: +2 damage and THAC0 for 2 rounds (does not stack)
+Critical Hit Chance: +5%
+Critical Hit Bonus: On a critical hit, gain +2 damage and +2 THAC0 for 2 rounds (non-stacking)
+Duration: 8 hours
 
 Weight: 1~
 
@@ -92,8 +93,8 @@ Weight: 1~
 
 STATISTICS:
 
-Life-steal: Heal 1 or 2 Hit Points each time a target is hit
-Bloodlust: Kills restore 6 Hit Points plus 8% of maximum Hit Points and increase attacks per round by 1 for the next 2 rounds (does not stack)
+Life-steal: Heal 2 Hit Points each time a target is hit
+Bloodlust: Kills restore 5 Hit Points plus 8% of maximum Hit Points and increase attacks per round by 1 for the next 2 rounds (does not stack)
 Duration: 8 hours
 
 Weight: 1~
@@ -185,6 +186,8 @@ Elemental and magical damage: +10%
 Duration: 24 hours
 
 Weight: 1~
+
+@252 = ~Mystic Cultivation faded~
 
 @260 = ~Tanglefoot Bag~
 @261 = ~This bag can be thrown to create a sticky area that ensnares creatures, as per the Entangle spell, affecting all creatures in a 15 ft. radius for 1 turn.

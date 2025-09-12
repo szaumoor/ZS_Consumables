@@ -3,7 +3,7 @@ ACTION_IF zs_cons_add_bloodlust BEGIN
 
     COPY ~%MOD_FOLDER%/items/elixirs/bloodlust~ ~override~
     COPY_EXISTING ~ZSCSBLD0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@170) id_ref_desc=RESOLVE_STR_REF(171) price = zs_cons_elixir_price_bloodlust END
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@170) id_ref_desc=RESOLVE_STR_REF(@171) price = zs_cons_elixir_price_bloodlust END
 
 END
 
@@ -11,7 +11,8 @@ ACTION_IF zs_cons_add_mystic_cultivation BEGIN
 
     COPY ~%MOD_FOLDER%/items/elixirs/mystic_cultivation~ ~override~
     COPY_EXISTING ~ZSCSMYS0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@250) id_ref_desc=RESOLVE_STR_REF(251) price = zs_cons_elixir_price_mystic_cultivation END
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@250) id_ref_desc=RESOLVE_STR_REF(@251) price = zs_cons_elixir_price_mystic_cultivation END
+        LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@252) END
 
 END
 
@@ -19,7 +20,7 @@ ACTION_IF zs_cons_add_see_invisibility BEGIN
 
     COPY ~%MOD_FOLDER%/items/elixirs/see_invisibility~ ~override~
     COPY_EXISTING ~ZSCSSIV0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@150) id_ref_desc=RESOLVE_STR_REF(151) price = zs_cons_elixir_price_see_invisibility END
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@150) id_ref_desc=RESOLVE_STR_REF(@151) price = zs_cons_elixir_price_see_invisibility END
 
 END
 
@@ -27,7 +28,7 @@ ACTION_IF zs_cons_add_universal_resistance BEGIN
 
     COPY ~%MOD_FOLDER%/items/elixirs/universal_resistance~ ~override~
     COPY_EXISTING ~ZSCSUVR0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@240) id_ref_desc=RESOLVE_STR_REF(241) price = zs_cons_elixir_price_universal_resistance END
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@240) id_ref_desc=RESOLVE_STR_REF(@241) price = zs_cons_elixir_price_universal_resistance END
 
 END
 
@@ -35,6 +36,6 @@ ACTION_IF zs_cons_add_viciousness BEGIN
 
     COPY ~%MOD_FOLDER%/items/elixirs/viciousness~ ~override~
     COPY_EXISTING ~ZSCSVIC0.ITM~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@160) id_ref_desc=RESOLVE_STR_REF(161) price = zs_cons_elixir_price_viciousness END
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@160) id_ref_desc=RESOLVE_STR_REF(@161) price = zs_cons_elixir_price_viciousness END
 
 END
