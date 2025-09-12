@@ -198,14 +198,13 @@ Weight: 1~
 
 STATISTICS:
 
-Special: Partially deals radiant damage, which cannot be resisted
 Damage: 4d4 vs. undead and fiends (3d4 magic, 1d4 radiant)
+Special: Partially deals radiant damage, which cannot be resisted
 Weakening: Fiends and undead must save vs. Death at -2 or take 15% more physical damage for 3 rounds (non-stacking)
 
 Weight: 1~
 @272 = ~Takes %p1% radiant damage~
-@273 = ~Undead weakened~
-@274 = ~Fiend weakened~
+@273 = ~Weakened by Holy Water~
 
 // igneous oil
 @1000 = ~Igneous Oil~

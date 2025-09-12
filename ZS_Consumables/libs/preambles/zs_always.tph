@@ -1,5 +1,6 @@
 // Library inclusion
 INCLUDE ~%MOD_FOLDER%/libs/functions/zs_alter_functions.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/functions/zs_cdfunctions.tpa~
 INCLUDE ~%MOD_FOLDER%/libs/functions/zs_checks.tpa~
 INCLUDE ~%MOD_FOLDER%/libs/functions/zs_regexp_filters.tpa~
 

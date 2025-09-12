@@ -1,8 +1,10 @@
 ACTION_IF zs_cons_add_acid_vial BEGIN
 
     COPY ~%MOD_FOLDER%/items/throwables/acid_vial~ ~override~
+    ADD_PROJECTILE ~%MOD_FOLDER%/pro/acid_vial/ZSCSACVZ.PRO~
     COPY_EXISTING ~ZSCSACV0.ITM~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@190) id_ref_desc=RESOLVE_STR_REF(@191) price = zs_cons_throwable_price_acid_vial END
+        LPF ALTER_HEADER INT_VAR projectile = %ZSCSACVZ% END
 
 END
 
@@ -19,10 +21,8 @@ END
 ACTION_IF zs_cons_add_choking_powder BEGIN
 
     COPY ~%MOD_FOLDER%/items/throwables/choking_powder~ ~override~
-    ADD_PROJECTILE ~%MOD_FOLDER%/pro/acid_vial/ZSCSACVZ.PRO~
     COPY_EXISTING ~ZSCSCKP0.ITM~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@210) id_ref_desc=RESOLVE_STR_REF(@211) price = zs_cons_throwable_price_choking_powder END
-        LPF ALTER_HEADER INT_VAR projectile = %ZSCSACVZ% END
 
 END
 
@@ -39,6 +39,9 @@ ACTION_IF zs_cons_add_holy_water BEGIN
     COPY ~%MOD_FOLDER%/items/throwables/holy_water~ ~override~
     COPY_EXISTING ~ZSCSHLW0.ITM~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@270) id_ref_desc=RESOLVE_STR_REF(@271) price = zs_cons_throwable_price_holy_water END
+        PATCH_FOR_EACH p1 IN 1 2 3 4 BEGIN
+            LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = p1 parameter1 = RESOLVE_STR_REF(@272) END
+        END
 
 END
 

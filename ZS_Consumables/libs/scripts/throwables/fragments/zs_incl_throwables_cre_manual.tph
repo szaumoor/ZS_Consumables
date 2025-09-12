@@ -10,7 +10,7 @@ REINCLUDE ~./zs_consumables/macro.tph~
 
 COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
               ~UDPHAE02.CRE~ ~override~ // phaere
-              ~CUPHAER.CRE~ ~override~ // phaere
+              ~CUPHAER.CRE~  ~override~ // phaere
               ~UDSOLA01.CRE~ ~override~ // solaufein
               ~UDSOLA02.CRE~ ~override~ // solaufein
               ~DADROW10.CRE~ ~override~ // drow torturer
@@ -19,7 +19,7 @@ COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
               ~DADROW9.CRE~  ~override~ // drow torturer
               ~DADROW6.CRE~  ~override~ // drowleader
 
-        SET random = RANDOM(0 3)
+        SET random = RANDOM(1 3)
         LPM stuff
 
 BUT_ONLY IF_EXISTS
