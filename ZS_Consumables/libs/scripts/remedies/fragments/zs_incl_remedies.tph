@@ -11,20 +11,26 @@ ACTION_IF zs_cons_add_angelic_reprieve BEGIN
             price = zs_cons_remedy_price_angelic_reprieve
         END
 
+    COPY_EXISTING ~ZSCSARP1.spl~ ~override~
+        LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@102) END
+
 END
 
 ACTION_IF zs_cons_add_angelic_slumber BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/angelic_slumber~ ~override~
     COPY_EXISTING ~ZSCSASL0.ITM~ ~override~
-    LPF ALTER_ITEM
-    INT_VAR
-        unid_ref_name = RESOLVE_STR_REF(@98)
-        unid_ref_desc = RESOLVE_STR_REF(@99)
-        id_ref_name=RESOLVE_STR_REF(@110)
-        id_ref_desc=RESOLVE_STR_REF(@111)
-        price = zs_cons_remedy_price_angelic_slumber
-    END
+        LPF ALTER_ITEM
+        INT_VAR
+            unid_ref_name = RESOLVE_STR_REF(@98)
+            unid_ref_desc = RESOLVE_STR_REF(@99)
+            id_ref_name=RESOLVE_STR_REF(@110)
+            id_ref_desc=RESOLVE_STR_REF(@111)
+            price = zs_cons_remedy_price_angelic_slumber
+        END
+
+    COPY_EXISTING ~ZSCSASL1.spl~ ~override~
+        LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@112) END
 
 END
 

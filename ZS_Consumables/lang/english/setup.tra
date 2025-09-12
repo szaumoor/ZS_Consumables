@@ -8,22 +8,26 @@ STATISTICS:
 
 Weight: 1~
 @100 = ~Angelic Reprieve Remedy~
-@101 = ~This rare remedy forces the imbiber to fall into deep slumber for a relatively short time, after which they wake up relatively more refreshed and ready to continue the adventure.
+@101 = ~This rare remedy forces the imbiber to fall into deep slumber for a short time, after which they wake up relatively more refreshed and ready to continue the adventure.
 
 STATISTICS:
 
-Special: User is put to sleep for 3 rounds. If by the end of three rounds their sleep was not interrupted, they wake up more refreshed, restoring 65% of their hit points and recovering one spell slot from levels 1-5 (if available, otherwise they recover one from a previous level if found).
+Special: User falls asleep for 3 rounds. If their sleep is uninterrupted, they awaken refreshed, restoring 50% of their Hit Points plus 27 extra points. Additionally, their fatigue is removed, and they regain one spell slot from levels 1–5 (if available; otherwise, the highest available lower-level slot is restored).
 
 Weight: 1~
+
+@102 = ~Angelic Reprieve interrupted~
 
 @110 = ~Angelic Slumber Remedy~
-@111 = ~This incredibly rare remedy forces the imbiber to fall into a relatively long comatose slumber after which they will wake up as if they had a refreshing night of rest.
+@111 = ~This incredibly rare remedy forces the imbiber to fall into a comatose slumber, after which they will wake up as if they had a refreshing night of rest.
 
 STATISTICS:
 
-Special: User is put to sleep for 1 turn. If by the end of the turn their sleep was not interrupted, they wake up refreshed as if they had a full night's rest and have all their hit points restored.
+Special: User falls asleep for 6 rounds. If the sleep remains uninterrupted for the full duration, the drinker awakens as if after a full night's rest—all Hit Points and memorized spells are fully restored and any level drain is removed.
 
 Weight: 1~
+
+@112 = ~Angelic Slumber interrupted~
 
 @120 = ~Basilisk Oil Remedy~
 @121 = ~This oil of a basilisk, when poured over a petrified creature, will restore them to flesh and bone, and to life. It will also additionally protect them from all sources of petrification and gaze attacks for 2 hours.
@@ -31,7 +35,7 @@ Weight: 1~
 STATISTICS:
 
 Restores a petrified creature to flesh
-Protects against petrification for 2 hours
+Protects against petrification and gaze attacks for 2 hours
 
 Weight: 1~
 
@@ -53,7 +57,7 @@ STATISTICS:
 
 Cures diseases, poison, blindness, silence, deafness, paralysis and feeblemindedness.
 Heals 12 Hit Points
-Regenerates 12 extra Hit Points over 2 turns.
+Regenerates 1 Hit Point per round for 2 turns.
 Special: May be given to others
 
 Weight: 1~

@@ -703,6 +703,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BDWAIZAH.STO~ BEGIN // THIEF MERCHANT (SOD)
         PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~ZSCSTGF0~ END // tanglefoot bag
         END
-        
+
     BUT_ONLY
 END

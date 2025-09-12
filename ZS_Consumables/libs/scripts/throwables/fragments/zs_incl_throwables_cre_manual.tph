@@ -17,7 +17,7 @@ COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
               ~DADROW11.CRE~ ~override~ // drow torturer
               ~DADROW8.CRE~  ~override~ // drow torturer
               ~DADROW9.CRE~  ~override~ // drow torturer
-              ~DADROW6.CRE~  ~override~ // drowleader
+              ~DADROW6.CRE~  ~override~ // drow leader
 
         SET random = RANDOM(1 3)
         LPM stuff

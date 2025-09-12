@@ -3,6 +3,7 @@ INCLUDE ~%MOD_FOLDER%/libs/functions/zs_alter_functions.tpa~
 INCLUDE ~%MOD_FOLDER%/libs/functions/zs_cdfunctions.tpa~
 INCLUDE ~%MOD_FOLDER%/libs/functions/zs_checks.tpa~
 INCLUDE ~%MOD_FOLDER%/libs/functions/zs_regexp_filters.tpa~
+INCLUDE ~%MOD_FOLDER%/libs/functions/zs_weidu_override.tpa~
 
 // Configuration variables
 INCLUDE ~%MOD_FOLDER%/zs_cons_config.txt~

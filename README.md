@@ -12,7 +12,7 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - Elixir of **Viciousness**: for 8 hours, benefit from a 5% critical hit chance, and whenever a creature is killed by the user, they gain a +2 damage and THAC0 bonus for 2 rounds (doesn't stack)
   - Elixir of **Bloodlust**: for 8 hours, hitting and killing enemies will heal the user in various amounts. Killing restores more health. Kills increase attacks per round by 1 for 2 rounds (doesn't stack)
   - Elixir of **Seeing the Invisible**: allows the user to see invisible creatures as per the detect invisibility spell. This effect triggers twice per round for 3 rounds, effectively giving them 6 opportunities to spot and dispel invisible creatures that aren't protected by Nondetection.
-  - Elixir of **Universal Resistance**: for 8 hours, resist 25% of all elemental, poison, and magical damage, as well as 7% physical damage resistance. The user also is granted +2 bonus to Armor Class and saving throws.
+  - Elixir of **Universal Resistance**: for 8 hours, resist 25% of all elemental, poison, and magical damage, as well as 8% physical damage resistance. The user also is granted +2 bonus to Armor Class and saving throws.
   - Elixir of **Mystic Cultivation**: For 24 hours, spell casters gain +1 to all spell slots, and cast spells with a +1 bonus to casting speed, and +2 bonus to casting level, and deal 10% more elemental and magical damage. Does not stack. Only spellcasters can drink it.
 - **Potion**: regular potion like vanilla ones. No restrictions.
   - Potion of **Minor Levitation**: allows the user to slightly hover above the ground, which grants immunity to most ground-based effects like web and grease. It also grants immunity to Slow and 35% faster movement speed for 3 turns
@@ -30,13 +30,13 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - **Sanctified** oil: undead take +4 radiant damage per hit (effectively irresistible) each hit and they must save vs. Death at +2 or become slowed and weakened for 3 rounds (-3 Strength, -2 Armor Class)
   - **Profane** oil: identical to sanctified but only affects the living.
 - **Remedy**: powerful concoctions that treat, cure, protect against, or dispel ailments.
-  - **Angelic Reprieve**: powerful remedy that puts the character to sleep briefly. After the sleep, if it completed without interruptions, the character is healed and recovers a number of spell slots.
-  - **Angelic Slumber**: a more powerful version that applies the equivalent to a full night of rest to the character after 1 turn of sleeping
-  - **Basilisk** **Oil**: this compound reverts petrification and protects against petrification for 2 hours.
-  - **Remedial Solution**: Cures the imbiber of all poisons, diseases, including blindness and silence. It also restores 12 HP and grants a slow regeneration that restores another 12 HP after 2 turns.
+  - **Angelic Reprieve**: powerful remedy that puts the character to sleep for 3 rounds. After the sleep, if it completed without interruptions, the character is healed and recovers a number of spell slots.
+  - **Angelic Slumber**: a more powerful version that applies the equivalent to a full night of rest and cures level drain after 5 rounds of sleeping. Works otherwise identically.
+  - **Basilisk Oil**: this compound reverts petrification and protects against petrification and gaze attacks for 2 hours, including vampiric and umber hulk gaze.
+  - **Remedial Solution**: Cures the imbiber of all diseases, poison, blindness, silence, deafness, paralysis and feeblemindedness (it can be given to others). It also restores 12 HP and grants a slow regeneration that restores another 12 HP over 2 turns.
 - **Throwables**: items that can be thrown at enemies to cause various effects (similar to Potion of Fire Breath or Explosions). None of these are treated as magical for the purposes of magical resistance.
   - **Acid vials**: throwable containers that deal minor acid damage instantly and once again after one round
-  - **Alchemist fire**: throwable containers that deal fire damage in a small area and ignite targets.
+  - **Alchemist fire**: throwable containers that deal minor fire damage in a small area and ignites the area, possibly dealing damage twice in total.
   - **Choking powder**: throwable container that creates effectively a Stinking Cloud as per the wizard spell
   - **Tanglefoot bags**: throwable containers that create difficult terrain and ensnare targets as per the Entangle spell
   - **Web grenade**: throwable containing a web sack that explodes on contact with the ground, creating a webbed area as per the Web wizard spell.
@@ -45,6 +45,17 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - **Holy Water**: throwable container that deals 3d4 magic damage plus 1d4 radiant damage to undead and fiends on a hit. Radiant damage cannot be resisted. They may be weakened if they fail a save vs. Death at +2, taking 15% more physical damage on hit for a few rounds. Magic resistance also doesn't affect it.
 
 When assessing durations, bear in mind that when an item says "hours", it means in-game hours, which in real-time are 5 minutes each. So an elixir that lasts for 4 hours lasts for 20 real-time minutes. This is how it works in vanilla as well. Only seconds, rounds, and turns refer to real-time.
+
+## Tactical opportunities
+
+Just some thoughts on tactical opportunities some of the consumables open up:
+
+- Angelic remedies. These consumables will come in handy, especially in setups that restrict resting in dangerous places. Normally, they'd be too problematic to use in combat, since they make you helpless, but you could, for example Maze an ally or wrap them in Otiluke's Resilient Sphere (which bypasses saves and Magic resistance when cast on allies), and let them rest in peace. The benefits will apply even in this case.
+- Holy Water: This makes all undead, who are often resilient to physical damage, take 15% more damage.
+- Pixie Dust: Suddenly backstab several enemies, if you have more than one backstabber, or buff & heal the party before returning to the fray. Infiltrate the whole party easily without spending spell slots of expensive invisibility potions.
+- Minor Levitation: Use it to spam web and other ground-based effects without having to be in spider shape, and similar effects, and to avoid annoyances when dealing with spider-infested places. Combine with web grenades, grease bottles, and tanglefoot bags for maximum effect.
+- Acid Vials, Alchemist Fire: Easy dispatching of trolls, easy access to those elements to cavaliers and others that don't have acidic or fire projectiles normally. Cheap helpful consumable at the start of BGEE. Acid vials are also useful to interrupt a caster in the next round.
+- Remedial Solution: Saving grace to save allies that got stunned, a condition which is often a death sentence during the majority of all the games, something that in vanilla can only be remedied (usually) with expensive or inconvenient Dispel Magic or Remove Paralysis spells.
 
 ## Compatibility
 

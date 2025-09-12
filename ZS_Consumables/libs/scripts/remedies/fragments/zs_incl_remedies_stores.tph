@@ -47,7 +47,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~MURCRAG.STO~ BEGIN // MRS CRAGMOON
     BUT_ONLY
 END
 
-
 ACTION_IF FILE_EXISTS_IN_GAME ~BHELM.STO~ BEGIN //helm's temple
     COPY_EXISTING ~BHELM.STO~   ~override~ //helm's temple
                   ~TEMHELM.STO~ ~override~ //helm's temple
