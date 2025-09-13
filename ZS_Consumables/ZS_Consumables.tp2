@@ -1,7 +1,7 @@
 BACKUP "weidu_external/backup/ZS_Consumables"
 SUPPORT "RoyalProtector at Gibberlings's forum https://www.gibberlings3.net/profile/12720-royalprotector/"
 VERSION "1.0.0"
-README ~ZS_Consumables/README.md~
+README ~ZS_Consumables/mod_readme.md~
 AUTO_EVAL_STRINGS
 ALWAYS
     INCLUDE ~%MOD_FOLDER%/libs/preambles/zs_always.tph~

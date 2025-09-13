@@ -52,8 +52,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.TAG_NAME }}
-          name: "ZS_WeaponOils ${{ env.TAG_NAME }}"
+          name: "ZS_Consumables ${{ env.TAG_NAME }}"
           body: ${{ steps.changelog.outputs.body }}
-          files: ZS_WeaponOils_${{ env.TAG_NAME }}.zip
+          files: ZS_Consumables_${{ env.TAG_NAME }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
