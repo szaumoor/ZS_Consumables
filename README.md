@@ -11,7 +11,7 @@ All consumables are distributed and priced in a way that tries to serve as balan
 - **Elixirs**: powerful potions that provide powerful and long-lasting effects, but only one of them can be active at the same time. None of them stack with themselves either.
   - Elixir of **Viciousness**: for 8 hours, benefit from a 5% critical hit chance, and whenever a creature is killed by the user, they gain a +2 damage and THAC0 bonus for 2 rounds (doesn't stack)
   - Elixir of **Bloodlust**: for 8 hours, hitting and killing enemies will heal the user in various amounts. Killing restores more health. Kills increase attacks per round by 1 for 2 rounds (doesn't stack)
-  - Elixir of **Seeing the Invisible**: allows the user to see invisible creatures as per the detect invisibility spell. This effect triggers twice per round for 3 rounds, effectively giving them 6 opportunities to spot and dispel invisible creatures that aren't protected by Nondetection.
+  - Elixir of **Seeing the Invisible**: allows the user to see invisible creatures as per the detect invisibility spell. This effect triggers twice per round for 5 rounds, effectively giving them 10 opportunities to spot and dispel invisible creatures that aren't protected by Nondetection.
   - Elixir of **Universal Resistance**: for 8 hours, resist 25% of all elemental, poison, and magical damage, as well as 8% physical damage resistance. The user also is granted +2 bonus to Armor Class and saving throws.
   - Elixir of **Mystic Cultivation**: For 24 hours, spell casters gain +1 to all spell slots, and cast spells with a +1 bonus to casting speed, and +2 bonus to casting level, and deal 10% more elemental and magical damage. Does not stack. Only spellcasters can drink it.
 - **Potion**: regular potion like vanilla ones. No restrictions.
@@ -56,6 +56,7 @@ Just some thoughts on tactical opportunities some of the consumables open up:
 - Minor Levitation: Use it to spam web and other ground-based effects without having to be in spider shape, and similar effects, and to avoid annoyances when dealing with spider-infested places. Combine with web grenades, grease bottles, and tanglefoot bags for maximum effect.
 - Acid Vials, Alchemist Fire: Easy dispatching of trolls, easy access to those elements to cavaliers and others that don't have acidic or fire projectiles normally. Cheap helpful consumable at the start of BGEE. Acid vials are also useful to interrupt a caster in the next round.
 - Remedial Solution: Saving grace to save allies that got stunned, a condition which is often a death sentence during the majority of all the games, something that in vanilla can only be remedied (usually) with expensive or inconvenient Dispel Magic or Remove Paralysis spells.
+- Seeing the invisible. Rapid detection thwarts enemy backstabbers
 
 ## Compatibility
 

@@ -36,14 +36,19 @@ END
 
 ACTION_IF zs_cons_add_holy_water BEGIN
 
+    ADD_PROJECTILE ~%MOD_FOLDER%/pro/holy_water/ZSCSHLWZ.PRO~
     COPY ~%MOD_FOLDER%/items/throwables/holy_water~ ~override~
     COPY_EXISTING ~ZSCSHLW0.ITM~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@270) id_ref_desc=RESOLVE_STR_REF(@271) price = zs_cons_throwable_price_holy_water END
-        
+        LPF ALTER_HEADER INT_VAR projectile = %ZSCSHLWZ% END
+
     COPY_EXISTING ~ZSCSHLW1.SPL~ ~override~
         PATCH_FOR_EACH p1 IN 1 2 3 4 BEGIN
             LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = p1 parameter1 = RESOLVE_STR_REF(@272) END
         END
+
+    COPY_EXISTING ~ZSCSHLW3.SPL~ ~override~
+        LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@273) END
 
 END
 
