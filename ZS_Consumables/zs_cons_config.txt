@@ -33,7 +33,7 @@ OUTER_SET zs_cons_oil_price_dragonbane    = "5000"
 
 OUTER_SET zs_cons_elixir_price_bloodlust            = "2000"
 OUTER_SET zs_cons_elixir_price_mystic_cultivation   = "3000"
-OUTER_SET zs_cons_elixir_price_see_invisibility     = "1000"
+OUTER_SET zs_cons_elixir_price_see_invisibility     = "1250"
 OUTER_SET zs_cons_elixir_price_universal_resistance = "1500"
 OUTER_SET zs_cons_elixir_price_viciousness          = "2250"
 
