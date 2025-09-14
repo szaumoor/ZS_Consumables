@@ -27,7 +27,7 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - **Kuo-Toan** Oil of **Stunning**: Save vs. Spell at +2 or become stunned for 1 round. Considered a poison.
   - **Dragon Bile** Extract: non-dragons take 1 poison damage, and have their movement speed and strength reduced to half for 5 rounds if save vs. Death is failed.
   - **Dragonsbane** oil: a very expensive oil which causes 1d6+2 poison damage to dragons on hit (half to others) which severely weakens dragons for 3 rounds. This weakness can only apply once per 3 rounds, and fades progressively round by round. The pain it causes also has a 50% chance of disrupting their improved invisibility or stoneskin.
-  - **Sanctified** oil: undead take +4 radiant damage per hit (effectively irresistible) each hit and they must save vs. Death at +2 or become slowed and weakened for 3 rounds (-3 Strength, -2 Armor Class)
+  - **Sanctified** oil: undead take +4 radiant damage per hit (effectively irresistible) each hit, and they must save vs. Death at +1 or become slowed and weakened for 3 rounds (-3 Strength, -2 Armor Class)
   - **Profane** oil: identical to sanctified but only affects the living.
 - **Remedy**: powerful concoctions that treat, cure, protect against, or dispel ailments.
   - **Angelic Reprieve**: powerful remedy that puts the character to sleep for 3 rounds. After the sleep, if it completed without interruptions, the character is healed and recovers a number of spell slots.
@@ -42,7 +42,7 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - **Web grenade**: throwable containing a web sack that explodes on contact with the ground, creating a webbed area as per the Web wizard spell.
   - **Grease** bottle: this bottle contains a thick, slippery grease that can be thrown on the ground to create a hazardous area. Any creature that moves through this area suffers the effects of the Grease spell.
   - **Pixie Dust**: you can throw a bunch of pixie dust into the air, making all targets in a small area invisible for 1 turn
-  - **Holy Water**: throwable container that deals 3d4 magic damage plus 1d4 radiant damage to undead and fiends on a hit. Radiant damage cannot be resisted. They may be weakened if they fail a save vs. Death at +2, taking 15% more physical damage on hit for a few rounds. Magic resistance also doesn't affect it.
+  - **Holy Water**: throwable container that deals 3d4 magic damage plus 1d4 radiant damage to undead and fiends on a hit. Radiant damage cannot be resisted. They may be weakened if they fail a save vs. Death at -2, taking 15% more physical damage on hit for a few rounds. Magic resistance also doesn't affect it.
 
 When assessing durations, bear in mind that when an item says "hours", it means in-game hours, which in real-time are 5 minutes each. So an elixir that lasts for 4 hours lasts for 20 real-time minutes. This is how it works in vanilla as well. Only seconds, rounds, and turns refer to real-time.
 
@@ -60,7 +60,7 @@ Just some thoughts on tactical opportunities some of the consumables open up:
 
 ## Compatibility
 
-Should be compatible with everything as far as I know. Please offer feedback on balance and the supply of oils throughout the game if you try this. One caveat to mention is that it might be philosophically incompatible with other mods. For example, it might add bonuses that add up to too much if you have mods that give you insane bonuses already; or you might have a mod that also introduces "oils" or some such items, which would interfere in the sense that it would stack with my oils, when they shouldn't, as far as my design decisions.
+Should be compatible with everything as far as I know. Please offer feedback on balance and the supply of consumables throughout the game if you try this. One caveat to mention is that it might be philosophically incompatible with other mods. For example, it might add bonuses that add up to too much if you have mods that give you insane bonuses already; or you might have a mod that also introduces "oils" or some such items, which would interfere in the sense that it would stack with my oils, when they shouldn't, as far as my design decisions.
 
 Recommendations for install order:
 
@@ -70,7 +70,7 @@ Recommendations for install order:
 
 ## Known issues
 
-The noxious oil sometimes seems to not offer log feedback indicating whether the poisoning was resisted or not. I don't think it affects functionality though.
+The noxious and kuo-toan oils sometimes seems to not offer log feedback indicating whether the poisoning was resisted or not. I don't think it affects functionality though.
 
 Additionally, applying the oils through the inventory will be through a button that states "drink potion", which doesn't make sense (trust me, don't drink them for real, you'll die), but I don't think that can be helped.
 
