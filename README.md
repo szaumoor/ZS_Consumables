@@ -41,7 +41,7 @@ All consumables are distributed and priced in a way that tries to serve as balan
   - **Tanglefoot bags**: throwable containers that create difficult terrain and ensnare targets as per the Entangle spell
   - **Web grenade**: throwable containing a web sack that explodes on contact with the ground, creating a webbed area as per the Web wizard spell.
   - **Grease** bottle: this bottle contains a thick, slippery grease that can be thrown on the ground to create a hazardous area. Any creature that moves through this area suffers the effects of the Grease spell.
-  - **Pixie Dust**: you can throw a bunch of pixie dust into the air, making all targets in a small area invisible for 1 turn
+  - **Pixie Dust**: you can throw a bunch of pixie dust into the air, making all targets in a small area invisible for 2 turns
   - **Holy Water**: throwable container that deals 3d4 magic damage plus 1d4 radiant damage to undead and fiends on a hit. Radiant damage cannot be resisted. They may be weakened if they fail a save vs. Death at -2, taking 15% more physical damage on hit for a few rounds. Magic resistance also doesn't affect it.
 
 When assessing durations, bear in mind that when an item says "hours", it means in-game hours, which in real-time are 5 minutes each. So an elixir that lasts for 4 hours lasts for 20 real-time minutes. This is how it works in vanilla as well. Only seconds, rounds, and turns refer to real-time.
