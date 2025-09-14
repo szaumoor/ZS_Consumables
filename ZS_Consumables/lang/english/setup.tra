@@ -23,7 +23,7 @@ Weight: 1~
 
 STATISTICS:
 
-Special: User falls asleep for 6 rounds. If the sleep remains uninterrupted for the full duration, the drinker awakens as if after a full night's rest—all Hit Points and memorized spells are fully restored and any level drain is removed.
+Special: User falls asleep for 5 rounds. If the sleep remains uninterrupted for the full duration, the drinker awakens as if they had a full night's rest—all Hit Points and memorized spells are fully restored, and any level drain is removed.
 
 Weight: 1~
 
@@ -109,7 +109,7 @@ Damage: 1d6+1 fire damage in a small area. Targets remaining in the fiery area m
 Weight: 1~
 
 @190 = ~Acid Vial~
-@191 = ~This vial contains a highly corrosive acid that can be thrown at a target to deal acid damage on impact, which may continue briefly afterwards. These vials are highly priced as troll-killing tools.
+@191 = ~This vial contains a highly corrosive acid that can be thrown at a target to deal acid damage on impact, which may continue briefly afterward. These vials are highly priced as troll-killing tools.
 
 STATISTICS:
 
@@ -147,7 +147,7 @@ Area: Create a webbed area in a field, ensnaring creatures within it if they fai
 Weight: 1~
 
 @230 = ~Potion of Minor Levitation~
-@231 = ~This potion allows the imbiber to levitate slightly off the ground, granting them immunity to many ground-based hazard and allow them to gracefully glide with increased speed temporarily.
+@231 = ~This potion allows the imbiber to levitate slightly off the ground, granting them immunity to many ground-based hazards and allow them to gracefully glide with increased speed temporarily.
 
 STATISTICS:
 
@@ -159,7 +159,6 @@ Duration: 2 hours
 Weight: 1~
 
 @232 = ~Levitating~
-
 
 @240 = ~Elixir of Universal Resistance~
 @241 = ~This elixir provides comprehensive protection to the imbiber, reducing all damage they take and increasing their chances at avoiding harmful effects. These protective effects will not stack with themselves or other elixirs.
@@ -318,9 +317,9 @@ Duration: 8 rounds
 
 Weight: 1~
 
-// kuotoan oil
+// kuo-toan oil
 @1018 = ~Kuo-Toan Oil of Stunning~
-@1019 = ~This greenish oil was originally created by Kuo-Toan alchemists, who use it to subdue prey in their aquatic domains. When applied to a weapon, it leaves a viscous coating that overwhelms the victim's body, rendering them temporarily helpless. It emits a faint, briny odor and is highly volatile - requiring exceptional manual dexterity to apply without accidentally numbing one's own fingers and risking self-exposure. It bypasses magical resistance due to its natural composition.
+@1019 = ~This greenish oil was originally created by Kuo-Toan alchemists, who use it to subdue prey in their aquatic domains. When applied to a weapon, it leaves a viscous coating that overwhelms the victim's body, rendering them temporarily helpless. It emits a faint, briny odor and is highly volatile—requiring exceptional manual dexterity to apply without accidentally numbing one's own fingers and risking self-exposure. It bypasses magical resistance due to its natural composition.
 
 STATISTICS:
 
