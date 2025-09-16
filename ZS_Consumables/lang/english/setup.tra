@@ -214,7 +214,7 @@ Weight: 1~
 
 // igneous oil
 @1000 = ~Igneous Oil~
-@1001 = ~This searing concoction ignites your weapons upon contact, scorching enemies with intense flames, bypassing magical resistance due to its natural composition.
+@1001 = ~This searing concoction ignites your weapons upon contact, scorching enemies with intense flames, bypassing magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -225,7 +225,7 @@ Weight: 1~
 
 // caustic oil
 @1002 = ~Caustic Oil~
-@1003 = ~This corrosive blend, derived from potent acidic extracts, coats weapons and dissolves flesh or armor upon impact. It also bypasses magical resistance due to its natural composition.
+@1003 = ~This corrosive blend, derived from potent acidic extracts, coats weapons and dissolves flesh or armor upon impact. It also bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -236,7 +236,7 @@ Weight: 1~
 
 // gelid oil
 @1004 = ~Gelid Oil~
-@1005 = ~This chilling concoction channels the power of pure frost to coat your weapons in biting cold. It bypasses magical resistance due to its natural composition.
+@1005 = ~This chilling concoction channels the power of pure frost to coat your weapons in biting cold. It bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -247,7 +247,7 @@ Weight: 1~
 
 // scintillating oil
 @1006 = ~Scintillating Oil~
-@1007 = ~This electrically charged oil crackles with raw energy, making your weapons inflict shocking electric damage upon contact. It bypasses magical resistance due to its natural composition.
+@1007 = ~This electrically charged oil crackles with raw energy, making your weapons inflict shocking electric damage upon contact. It bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -258,7 +258,7 @@ Weight: 1~
 
 // arcane oil
 @1008 = ~Arcane Oil~
-@1009 = ~Imbued with potent magical energies, this oil empowers your weapons to inflict pure magic damage. Each strike resonates with arcane force, though magic resistance may stop it.
+@1009 = ~Imbued with potent magical energies, this oil empowers your weapons to inflict pure magic damage. Each strike resonates with arcane force, though magic resistance may stop it. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -269,7 +269,7 @@ Weight: 1~
 
 // poisonous oil
 @1010 = ~Noxious Oil~
-@1011 = ~A vile concoction brewed from toxic flora, this oil coats a weapon in a layer of poison which seeps into the victim's bloodstream with each strike. Handling this substance is perilous; only those with exceptional dexterity can apply it without accidentally poisoning themselves. It bypasses magical resistance due to its natural composition.
+@1011 = ~A vile concoction brewed from toxic flora, this oil coats a weapon in a layer of poison which seeps into the victim's bloodstream with each strike. Handling this substance is perilous; only those with exceptional dexterity can apply it without accidentally poisoning themselves. It bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -282,7 +282,7 @@ Weight: 1~
 
 // drow poisonous oil
 @1012 = ~Drow Soporific Oil~
-@1013 = ~Originally crafted by the drow, this refined oil endows weapons with a soporific effect, lulling foes into a deep sleep for 1 turn upon exposure. Its volatile nature demands exceptional dexterity to avoid self-affliction, and it bypasses magical resistance due to its natural composition.
+@1013 = ~Originally crafted by the drow, this refined oil endows weapons with a soporific effect, lulling foes into a deep sleep for 1 turn upon exposure. Its volatile nature demands exceptional dexterity to avoid self-affliction, and it bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -295,7 +295,7 @@ Weight: 1~
 
 // blessed oil
 @1014 = ~Sanctified Oil~
-@1015 = ~This oil has been ritually blessed to combat the undead. When applied, it imbues weapons with a radiance that sears undead foes, disregarding their defenses and magic resistance. Its holy power can also sap the strength and vitality of these unnatural creatures, making them easier to defeat.
+@1015 = ~This oil has been ritually blessed to combat the undead. When applied, it imbues weapons with a radiance that sears undead foes, disregarding their defenses and magic resistance. Its holy power can also sap the strength and vitality of these unnatural creatures, making them easier to defeat. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -307,7 +307,7 @@ Weight: 1~
 
 // unholy oil
 @1016 = ~Profane Oil~
-@1017 = ~Created through dark rituals and infused with energies from the Negative Plane, this oil corrupts any weapon it coats. When used against the living, it inflicts wounds that weaken and slow the target, and its unnatural power is unaffected by defenses and magical resistance.
+@1017 = ~Created through dark rituals and infused with energies from the Negative Plane, this oil corrupts any weapon it coats. When used against the living, it inflicts wounds that weaken and slow the target, and its unnatural power is unaffected by defenses and magical resistance. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -319,7 +319,7 @@ Weight: 1~
 
 // kuo-toan oil
 @1018 = ~Kuo-Toan Oil of Stunning~
-@1019 = ~This greenish oil was originally created by Kuo-Toan alchemists, who use it to subdue prey in their aquatic domains. When applied to a weapon, it leaves a viscous coating that overwhelms the victim's body, rendering them temporarily helpless. It emits a faint, briny odor and is highly volatile—requiring exceptional manual dexterity to apply without accidentally numbing one's own fingers and risking self-exposure. It bypasses magical resistance due to its natural composition.
+@1019 = ~This greenish oil was originally created by Kuo-Toan alchemists, who use it to subdue prey in their aquatic domains. When applied to a weapon, it leaves a viscous coating that overwhelms the victim's body, rendering them temporarily helpless. It emits a faint, briny odor and is highly volatile—requiring exceptional manual dexterity to apply without accidentally numbing one's own fingers and risking self-exposure. It bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -332,7 +332,7 @@ Weight: 1~
 
 // dragon bile
 @1020 = ~Dragon Bile Extract~
-@1021 = ~Harvested from the gallbladder of slain dragons, this viscous, emerald-hued fluid is among the most coveted and expensive poisons in the realms. When applied to a weapon, it creates a potent coating that seeps into wounds and rapidly deteriorates the victim's muscular strength. Only those with exceptional dexterity can safely apply it without risking self-exposure. It bypasses magical resistance due to its natural composition.
+@1021 = ~Harvested from the gallbladder of slain dragons, this viscous, emerald-hued fluid is among the most coveted and expensive poisons in the realms. When applied to a weapon, it creates a potent coating that seeps into wounds and rapidly deteriorates the victim's muscular strength. Only those with exceptional dexterity can safely apply it without risking self-exposure. It bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
@@ -345,7 +345,7 @@ Weight: 1~
 
 // dragonsbane oil
 @1022 = ~Dragonsbane Oil~
-@1023 = ~This rare poison was made with a single purpose: to bring down even the mightiest of dragons. The blend of natural toxins specifically target draconic physiology, inflicting agony and sapping their strength. While very harmful to dragons, half-dragons, and wyverns, its effects on others are less pronounced. Only those with exceptional dexterity can safely apply it, as a single misstep can result in self-inflicted harm. It bypasses magical resistance due to its natural composition.
+@1023 = ~This rare poison was made with a single purpose: to bring down even the mightiest of dragons. The blend of natural toxins specifically target draconic physiology, inflicting agony and sapping their strength. While very harmful to dragons, half-dragons, and wyverns, its effects on others are less pronounced. Only those with exceptional dexterity can safely apply it, as a single misstep can result in self-inflicted harm. It bypasses magical resistance due to its natural composition. A target may only be affected by this oil three times per round, regardless of the source.
 
 STATISTICS:
 
