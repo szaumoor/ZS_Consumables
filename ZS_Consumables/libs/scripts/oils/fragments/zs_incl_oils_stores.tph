@@ -13,7 +13,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SHTHSTOR.STO~ BEGIN // shadow thief fence RATELL
         END
 
         PATCH_IF zs_cons_add_soporific_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
         END
 
     BUT_ONLY
@@ -29,13 +29,13 @@ ACTION_IF FILE_EXISTS_IN_GAME ~BSHOP01.STO~ BEGIN // cutpurse shop
         PATCH_IF zs_cons_add_caustic_oil BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~ZSCSAC01~  END // CAUSTIC oil
         END
-        
+
         PATCH_IF zs_cons_add_soporific_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
         END
 
         PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPSO3~  END // dragon bile
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
         END
 
         PATCH_IF zs_cons_add_gelid_oil BEGIN
@@ -54,7 +54,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~SLSHOP01.STO~ BEGIN // black market thief
         END
 
         PATCH_IF zs_cons_add_soporific_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
         END
 
     BUT_ONLY
@@ -86,11 +86,11 @@ ACTION_IF FILE_EXISTS_IN_GAME ~TRMER02.STO~ BEGIN // MERCHANT TRADEMEET
     COPY_EXISTING ~TRMER02.STO~ ~override~ // MERCHANT TRADEMEET
 
         PATCH_IF zs_cons_add_soporific_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
         END
 
         PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO3~  END // dragon bile
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS03~  END // dragon bile
         END
 
     BUT_ONLY
@@ -101,7 +101,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~MURCRAG.STO~ BEGIN // MRS CRAGMOON
     COPY_EXISTING ~MURCRAG.STO~ ~override~ // MRS CRAGMOON
 
         PATCH_IF zs_cons_add_soporific_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~  END // drow soporific oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS02~  END // drow soporific oil
         END
 
         PATCH_IF zs_cons_add_arcane_oil BEGIN
@@ -119,7 +119,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~ARLED.STO~ BEGIN
         END
 
         PATCH_IF zs_cons_add_soporific_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPSO2~ END // drow soporific oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~ZSCSPS02~ END // drow soporific oil
         END
 
         PATCH_IF zs_cons_add_caustic_oil BEGIN
@@ -149,7 +149,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~UHMER01.STO~ BEGIN
         END
 
         PATCH_IF zs_cons_add_dragonsbane_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPSO4~ END // Dragonsbane oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~ZSCSPS04~ END // Dragonsbane oil
         END
 
     BUT_ONLY
