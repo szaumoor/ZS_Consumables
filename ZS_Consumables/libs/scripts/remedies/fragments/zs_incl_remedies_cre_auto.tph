@@ -14,7 +14,7 @@ ACTION_IF zs_cons_add_random_redistribution_cre BEGIN
 
                             SET chance = RANDOM(1 100)
                             PATCH_IF chance <= 5 BEGIN
-                                ADD_CRE_ITEM ~ZSCSRMS0~ (1) (0) (0) ~none~ ~inv~ // remedial solution
+                                ADD_CRE_ITEM ~ZSCSRMS0~ (1) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // remedial solution
                             END
 
                         END

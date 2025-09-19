@@ -39,8 +39,8 @@ OUTER_SET zs_cons_elixir_price_viciousness          = "2250"
 
 OUTER_SET zs_cons_potion_price_minor_levitation = "850"
 
-OUTER_SET zs_cons_remedy_price_angelic_reprieve  = "5000"
-OUTER_SET zs_cons_remedy_price_angelic_slumber   = "2500"
+OUTER_SET zs_cons_remedy_price_angelic_reprieve  = "2500"
+OUTER_SET zs_cons_remedy_price_angelic_slumber   = "5000"
 OUTER_SET zs_cons_remedy_price_basilisk_oil      = "950"
 OUTER_SET zs_cons_remedy_price_remedial_solution = "350"
 

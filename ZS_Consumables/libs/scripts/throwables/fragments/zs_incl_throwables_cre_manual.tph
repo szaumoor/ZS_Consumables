@@ -4,7 +4,7 @@
 // END
 // >>>>>>>>
 // COPY ~./zs_consumables/macro.tph~ ~./zs_consumables/macro.tph~
-//     REPLACE_TEXTUALLY ~\(//replaceme\)~ ~ADD_CRE_ITEM "ZSCSWEB0" "#%random%" "#0" "#0" "none" "inv" %WNL%\1~
+//     REPLACE_TEXTUALLY ~\(//replaceme\)~ ~ADD_CRE_ITEM "ZSCSWEB0" "#%random%" "#0" "#0" "none" "inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16" %WNL%\1~
 
 // REINCLUDE ~./zs_consumables/macro.tph~
 
@@ -24,15 +24,15 @@ COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
             WITH
             1
             BEGIN
-                ADD_CRE_ITEM ~ZSCSWEB0~ #1 #0 #0 ~none~ ~inv~ // web grenade
+                ADD_CRE_ITEM ~ZSCSWEB0~ #1 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // web grenade
             END
             2
             BEGIN
-                ADD_CRE_ITEM ~ZSCSWEB0~ #2 #0 #0 ~none~ ~inv~
+                ADD_CRE_ITEM ~ZSCSWEB0~ #2 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
             END
             3
             BEGIN
-                ADD_CRE_ITEM ~ZSCSWEB0~ #3 #0 #0 ~none~ ~inv~
+                ADD_CRE_ITEM ~ZSCSWEB0~ #3 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
             END DEFAULT END
 
 BUT_ONLY IF_EXISTS
