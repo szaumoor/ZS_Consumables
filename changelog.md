@@ -3,4 +3,4 @@
 
 ## Fixes
 
-- Fixed remedial solution applying regeneration permanently
+- Improved readme, added symlink
