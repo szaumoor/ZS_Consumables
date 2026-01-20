@@ -1,38 +1,28 @@
-// <<<<<<<<./zs_consumables/macro.tph
-// DEFINE_PATCH_MACRO stuff BEGIN
-// //replaceme
-// END
-// >>>>>>>>
-// COPY ~./zs_consumables/macro.tph~ ~./zs_consumables/macro.tph~
-//     REPLACE_TEXTUALLY ~\(//replaceme\)~ ~ADD_CRE_ITEM "ZSCSWEB0" "#%random%" "#0" "#0" "none" "inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16" %WNL%\1~
-
-// REINCLUDE ~./zs_consumables/macro.tph~
-
-COPY_EXISTING ~UDPHAE01.CRE~ ~override~ // phaere
-              ~UDPHAE02.CRE~ ~override~ // phaere
-              ~CUPHAER.CRE~  ~override~ // phaere
-              ~UDSOLA01.CRE~ ~override~ // solaufein
-              ~UDSOLA02.CRE~ ~override~ // solaufein
-              ~DADROW10.CRE~ ~override~ // drow torturer
-              ~DADROW11.CRE~ ~override~ // drow torturer
-              ~DADROW8.CRE~  ~override~ // drow torturer
-              ~DADROW9.CRE~  ~override~ // drow torturer
-              ~DADROW6.CRE~  ~override~ // drow leader
+COPY_EXISTING ~udphae01.cre~ ~override~ // phaere
+              ~udphae02.cre~ ~override~ // phaere
+              ~cuphaer.cre~  ~override~ // phaere
+              ~udsola01.cre~ ~override~ // solaufein
+              ~udsola02.cre~ ~override~ // solaufein
+              ~dadrow10.cre~ ~override~ // drow torturer
+              ~dadrow11.cre~ ~override~ // drow torturer
+              ~dadrow8.cre~  ~override~ // drow torturer
+              ~dadrow9.cre~  ~override~ // drow torturer
+              ~dadrow6.cre~  ~override~ // drow leader
 
         SET random = RANDOM(1 3)
         PATCH_MATCH random
             WITH
             1
             BEGIN
-                ADD_CRE_ITEM ~ZSCSWEB0~ #1 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // web grenade
+                ADD_CRE_ITEM ~zscsweb0~ #1 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // web grenade
             END
             2
             BEGIN
-                ADD_CRE_ITEM ~ZSCSWEB0~ #2 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+                ADD_CRE_ITEM ~zscsweb0~ #2 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
             END
             3
             BEGIN
-                ADD_CRE_ITEM ~ZSCSWEB0~ #3 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+                ADD_CRE_ITEM ~zscsweb0~ #3 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
             END DEFAULT END
 
 BUT_ONLY IF_EXISTS

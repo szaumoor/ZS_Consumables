@@ -14,13 +14,13 @@ ACTION_IF zs_cons_add_random_redistribution_cre BEGIN
 
                             SET chance_pixie = RANDOM(1 100)
                             PATCH_IF chance_pixie <= 5 BEGIN
-                                ADD_CRE_ITEM ~ZSCSPXD0~ (1) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // pixie dust
+                                ADD_CRE_ITEM ~zscspxd0~ (1) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // pixie dust
                             END
 
                             SET chance_tanglefoot = RANDOM(1 100)
                             PATCH_IF chance_tanglefoot <= 15 BEGIN
                                 SET amount = RANDOM(1 3)
-                                ADD_CRE_ITEM ~ZSCSTGF0~ (amount) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // tanglefoot bag
+                                ADD_CRE_ITEM ~zscstgf0~ (amount) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // tanglefoot bag
                             END
 
                         END

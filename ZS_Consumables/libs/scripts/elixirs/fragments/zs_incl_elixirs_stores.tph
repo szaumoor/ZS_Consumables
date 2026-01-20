@@ -1,484 +1,484 @@
-ACTION_IF FILE_EXISTS_IN_GAME ~SLSHOP01.STO~ BEGIN // black market thief
-    COPY_EXISTING ~SLSHOP01.STO~ ~override~ // black market thief
+ACTION_IF FILE_EXISTS_IN_GAME ~slshop01.sto~ BEGIN // black market thief
+    COPY_EXISTING ~slshop01.sto~ ~override~ // black market thief
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~PPSTOR01.STO~ BEGIN // storekeep brynnlaw
-    COPY_EXISTING ~PPSTOR01.STO~ ~override~ // storekeep brynnlaw
+ACTION_IF FILE_EXISTS_IN_GAME ~ppstor01.sto~ BEGIN // storekeep brynnlaw
+    COPY_EXISTING ~ppstor01.sto~ ~override~ // storekeep brynnlaw
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
     BUT_ONLY
 END
 
 
-ACTION_IF FILE_EXISTS_IN_GAME ~TRMER02.STO~ BEGIN // MERCHANT TRADEMEET
-    COPY_EXISTING ~TRMER02.STO~ ~override~ // MERCHANT TRADEMEET
+ACTION_IF FILE_EXISTS_IN_GAME ~trmer02.sto~ BEGIN // MERCHANT TRADEMEET
+    COPY_EXISTING ~trmer02.sto~ ~override~ // MERCHANT TRADEMEET
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~MURCRAG.STO~ BEGIN // MRS CRAGMOON
-    COPY_EXISTING ~MURCRAG.STO~ ~override~ // MRS CRAGMOON
+ACTION_IF FILE_EXISTS_IN_GAME ~murcrag.sto~ BEGIN // MRS CRAGMOON
+    COPY_EXISTING ~murcrag.sto~ ~override~ // MRS CRAGMOON
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~BHELM.STO~ BEGIN //helm's temple
-    COPY_EXISTING ~BHELM.STO~   ~override~ //helm's temple
-                  ~TEMHELM.STO~ ~override~ //helm's temple
-                  ~TEM4802.STO~ ~override~ //helm's temple
+ACTION_IF FILE_EXISTS_IN_GAME ~bhelm.sto~ BEGIN //helm's temple
+    COPY_EXISTING ~bhelm.sto~   ~override~ //helm's temple
+                  ~temhelm.sto~ ~override~ //helm's temple
+                  ~tem4802.sto~ ~override~ //helm's temple
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~ULGOTH.STO~ BEGIN //ulgoth's inn
-    COPY_EXISTING ~ULGOTH.STO~ ~override~ //ulgoth's inn
+ACTION_IF FILE_EXISTS_IN_GAME ~ulgoth.sto~ BEGIN //ulgoth's inn
+    COPY_EXISTING ~ulgoth.sto~ ~override~ //ulgoth's inn
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~TEM3402.STO~ BEGIN //helm's temple
-    COPY_EXISTING ~TEM3402.STO~ ~override~ //helm's temple
+ACTION_IF FILE_EXISTS_IN_GAME ~tem3402.sto~ BEGIN //helm's temple
+    COPY_EXISTING ~tem3402.sto~ ~override~ //helm's temple
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~DAWNMAS.STO~ BEGIN // DAWNMASTER's temple
-    COPY_EXISTING ~DAWNMAS.STO~ ~override~ //DAWNMASTER's temple
-                  ~TEMLATH.STO~ ~override~ //LATHANDER's temple
+ACTION_IF FILE_EXISTS_IN_GAME ~dawnmas.sto~ BEGIN // dawnmaster's temple
+    COPY_EXISTING ~dawnmas.sto~ ~override~ //dawnmaster's temple
+                  ~temlath.sto~ ~override~ //lathander's temple
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~TRGENI01.STO~ BEGIN // trademeet genie
-    COPY_EXISTING ~TRGENI01.STO~ ~override~ //trademeet genie
-                  ~TRCAR04.STO~ ~override~ // caravan merchant
+ACTION_IF FILE_EXISTS_IN_GAME ~trgeni01.sto~ BEGIN // trademeet genie
+    COPY_EXISTING ~trgeni01.sto~ ~override~ //trademeet genie
+                  ~trcar04.sto~ ~override~ // caravan merchant
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
-        END
-
-        PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~RIBALD.STO~ BEGIN // ribald's shop
-    COPY_EXISTING ~RIBALD.STO~ ~override~ // ribald's shop
-
-        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
-        END
-
-        PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
-        END
-
-        PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
-        END
-
-        PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~UDDUER02.STO~ BEGIN // duergar merchant (when encountered as a drow)
-    COPY_EXISTING ~UDDUER02.STO~ ~override~ // duergar merchant (when encountered as a drow)
+ACTION_IF FILE_EXISTS_IN_GAME ~ribald.sto~ BEGIN // ribald's shop
+    COPY_EXISTING ~ribald.sto~ ~override~ // ribald's shop
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~STOBLACK.STO~ BEGIN // BLACK LILY
-    COPY_EXISTING ~STOBLACK.STO~ ~override~ // black lily
-                  ~STOSILEN.STO~ ~override~ // silence
-
-        PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
-        END
-
-        PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~BMTHIEF.STO~ BEGIN // BLACK MARKET THIEF
-    COPY_EXISTING ~BMTHIEF.STO~ ~override~ // BLACK MARKET THIEF
-
-        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
-        END
-
-        PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
-        END
-
-        PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.STO~ BEGIN // SOD QUARTERMASTER
-    COPY_EXISTING ~bdbeleg3.STO~ ~override~ // sod quartermaster
-
-        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
-        END
-
-        PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
-        END
-
-        PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~bdnazram.STO~ BEGIN // SOD GENIE
-    COPY_EXISTING ~bdnazram.STO~ ~override~ // sod genie
+ACTION_IF FILE_EXISTS_IN_GAME ~udduer02.sto~ BEGIN // duergar merchant (when encountered as a drow)
+    COPY_EXISTING ~udduer02.sto~ ~override~ // duergar merchant (when encountered as a drow)
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~stoblack.sto~ BEGIN // BLACK LILY
+    COPY_EXISTING ~stoblack.sto~ ~override~ // black lily
+                  ~stosilen.sto~ ~override~ // silence
+
+        PATCH_IF zs_cons_add_viciousness BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsvic0~ END // viciousness
+        END
+
+        PATCH_IF zs_cons_add_bloodlust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bmthief.sto~ BEGIN // BLACK MARKET THIEF
+    COPY_EXISTING ~bmthief.sto~ ~override~ // BLACK MARKET THIEF
+
+        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
+        END
+
+        PATCH_IF zs_cons_add_viciousness BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsvic0~ END // viciousness
+        END
+
+        PATCH_IF zs_cons_add_bloodlust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.sto~ BEGIN // SOD QUARTERMASTER
+    COPY_EXISTING ~bdbeleg3.sto~ ~override~ // sod quartermaster
+
+        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
+        END
+
+        PATCH_IF zs_cons_add_viciousness BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsvic0~ END // viciousness
+        END
+
+        PATCH_IF zs_cons_add_bloodlust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~bdsorcsc.STO~ BEGIN // SOD SORCEROUS SUNDRIES
-    COPY_EXISTING ~bdsorcsc.STO~ ~override~ // sod sorcerous sundries
+ACTION_IF FILE_EXISTS_IN_GAME ~bdnazram.sto~ BEGIN // SOD GENIE
+    COPY_EXISTING ~bdnazram.sto~ ~override~ // sod genie
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~HIGHHEDG.STO~ BEGIN // HIGH HEDGE
-    COPY_EXISTING ~HIGHHEDG.STO~ ~override~ // HIGH HEDGE
-                  ~STO0703.STO~  ~override~ // SORCEROUS SUNDRIES
+ACTION_IF FILE_EXISTS_IN_GAME ~bdsorcsc.sto~ BEGIN // SOD SORCEROUS SUNDRIES
+    COPY_EXISTING ~bdsorcsc.sto~ ~override~ // sod sorcerous sundries
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~UDDROW24.STO~ BEGIN // DROW VENDOR
-    COPY_EXISTING ~UDDROW24.STO~ ~override~ //DROW VENDOR
-
-        PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
-        END
-
-        PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~AMSMUG01.STO~ BEGIN // AMEKTHRAN SMUGGLERS
-    COPY_EXISTING ~AMSMUG01.STO~ ~override~ // AMEKTHRAN SMUGGLERS
-                  ~AMSMUG02.STO~ ~override~ // AMEKTHRAN SMUGGLERS
+ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ BEGIN // HIGH HEDGE
+    COPY_EXISTING ~highhedg.sto~ ~override~ // high hedge
+                  ~sto0703.sto~  ~override~ // sorcerous sundries
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~25SPELL.STO~ BEGIN // ARCANA ARCHIVES
-    COPY_EXISTING ~25SPELL.STO~  ~override~ // ARCANA ARCHIVES
-                  ~25SPELL2.STO~ ~override~ // ARCANA ARCHIVES
-
-        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
-        END
-
-        PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
     BUT_ONLY
-
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~OHNPOTME.STO~ BEGIN // POTION MERCHANT (NEERA'S QUEST)
-    COPY_EXISTING ~OHNPOTME.STO~ ~override~ // POTION MERCHANT (NEERA'S QUEST)
+ACTION_IF FILE_EXISTS_IN_GAME ~uddrow24.sto~ BEGIN // DROW VENDOR
+    COPY_EXISTING ~uddrow24.sto~ ~override~ //DROW VENDOR
+
+        PATCH_IF zs_cons_add_viciousness BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsvic0~ END // viciousness
+        END
+
+        PATCH_IF zs_cons_add_bloodlust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~amsmug01.sto~ BEGIN // AMEKTHRAN SMUGGLERS
+    COPY_EXISTING ~amsmug01.sto~ ~override~ // amekthran smugglers
+                  ~amsmug02.sto~ ~override~ // amekthran smugglers
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
-        END
-
-        PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
     BUT_ONLY
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~SAHPR1.STO~ BEGIN //SAUHAGIN's PRIESTESS
-    COPY_EXISTING ~SAHPR1.STO~ ~override~ //SAUHAGIN's PRIESTESS
-
-        PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
-        END
-
-        PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~GARLENA.STO~ BEGIN // GARLENA (watcher's keep)
-    COPY_EXISTING ~GARLENA.STO~ ~override~ // GARLENA (watcher's keep)
+ACTION_IF FILE_EXISTS_IN_GAME ~25spell.sto~ BEGIN // ARCANA ARCHIVES
+    COPY_EXISTING ~25spell.sto~  ~override~ // arcana archives
+                  ~25spell2.sto~ ~override~ // arcana archives
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSMYS0~ END // mystic cultivation
-        END
-
-        PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
-        END
-
-        PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
         END
 
     BUT_ONLY
+
 END
 
-ACTION_IF FILE_EXISTS_IN_GAME ~TEM2304.STO~ BEGIN // gellana mirrorshade
-    COPY_EXISTING ~TEM2304.STO~ ~override~ // gellana mirrorshade
+ACTION_IF FILE_EXISTS_IN_GAME ~ohnpotme.sto~ BEGIN // POTION MERCHANT (NEERA'S QUEST)
+    COPY_EXISTING ~ohnpotme.sto~ ~override~ // POTION MERCHANT (NEERA'S QUEST)
 
-        PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
+        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~SHOP04.STO~ BEGIN // potion merchant
-    COPY_EXISTING ~SHOP04.STO~ ~override~ // potion merchant
-
-        PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSUVR0~ END // universal resistance
-        END
-
-        PATCH_IF zs_cons_add_see_invisibility BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~ZSCSSIV0~ END // see invisibility
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~BDWAIZAH.STO~ BEGIN // THIEF MERCHANT (SOD)
-    COPY_EXISTING ~BDWAIZAH.STO~ ~override~ // THIEF MERCHANT (SOD)
 
         PATCH_IF zs_cons_add_viciousness BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSVIC0~ END // viciousness
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsvic0~ END // viciousness
         END
 
         PATCH_IF zs_cons_add_bloodlust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~ZSCSBLD0~ END // bloodlust
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
+        END
+
+        PATCH_IF zs_cons_add_universal_resistance BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
+        END
+
+        PATCH_IF zs_cons_add_see_invisibility BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~sahpr1.sto~ BEGIN //SAUHAGIN's PRIESTESS
+    COPY_EXISTING ~sahpr1.sto~ ~override~ //SAUHAGIN's PRIESTESS
+
+        PATCH_IF zs_cons_add_viciousness BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsvic0~ END // viciousness
+        END
+
+        PATCH_IF zs_cons_add_bloodlust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~garlena.sto~ BEGIN // GARLENA (watcher's keep)
+    COPY_EXISTING ~garlena.sto~ ~override~ // GARLENA (watcher's keep)
+
+        PATCH_IF zs_cons_add_mystic_cultivation BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
+        END
+
+        PATCH_IF zs_cons_add_viciousness BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~zscsvic0~ END // viciousness
+        END
+
+        PATCH_IF zs_cons_add_bloodlust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
+        END
+
+        PATCH_IF zs_cons_add_universal_resistance BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
+        END
+
+        PATCH_IF zs_cons_add_see_invisibility BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~tem2304.sto~ BEGIN // gellana mirrorshade
+    COPY_EXISTING ~tem2304.sto~ ~override~ // gellana mirrorshade
+
+        PATCH_IF zs_cons_add_universal_resistance BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~shop04.sto~ BEGIN // potion merchant
+    COPY_EXISTING ~shop04.sto~ ~override~ // potion merchant
+
+        PATCH_IF zs_cons_add_universal_resistance BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
+        END
+
+        PATCH_IF zs_cons_add_see_invisibility BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscssiv0~ END // see invisibility
+        END
+
+    BUT_ONLY
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdwaizah.sto~ BEGIN // THIEF MERCHANT (SOD)
+    COPY_EXISTING ~bdwaizah.sto~ ~override~ // THIEF MERCHANT (SOD)
+
+        PATCH_IF zs_cons_add_viciousness BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsvic0~ END // viciousness
+        END
+
+        PATCH_IF zs_cons_add_bloodlust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsbld0~ END // bloodlust
         END
 
     BUT_ONLY
