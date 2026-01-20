@@ -5,4 +5,4 @@
 
 - Improved readme, added symlink
 - Releases now include a variant per platform
-- Included partial compatibility with IWDEE, with some automatic distribution of elements.
+- Included compatibility with IWDEE, adding stock to various merchants and creatures
