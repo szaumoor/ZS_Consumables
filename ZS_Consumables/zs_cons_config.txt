@@ -1,6 +1,6 @@
 // Redistribution variables \\
 
-// random distribution of oils to various creatures
+// allow random distribution of oils to various creatures
 OUTER_SET zs_cons_add_random_redistribution_cre = "1"
 
 // probabilities a thief gets at least noxious oil
@@ -72,7 +72,7 @@ OUTER_SET zs_cons_pod_add_dragonbile    = "1"
 OUTER_SET zs_cons_pod_add_kuotoa        = "1"
 OUTER_SET zs_cons_pod_add_dragonbane    = "1"
 
-// Amount of oils available in the store
+// Amount of oils available in the stores in Pits of Despair (upcoming mod, ignore if not relevant)
 OUTER_SET zs_cons_pod_caustic_store       = "20"
 OUTER_SET zs_cons_pod_gelid_store         = "20"
 OUTER_SET zs_cons_pod_igneous_store       = "20"
