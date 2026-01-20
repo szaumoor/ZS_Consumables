@@ -1,765 +1,803 @@
-ACTION_IF FILE_EXISTS_IN_GAME ~shthstor.sto~ BEGIN // shadow thief fence RATELL
-    COPY_EXISTING ~shthstor.sto~  ~override~ //shadow thief fence ratell
-                  ~roger.sto~     ~override~  // roger the fence
-                  ~jayes.sto~     ~override~  // jayes the fence
-                  ~trthf02.sto~   ~override~  // kich fence (trademeet)
+ ACTION_IF NOT GAME_IS "iwdee" BEGIN
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~shthstor.sto~ BEGIN // shadow thief fence RATELL
+        COPY_EXISTING ~shthstor.sto~  ~override~ //shadow thief fence ratell
+                      ~roger.sto~     ~override~  // roger the fence
+                      ~jayes.sto~     ~override~  // jayes the fence
+                      ~trthf02.sto~   ~override~  // kich fence (trademeet)
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bshop01.sto~ BEGIN // cutpurse shop
+        COPY_EXISTING ~bshop01.sto~ ~override~ //shadow thief fence ratell
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~slshop01.sto~ BEGIN // black market thief
+        COPY_EXISTING ~slshop01.sto~ ~override~ // black market thief
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~ppstor01.sto~ BEGIN // storekeep brynnlaw
+        COPY_EXISTING ~ppstor01.sto~ ~override~ // storekeep brynnlaw
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~murcrag.sto~ BEGIN // MRS CRAGMOON
+        COPY_EXISTING ~murcrag.sto~ ~override~ // MRS CRAGMOON
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~uhmer01.sto~ BEGIN
+        COPY_EXISTING ~uhmer01.sto~ ~override~ // elence fielding umar hills
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+        BUT_ONLY
+
+        COPY_EXISTING ~uhmer02.sto~ ~override~ // MIN MINLING umar hills
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+        BUT_ONLY
+    END
+
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bernard.sto~ BEGIN // copper coronet bernard
+        COPY_EXISTING ~bernard.sto~  ~override~
+                    ~bernard2.sto~ ~override~
+                    ~bernard3.sto~ ~override~
+                    ~bernard4.sto~ ~override~
+                    ~bernard5.sto~ ~override~
+                    ~bernard6.sto~ ~override~
+                    ~hendak.sto~   ~override~ //hendak
+                    ~lehtinan.sto~ ~override~ //lehtinan
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bhelm.sto~ BEGIN //helm's temple
+        COPY_EXISTING ~bhelm.sto~   ~override~ //helm's temple
+                    ~temhelm.sto~ ~override~ //helm's temple
+                    ~tem4802.sto~ ~override~ //helm's temple
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~ulgoth.sto~ BEGIN //ulgoth's inn
+        COPY_EXISTING ~ulgoth.sto~ ~override~ //helm's temple
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~tem3402.sto~ BEGIN //helm's temple
+        COPY_EXISTING ~tem3402.sto~ ~override~ //helm's temple
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~dawnmas.sto~ BEGIN // DAWNMASTER's temple
+        COPY_EXISTING ~dawnmas.sto~ ~override~ //dawnmaster's temple
+                    ~temlath.sto~ ~override~ //lathander's temple
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 20 STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~trrak01.sto~ BEGIN // THUMB
+        COPY_EXISTING ~trrak01.sto~ ~override~ //THUMB
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~trgeni01.sto~ BEGIN // trademeet genie
+        COPY_EXISTING ~trgeni01.sto~ ~override~ //trademeet genie
+                    ~trcar04.sto~ ~override~ // caravan merchant
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~temsup.sto~ BEGIN // waukeen's temple
+        COPY_EXISTING ~temsup.sto~   ~override~ //waukeen's temple
+                    ~amcler02.sto~ ~override~ // waukeen's temple (tob)
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~friend.sto~ BEGIN // friendly arm inn
+        COPY_EXISTING ~Friend.sto~ ~override~ // friendly arm inn
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~ribald.sto~ BEGIN // ribald's shop
+        COPY_EXISTING ~ribald.sto~ ~override~ // ribald's shop
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~udduer02.sto~ BEGIN // duergar merchant (when encountered as a drow)
+        COPY_EXISTING ~udduer02.sto~ ~override~ // duergar merchant (when encountered as a drow)
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~ END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsweb0~ END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~stoblack.sto~ BEGIN // BLACK LILY
+        COPY_EXISTING ~stoblack.sto~ ~override~ // black lily
+                    ~stosilen.sto~ ~override~ // silence
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsckp0~ END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsweb0~ END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bmthief.sto~ BEGIN // BLACK MARKET THIEF
+        COPY_EXISTING ~bmthief.sto~ ~override~ // BLACK MARKET THIEF
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsckp0~ END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsweb0~ END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsacv0~ END // acid vial
+            END
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.sto~ BEGIN // SOD QUARTERMASTER
+        COPY_EXISTING ~bdbeleg3.sto~ ~override~ // sod quartermaster
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bdnazram.sto~ BEGIN // SOD GENIE
+        COPY_EXISTING ~bdnazram.sto~ ~override~ // sod genie
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bdonoro.sto~ BEGIN // SOD ONOROTH
+        COPY_EXISTING ~bdonoro.sto~ ~override~ // sod onoroth
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+            END
+
+                    PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 7  STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 7  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bdpolvi.sto~ BEGIN // SOD CRUSADER POLVI
+        COPY_EXISTING ~bdpolvi.sto~ ~override~ // sod crusader polvi
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bdsorcsc.sto~ BEGIN // SOD SORCEROUS SUNDRIES
+        COPY_EXISTING ~bdsorcsc.sto~ ~override~ // sod sorcerous sundries
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ BEGIN // HIGH HEDGE
+        COPY_EXISTING ~highhedg.sto~ ~override~ // high hedge
+                    ~sto0703.sto~  ~override~ // sorcerous sundries
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 14 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~inn3351.sto~ BEGIN // FELDEPOST INN
+        COPY_EXISTING ~inn3351.sto~ ~override~ // FELDEPOST INN
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscstgf0~ END // tanglefoot bag
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~uddrow24.sto~ BEGIN // DROW VENDOR
+        COPY_EXISTING ~uddrow24.sto~ ~override~ //DROW VENDOR
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~ END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsweb0~ END // web grenade
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~amsmug01.sto~ BEGIN // AMEKTHRAN SMUGGLERS
+        COPY_EXISTING ~amsmug01.sto~ ~override~ // amekthran smugglers
+                    ~amsmug02.sto~ ~override~ // amekthran smugglers
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~25spell.sto~ BEGIN // ARCANA ARCHIVES
+        COPY_EXISTING ~25spell.sto~  ~override~ // arcana archives
+                    ~25spell2.sto~ ~override~ // arcana archives
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~hgkar01.sto~ BEGIN // Karthis al-Hezzar
+        COPY_EXISTING ~hgkar01.sto~  ~override~ // karthis al-hezzar
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscsckp0~  END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscsweb0~  END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+            END
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~uddrow23.sto~ BEGIN // DROW VENDOR
+        COPY_EXISTING ~uddrow23.sto~ ~override~ //DROW VENDOR
+
+            PATCH_IF zs_cons_add_choking_powder BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsckp0~ END // choking powder
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscsweb0~ END // web grenade
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~ohnpotme.sto~ BEGIN // POTION MERCHANT (NEERA'S QUEST)
+        COPY_EXISTING ~ohnpotme.sto~ ~override~ // POTION MERCHANT (NEERA'S QUEST)
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~sahpr1.sto~ BEGIN //SAUHAGIN's PRIESTESS
+        COPY_EXISTING ~sahpr1.sto~ ~override~ //SAUHAGIN's PRIESTESS
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~garlena.sto~ BEGIN // GARLENA (watcher's keep)
+        COPY_EXISTING ~garlena.sto~ ~override~ // GARLENA (watcher's keep)
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 24  STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~suelf10.sto~ BEGIN // SULDANESSELAR MERCHANT
+        COPY_EXISTING ~suelf10.sto~ ~override~ // SULDANESSELAR MERCHANT
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~zscshlw0~ END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~tem2304.sto~ BEGIN // gellana mirrorshade
+        COPY_EXISTING ~tem2304.sto~ ~override~ // gellana mirrorshade
+
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscshlw0~  END // holy water
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~shop04.sto~ BEGIN // potion merchant
+        COPY_EXISTING ~shop04.sto~ ~override~ // potion merchant
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_alchemist_fire BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+
+        BUT_ONLY
+    END
+
+    ACTION_IF FILE_EXISTS_IN_GAME ~bdwaizah.sto~ BEGIN // THIEF MERCHANT (SOD)
+        COPY_EXISTING ~bdwaizah.sto~ ~override~ // THIEF MERCHANT (SOD)
+
+            PATCH_IF zs_cons_add_acid_vial BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 16 STR_VAR item_name = ~zscsacv0~ END // acid vial
+            END
+
+            PATCH_IF zs_cons_add_pixie_dust BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscspxd0~ END // pixie dust
+            END
+
+            PATCH_IF zs_cons_add_web_grenade BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsweb0~ END // web grenade
+            END
+
+            PATCH_IF zs_cons_add_grease_bottle BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
+            END
+
+            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscstgf0~ END // tanglefoot bag
+            END
+
+        BUT_ONLY
+    END
+
+END ELSE BEGIN
+
+    COPY_EXISTING ~kuork0.sto~ ~override~ // orrick IWDEE
 
         PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsacv0~  END // acid vial
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
         END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bshop01.sto~ BEGIN // cutpurse shop
-    COPY_EXISTING ~bshop01.sto~ ~override~ //shadow thief fence ratell
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~slshop01.sto~ BEGIN // black market thief
-    COPY_EXISTING ~slshop01.sto~ ~override~ // black market thief
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~ppstor01.sto~ BEGIN // storekeep brynnlaw
-    COPY_EXISTING ~ppstor01.sto~ ~override~ // storekeep brynnlaw
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~murcrag.sto~ BEGIN // MRS CRAGMOON
-    COPY_EXISTING ~murcrag.sto~ ~override~ // MRS CRAGMOON
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscshlw0~  END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~uhmer01.sto~ BEGIN
-    COPY_EXISTING ~uhmer01.sto~ ~override~ // elence fielding umar hills
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-    BUT_ONLY
-
-    COPY_EXISTING ~uhmer02.sto~ ~override~ // MIN MINLING umar hills
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-    BUT_ONLY
-END
-
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bernard.sto~ BEGIN // copper coronet bernard
-    COPY_EXISTING ~bernard.sto~  ~override~
-                  ~bernard2.sto~ ~override~
-                  ~bernard3.sto~ ~override~
-                  ~bernard4.sto~ ~override~
-                  ~bernard5.sto~ ~override~
-                  ~bernard6.sto~ ~override~
-                  ~hendak.sto~   ~override~ //hendak
-                  ~lehtinan.sto~ ~override~ //lehtinan
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bhelm.sto~ BEGIN //helm's temple
-    COPY_EXISTING ~bhelm.sto~   ~override~ //helm's temple
-                  ~temhelm.sto~ ~override~ //helm's temple
-                  ~tem4802.sto~ ~override~ //helm's temple
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscshlw0~  END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~ulgoth.sto~ BEGIN //ulgoth's inn
-    COPY_EXISTING ~ulgoth.sto~ ~override~ //helm's temple
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~tem3402.sto~ BEGIN //helm's temple
-    COPY_EXISTING ~tem3402.sto~ ~override~ //helm's temple
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscshlw0~  END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~dawnmas.sto~ BEGIN // DAWNMASTER's temple
-    COPY_EXISTING ~dawnmas.sto~ ~override~ //dawnmaster's temple
-                  ~temlath.sto~ ~override~ //lathander's temple
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 20 STR_VAR item_name = ~zscshlw0~  END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~trrak01.sto~ BEGIN // THUMB
-    COPY_EXISTING ~trrak01.sto~ ~override~ //THUMB
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~trgeni01.sto~ BEGIN // trademeet genie
-    COPY_EXISTING ~trgeni01.sto~ ~override~ //trademeet genie
-                  ~trcar04.sto~ ~override~ // caravan merchant
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~temsup.sto~ BEGIN // waukeen's temple
-    COPY_EXISTING ~temsup.sto~   ~override~ //waukeen's temple
-                  ~amcler02.sto~ ~override~ // waukeen's temple (tob)
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscshlw0~  END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~friend.sto~ BEGIN // friendly arm inn
-    COPY_EXISTING ~Friend.sto~ ~override~ // friendly arm inn
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~ribald.sto~ BEGIN // ribald's shop
-    COPY_EXISTING ~ribald.sto~ ~override~ // ribald's shop
 
         PATCH_IF zs_cons_add_alchemist_fire BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
         END
 
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
+        PATCH_IF zs_cons_add_choking_powder BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 14  STR_VAR item_name = ~zscsckp0~  END // choking powder
+        END
+
+        PATCH_IF zs_cons_add_grease_bottle BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+        END
+
+        PATCH_IF zs_cons_add_web_grenade BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscsweb0~  END // web grenade
         END
 
         PATCH_IF zs_cons_add_pixie_dust BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscspxd0~  END // pixie dust
         END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~udduer02.sto~ BEGIN // duergar merchant (when encountered as a drow)
-    COPY_EXISTING ~udduer02.sto~ ~override~ // duergar merchant (when encountered as a drow)
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~ END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsweb0~ END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~stoblack.sto~ BEGIN // BLACK LILY
-    COPY_EXISTING ~stoblack.sto~ ~override~ // black lily
-                  ~stosilen.sto~ ~override~ // silence
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsckp0~ END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsweb0~ END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bmthief.sto~ BEGIN // BLACK MARKET THIEF
-    COPY_EXISTING ~bmthief.sto~ ~override~ // BLACK MARKET THIEF
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsckp0~ END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsweb0~ END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsacv0~ END // acid vial
-        END
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bdbeleg3.sto~ BEGIN // SOD QUARTERMASTER
-    COPY_EXISTING ~bdbeleg3.sto~ ~override~ // sod quartermaster
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bdnazram.sto~ BEGIN // SOD GENIE
-    COPY_EXISTING ~bdnazram.sto~ ~override~ // sod genie
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bdonoro.sto~ BEGIN // SOD ONOROTH
-    COPY_EXISTING ~bdonoro.sto~ ~override~ // sod onoroth
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
-        END
-
-                PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 7  STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 7  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bdpolvi.sto~ BEGIN // SOD CRUSADER POLVI
-    COPY_EXISTING ~bdpolvi.sto~ ~override~ // sod crusader polvi
-
+        
         PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscshlw0~  END // holy water
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~zscshlw0~ END // holy water
         END
 
-    BUT_ONLY
-END
+    BUT_ONLY IF_EXISTS
 
-ACTION_IF FILE_EXISTS_IN_GAME ~bdsorcsc.sto~ BEGIN // SOD SORCEROUS SUNDRIES
-    COPY_EXISTING ~bdsorcsc.sto~ ~override~ // sod sorcerous sundries
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ BEGIN // HIGH HEDGE
-    COPY_EXISTING ~highhedg.sto~ ~override~ // high hedge
-                  ~sto0703.sto~  ~override~ // sorcerous sundries
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 14 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~inn3351.sto~ BEGIN // FELDEPOST INN
-    COPY_EXISTING ~inn3351.sto~ ~override~ // FELDEPOST INN
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscstgf0~ END // tanglefoot bag
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~uddrow24.sto~ BEGIN // DROW VENDOR
-    COPY_EXISTING ~uddrow24.sto~ ~override~ //DROW VENDOR
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsckp0~ END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsweb0~ END // web grenade
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~amsmug01.sto~ BEGIN // AMEKTHRAN SMUGGLERS
-    COPY_EXISTING ~amsmug01.sto~ ~override~ // amekthran smugglers
-                  ~amsmug02.sto~ ~override~ // amekthran smugglers
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~25spell.sto~ BEGIN // ARCANA ARCHIVES
-    COPY_EXISTING ~25spell.sto~  ~override~ // arcana archives
-                  ~25spell2.sto~ ~override~ // arcana archives
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~hgkar01.sto~ BEGIN // Karthis al-Hezzar
-    COPY_EXISTING ~hgkar01.sto~  ~override~ // karthis al-hezzar
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscsckp0~  END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscsweb0~  END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
-        END
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~uddrow23.sto~ BEGIN // DROW VENDOR
-    COPY_EXISTING ~uddrow23.sto~ ~override~ //DROW VENDOR
-
-        PATCH_IF zs_cons_add_choking_powder BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsckp0~ END // choking powder
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscsweb0~ END // web grenade
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~ohnpotme.sto~ BEGIN // POTION MERCHANT (NEERA'S QUEST)
-    COPY_EXISTING ~ohnpotme.sto~ ~override~ // POTION MERCHANT (NEERA'S QUEST)
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~sahpr1.sto~ BEGIN //SAUHAGIN's PRIESTESS
-    COPY_EXISTING ~sahpr1.sto~ ~override~ //SAUHAGIN's PRIESTESS
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~garlena.sto~ BEGIN // GARLENA (watcher's keep)
-    COPY_EXISTING ~garlena.sto~ ~override~ // GARLENA (watcher's keep)
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 24  STR_VAR item_name = ~zscshlw0~  END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~suelf10.sto~ BEGIN // SULDANESSELAR MERCHANT
-    COPY_EXISTING ~suelf10.sto~ ~override~ // SULDANESSELAR MERCHANT
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~zscshlw0~ END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~tem2304.sto~ BEGIN // gellana mirrorshade
-    COPY_EXISTING ~tem2304.sto~ ~override~ // gellana mirrorshade
-
-        PATCH_IF zs_cons_add_holy_water BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8  STR_VAR item_name = ~zscshlw0~  END // holy water
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~shop04.sto~ BEGIN // potion merchant
-    COPY_EXISTING ~shop04.sto~ ~override~ // potion merchant
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsacv0~  END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_alchemist_fire BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1  STR_VAR item_name = ~zscspxd0~  END // pixie dust
-        END
-
-    BUT_ONLY
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~bdwaizah.sto~ BEGIN // THIEF MERCHANT (SOD)
-    COPY_EXISTING ~bdwaizah.sto~ ~override~ // THIEF MERCHANT (SOD)
-
-        PATCH_IF zs_cons_add_acid_vial BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 16 STR_VAR item_name = ~zscsacv0~ END // acid vial
-        END
-
-        PATCH_IF zs_cons_add_pixie_dust BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscspxd0~ END // pixie dust
-        END
-
-        PATCH_IF zs_cons_add_web_grenade BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsweb0~ END // web grenade
-        END
-
-        PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-        END
-
-        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscstgf0~ END // tanglefoot bag
-        END
-
-    BUT_ONLY
 END

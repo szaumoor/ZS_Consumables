@@ -132,7 +132,11 @@ ACTION_IF FILE_EXISTS_IN_GAME ~shop04.sto~ BEGIN // potion merchant
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdwaizah.sto~ BEGIN // THIEF MERCHANT (SOD)
-    COPY_EXISTING ~BDWaIZAH.sto~ ~override~ // THIEF MERCHANT (SOD)
+    COPY_EXISTING ~bdwaizah.sto~ ~override~ // THIEF MERCHANT (SOD)
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
     BUT_ONLY
 END
+
+COPY_EXISTING ~kuork0.sto~ ~override~ // orrick IWDEE
+    LPF ADD_STORE_ITEM_EX INT_VAR stack = 20 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
+BUT_ONLY IF_EXISTS
