@@ -12,7 +12,7 @@ Weight: 1~
 
 STATISTICS:
 
-Special: User falls asleep for 3 rounds. If their sleep is uninterrupted, they awaken refreshed, restoring 50% of their Hit Points plus 27 extra points. Additionally, their fatigue is removed, and they regain one spell slot from levels 1–5 (if available; otherwise, the highest available lower-level slot is restored).
+Special: User falls asleep for 3 rounds. If their sleep is uninterrupted, they awaken refreshed, restoring 50% of their Hit Points plus 27 extra points. Additionally, their fatigue is removed, and they regain one spell slot from levels 1-5 (if available; otherwise, the highest available lower-level slot is restored).
 
 Weight: 1~
 
@@ -58,7 +58,7 @@ STATISTICS:
 Cures diseases, poison, blindness, silence, deafness, paralysis and feeblemindedness.
 Heals 12 Hit Points
 Regenerates 1 Hit Point per round for 2 turns.
-Special: May be given to others
+Special: May be administered to others
 
 Weight: 1~
 
@@ -354,7 +354,7 @@ Weakening: Dragons, half-dragons, and wyverns suffer the following effects once 
   – Attacks per round reduced to 1/2 for 1 round
   – Strength is reduced by 40% for 2 rounds
   – Casting speed, THAC0, and Armor Class are damaged by 4 points for 3 rounds
-The pain it causes may affect concentration: 50% chance of disrupting Stoneskin or any kind of Invisibility.
+The pain it causes may affect concentration: 50% chance of disrupting Stoneskin or any kind of invisibility.
 Self-damage: User suffers the same effect if their Dexterity is below 16. Blackguards and assassins are immune to this effect. Other thieves have a 50% chance of being affected; bards have a 70% chance.
 Duration: 8 rounds
 

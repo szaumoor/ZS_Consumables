@@ -1328,11 +1328,24 @@ END ELSE BEGIN
     COPY_EXISTING ~kusmith.sto~ ~override~ // conlan IWDEE
 
         PATCH_IF zs_cons_add_gelid_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscscd01~ END // GELID damage oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscscd01~ END // gelid damage oil
         END
 
         PATCH_IF zs_cons_add_igneous_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR  item_name = ~zscsmd01~ END // arcane oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR  item_name = ~zscsfr01~ END // igneous oil
+        END
+
+    BUT_ONLY IF_EXISTS
+
+
+    COPY_EXISTING ~shlehlan.sto~ ~override~ // severed hand ghost merchant iwdee
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR  item_name = ~zscsfr01~ END // igneous oil
+        END
+
+        PATCH_IF zs_cons_add_sanctified_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscshl01~ END // sanctified oil
         END
 
     BUT_ONLY IF_EXISTS
