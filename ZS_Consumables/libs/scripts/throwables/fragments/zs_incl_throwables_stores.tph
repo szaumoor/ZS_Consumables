@@ -838,6 +838,7 @@ END ELSE BEGIN
     BUT_ONLY IF_EXISTS
 
      COPY_EXISTING ~emmeric.sto~ ~override~ // ememric IWDEE
+                   ~hobart.sto~ ~override~ // ememric IWDEE
 
         PATCH_IF zs_cons_add_choking_powder BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsckp0~  END // choking powder

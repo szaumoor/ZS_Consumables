@@ -1312,6 +1312,10 @@ END ELSE BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscscd01~ END // GELID damage oil
         END
 
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsac01~ END // CAUSTIC damage oil
+        END
+
         PATCH_IF zs_cons_add_scintillating_oil BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 7 STR_VAR item_name = ~zscsel01~ END // scintillating oil 20
         END
@@ -1336,6 +1340,10 @@ END ELSE BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR  item_name = ~zscsfr01~ END // igneous oil
         END
 
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsac01~ END // CAUSTIC damage oil
+        END
+
     BUT_ONLY IF_EXISTS
 
     COPY_EXISTING ~emmeric.sto~ ~override~ // ememric IWDEE
@@ -1352,12 +1360,16 @@ END ELSE BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsps03~  END // dragon bile
         END
 
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsac01~ END // CAUSTIC damage oil
+        END
+
         PATCH_IF zs_cons_add_scintillating_oil BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscsel01~ END // scintillating oil 20
         END
 
         PATCH_IF zs_cons_add_soporific_oil BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsps02~  END // drow soporific oil
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2  STR_VAR item_name = ~zscsps02~  END // drow soporific oil
         END
 
         PATCH_IF zs_cons_add_kuotoan_oil BEGIN
@@ -1366,6 +1378,25 @@ END ELSE BEGIN
 
     BUT_ONLY IF_EXISTS
 
+    COPY_EXISTING ~hobart.sto~ ~override~ // ememric IWDEE
+
+        PATCH_IF zs_cons_add_gelid_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscscd01~ END // gelid damage oil
+        END
+
+        PATCH_IF zs_cons_add_igneous_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR  item_name = ~zscsfr01~ END // igneous oil
+        END
+
+        PATCH_IF zs_cons_add_scintillating_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsel01~ END // scintillating oil 20
+        END
+
+        PATCH_IF zs_cons_add_caustic_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsac01~ END // CAUSTIC damage oil
+        END
+
+    BUT_ONLY IF_EXISTS
 
     COPY_EXISTING ~shlehlan.sto~ ~override~ // severed hand ghost merchant iwdee
 
