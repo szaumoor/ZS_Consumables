@@ -119,7 +119,6 @@
         BUT_ONLY
     END
 
-
     ACTION_IF FILE_EXISTS_IN_GAME ~bernard.sto~ BEGIN // copper coronet bernard
         COPY_EXISTING ~bernard.sto~  ~override~
                     ~bernard2.sto~ ~override~
@@ -260,7 +259,7 @@
     END
 
     ACTION_IF FILE_EXISTS_IN_GAME ~friend.sto~ BEGIN // friendly arm inn
-        COPY_EXISTING ~Friend.sto~ ~override~ // friendly arm inn
+        COPY_EXISTING ~friend.sto~ ~override~ // friendly arm inn
 
             PATCH_IF zs_cons_add_alchemist_fire BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
@@ -753,17 +752,14 @@
 
             PATCH_IF zs_cons_add_web_grenade BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsweb0~ END // web grenade
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscspxd0~  END // pixie dust
+            END
+        
+            PATCH_IF zs_cons_add_holy_water BEGIN
+                LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~zscshlw0~ END // holy water
             END
 
-            PATCH_IF zs_cons_add_grease_bottle BEGIN
-                LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsgrs0~ END // grease bottle
-            END
-
-            PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
-                LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscstgf0~ END // tanglefoot bag
-            END
-
-        BUT_ONLY
+        BUT_ONLY IF_EXISTS
     END
 
 END ELSE BEGIN
@@ -812,7 +808,7 @@ END ELSE BEGIN
 
     BUT_ONLY IF_EXISTS
 
-    COPY_EXISTING ~bandoth.sto~ ~override~ // orrick IWDEE
+    COPY_EXISTING ~bandoth.sto~ ~override~ // bandoth IWDEE
 
         PATCH_IF zs_cons_add_acid_vial BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 13 STR_VAR item_name = ~zscsacv0~  END // acid vial
