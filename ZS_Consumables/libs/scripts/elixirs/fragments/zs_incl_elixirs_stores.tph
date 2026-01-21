@@ -490,7 +490,7 @@ END ELSE BEGIN
 
     COPY_EXISTING ~kuork0.sto~ ~override~ // orrick IWDEE
                   ~edion.sto~ ~override~ // edion IWDEE
-
+                  ~kieran2.sto~ ~override~
         PATCH_IF zs_cons_add_universal_resistance BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END

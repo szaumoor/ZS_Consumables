@@ -1295,6 +1295,7 @@ END ELSE BEGIN
 
     COPY_EXISTING ~kuork0.sto~ ~override~ // orrick IWDEE
                   ~edion.sto~ ~override~ // edion IWDEE
+                  ~kieran2.sto~ ~override~ // kieran IWDEE
 
         PATCH_IF zs_cons_add_soporific_oil BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsps02~  END // drow soporific oil
