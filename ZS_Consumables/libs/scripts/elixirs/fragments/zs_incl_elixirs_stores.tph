@@ -489,13 +489,14 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 END ELSE BEGIN
 
     COPY_EXISTING ~kuork0.sto~ ~override~ // orrick IWDEE
+                  ~edion.sto~ ~override~ // edion IWDEE
 
         PATCH_IF zs_cons_add_universal_resistance BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR  item_name = ~zscsuvr0~ END // universal resistance
         END
 
         PATCH_IF zs_cons_add_mystic_cultivation BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR  item_name = ~zscsmys0~ END // mystic cultivation
         END
 
     BUT_ONLY IF_EXISTS

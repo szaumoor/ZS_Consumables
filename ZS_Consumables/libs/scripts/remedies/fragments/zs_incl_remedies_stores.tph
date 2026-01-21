@@ -354,8 +354,23 @@ END ELSE BEGIN
 
         PATCH_IF zs_cons_add_basilisk_oil BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 9 STR_VAR item_name = ~zscsbsk0~ END // basilisk oil
+        END     
+
+    BUT_ONLY IF_EXISTS
+
+    COPY_EXISTING ~edion.sto~ ~override~ // edion IWDEE
+
+        PATCH_IF zs_cons_add_angelic_reprieve BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsarp0~ END // angelic reprieve
         END
-        
+
+        PATCH_IF zs_cons_add_angelic_slumber BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsasl0~ END // angelic slumber
+        END
+
+        PATCH_IF zs_cons_add_basilisk_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsbsk0~ END // basilisk oil
+        END
 
     BUT_ONLY IF_EXISTS
 
