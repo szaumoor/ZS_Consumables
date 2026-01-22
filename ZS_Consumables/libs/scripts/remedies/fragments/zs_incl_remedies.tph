@@ -1,7 +1,7 @@
 ACTION_IF zs_cons_add_angelic_reprieve BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/angelic_reprieve~ ~override~
-    COPY_EXISTING ~ZSCSARP0.ITM~ ~override~
+    COPY_EXISTING ~zscsarp0.itm~ ~override~
         LPF ALTER_ITEM
         INT_VAR
             unid_ref_name = RESOLVE_STR_REF(@98)
@@ -11,7 +11,7 @@ ACTION_IF zs_cons_add_angelic_reprieve BEGIN
             price = zs_cons_remedy_price_angelic_reprieve
         END
 
-    COPY_EXISTING ~ZSCSARP1.spl~ ~override~
+    COPY_EXISTING ~zscsarp1.spl~ ~override~
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@102) END
 
 END
@@ -19,7 +19,7 @@ END
 ACTION_IF zs_cons_add_angelic_slumber BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/angelic_slumber~ ~override~
-    COPY_EXISTING ~ZSCSASL0.ITM~ ~override~
+    COPY_EXISTING ~zscsasl0.itm~ ~override~
         LPF ALTER_ITEM
         INT_VAR
             unid_ref_name = RESOLVE_STR_REF(@98)
@@ -29,7 +29,7 @@ ACTION_IF zs_cons_add_angelic_slumber BEGIN
             price = zs_cons_remedy_price_angelic_slumber
         END
 
-    COPY_EXISTING ~ZSCSASL1.spl~ ~override~
+    COPY_EXISTING ~zscsasl1.spl~ ~override~
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@112) END
 
 END
@@ -37,7 +37,7 @@ END
 ACTION_IF zs_cons_add_basilisk_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/basilisk_oil~ ~override~
-    COPY_EXISTING ~ZSCSBSK0.ITM~ ~override~
+    COPY_EXISTING ~zscsbsk0.itm~ ~override~
         LPF ALTER_ITEM
         INT_VAR
             unid_ref_name = RESOLVE_STR_REF(@98)
@@ -52,7 +52,7 @@ END
 ACTION_IF zs_cons_add_remedial_solution BEGIN
 
     COPY ~%MOD_FOLDER%/items/remedies/remedial_solution~ ~override~
-    COPY_EXISTING ~ZSCSRMS0.ITM~ ~override~
+    COPY_EXISTING ~zscsrms0.itm~ ~override~
         LPF ALTER_ITEM
         INT_VAR
             unid_ref_name = RESOLVE_STR_REF(@98)

@@ -1,7 +1,7 @@
 BACKUP "weidu_external/backup/ZS_Consumables"
 SUPPORT "Kaelyn at Gibberlings's forum https://www.gibberlings3.net/profile/12720-kaelyn/ or at kaelyn@tuta.io"
-VERSION "1.0.2"
-README ~ZS_Consumables/mod_readme.md~
+VERSION "1.0.3"
+README ~ZS_Consumables/readme.md~
 AUTO_EVAL_STRINGS
 ALWAYS
     INCLUDE ~%MOD_FOLDER%/libs/preambles/zs_always.tph~
@@ -12,4 +12,4 @@ LANGUAGE
 "ZS_Consumables/lang/english/setup.tra"
 
 BEGIN @0 DESIGNATED 0 // install consumables
-REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" @500
+REQUIRE_PREDICATE GAME_IS "iwdee bgee bg2ee eet" @500

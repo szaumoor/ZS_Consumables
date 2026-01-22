@@ -1,7 +1,7 @@
 ACTION_IF zs_cons_add_igneous_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/igneous_oil~ ~override~
-    COPY_EXISTING ~ZSCSFR01.ITM~ ~override~
+    COPY_EXISTING ~zscsfr01.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1000) id_ref_desc=RESOLVE_STR_REF(@1001) price=zs_cons_oil_price_igneous END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2006) END
 
@@ -10,8 +10,8 @@ END
 ACTION_IF zs_cons_add_caustic_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/caustic_oil~ ~override~
-    COPY_EXISTING ~ZSCSAC01.ITM~ ~override~
-                  ~ZSWONPC0.ITM~ ~override~
+    COPY_EXISTING ~zscsac01.itm~ ~override~
+                  ~zswonpc0.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1002) id_ref_desc=RESOLVE_STR_REF(@1003) price=zs_cons_oil_price_caustic END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2001) END
 
@@ -20,7 +20,7 @@ END
 ACTION_IF zs_cons_add_gelid_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/gelid_oil~ ~override~
-    COPY_EXISTING ~ZSCSCD01.ITM~ ~override~
+    COPY_EXISTING ~zscscd01.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1004) id_ref_desc=RESOLVE_STR_REF(@1005) price=zs_cons_oil_price_gelid END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2005) END
 
@@ -29,7 +29,7 @@ END
 ACTION_IF zs_cons_add_scintillating_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/scintillating_oil~ ~override~
-    COPY_EXISTING ~ZSCSEL01.ITM~ ~override~
+    COPY_EXISTING ~zscsel01.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1006) id_ref_desc=RESOLVE_STR_REF(@1007) price=zs_cons_oil_price_scintillating END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2010) END
 
@@ -38,7 +38,7 @@ END
 ACTION_IF zs_cons_add_arcane_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/arcane_oil~ ~override~
-    COPY_EXISTING ~ZSCSMD01.ITM~ ~override~
+    COPY_EXISTING ~zscsmd01.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1008) id_ref_desc=RESOLVE_STR_REF(@1009) price=zs_cons_oil_price_arcane END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2000) END
 
@@ -47,8 +47,8 @@ END
 ACTION_IF zs_cons_add_noxious_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/noxious_oil~ ~override~
-    COPY_EXISTING ~ZSCSPS01.ITM~ ~override~
-                  ~ZSWONPC1.ITM~ ~override~
+    COPY_EXISTING ~zscsps01.itm~ ~override~
+                  ~zswonpc1.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1010) id_ref_desc=RESOLVE_STR_REF(@1011) price=zs_cons_oil_price_noxious END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2008) END
 
@@ -57,8 +57,8 @@ END
 ACTION_IF zs_cons_add_soporific_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/soporific_oil~ ~override~
-    COPY_EXISTING ~ZSCSPS02.ITM~ ~override~
-                  ~ZSWONPC2.ITM~ ~override~
+    COPY_EXISTING ~zscsps02.itm~ ~override~
+                  ~zswonpc2.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1012) id_ref_desc=RESOLVE_STR_REF(@1013) price=zs_cons_oil_price_soporific END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2004) END
 
@@ -67,7 +67,7 @@ END
 ACTION_IF zs_cons_add_sanctified_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/sanctified_oil~ ~override~
-    COPY_EXISTING ~ZSCSHL01.ITM~ ~override~
+    COPY_EXISTING ~zscshl01.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1014) id_ref_desc=RESOLVE_STR_REF(@1015) price=zs_cons_oil_price_sanctified END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2011) END
 
@@ -76,7 +76,7 @@ END
 ACTION_IF zs_cons_add_profane_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/profane_oil~ ~override~
-    COPY_EXISTING ~ZSCSUL01.ITM~ ~override~
+    COPY_EXISTING ~zscsul01.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1016) id_ref_desc=RESOLVE_STR_REF(@1017) price=zs_cons_oil_price_profane END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2009) END
 END
@@ -84,12 +84,11 @@ END
 ACTION_IF zs_cons_add_kuotoan_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/kuotoan_oil~ ~override~
-    COPY_EXISTING ~ZSCSPS05.ITM~ ~override~
+    COPY_EXISTING ~zscsps05.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1018) id_ref_desc=RESOLVE_STR_REF(@1019) price=zs_cons_oil_price_kuotoa END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2007) END
 
-
-    COPY_EXISTING ~ZSCSKUO1.SPL~ ~override~
+    COPY_EXISTING ~zscskuo1.spl~ ~override~
         PATCH_IF GAME_IS ~bgee~ BEGIN // PATCH stunned strref in BGEE
             LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = 26050 END
         END
@@ -98,7 +97,7 @@ END
 ACTION_IF zs_cons_add_dragon_bile_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/dragon_bile~ ~override~
-    COPY_EXISTING ~ZSCSPS03.ITM~ ~override~
+    COPY_EXISTING ~zscsps03.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1020) id_ref_desc=RESOLVE_STR_REF(@1021) price=zs_cons_oil_price_dragonbile    END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2002) END
 
@@ -107,11 +106,11 @@ END
 ACTION_IF zs_cons_add_dragonsbane_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/dragonsbane_oil~ ~override~
-    COPY_EXISTING ~ZSCSPS04.ITM~ ~override~
+    COPY_EXISTING ~zscsps04.itm~ ~override~
         LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1022) id_ref_desc=RESOLVE_STR_REF(@1023) price=zs_cons_oil_price_dragonbane END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2003) END
 
-    COPY_EXISTING ~ZSCSPOSJ.SPL~ ~override~
+    COPY_EXISTING ~zscsposj.spl~ ~override~
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@1024) END
 
 END

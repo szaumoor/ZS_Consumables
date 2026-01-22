@@ -1,10 +1,13 @@
 // Redistribution variables \\
 
-// random distribution of oils to various creatures
+// allow random distribution of oils to various creatures
 OUTER_SET zs_cons_add_random_redistribution_cre = "1"
 
+// This is the maximum number of noxious oils a thief or fighter/thief can possibly get if matched
+OUTER_SET zs_cons_thief_noxious_oil_assignment_max = "2"
+
 // probabilities a thief gets at least noxious oil
-OUTER_SET zs_cons_thief_noxious_oil_assignment_chances = "25"
+OUTER_SET zs_cons_thief_noxious_oil_assignment_chances = "15"
 
 // probabilities a thief gets caustic oil *ONLY IF* they don't get noxious oil;
 // The number should be balanced around
@@ -15,7 +18,7 @@ OUTER_SET zs_cons_thief_drow_poison_assignment_chances = "15"
 
 // probabilities of injecting one elemental or arcane oil to pure warrior classes and classes with mage classes, sorcerers, and bards, respectively
 OUTER_SET zs_cons_fighter_elemental_assignment_chances = "15"
-OUTER_SET zs_cons_mage_arcane_oil_assignment_chances   = "25"
+OUTER_SET zs_cons_mage_arcane_oil_assignment_chances   = "15"
 
 // Price configurations \\
 OUTER_SET zs_cons_oil_price_caustic       = "500"
@@ -72,7 +75,7 @@ OUTER_SET zs_cons_pod_add_dragonbile    = "1"
 OUTER_SET zs_cons_pod_add_kuotoa        = "1"
 OUTER_SET zs_cons_pod_add_dragonbane    = "1"
 
-// Amount of oils available in the store
+// Amount of oils available in the stores in Pits of Despair (upcoming mod, ignore if not relevant)
 OUTER_SET zs_cons_pod_caustic_store       = "20"
 OUTER_SET zs_cons_pod_gelid_store         = "20"
 OUTER_SET zs_cons_pod_igneous_store       = "20"

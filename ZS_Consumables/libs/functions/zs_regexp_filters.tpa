@@ -6,10 +6,10 @@ BEGIN
     READ_BYTE 0x275 gender
     SET result = gender == gender_summoned       OR
                  gender == gender_summoned_demon OR
-                 "%SOURCE_RES" STR_EQ "DEVAEVIL" OR
-                 "%SOURCE_RES" STR_EQ "DEVAGOOD" OR
-                 "%SOURCE_RES" STR_EQ "PLANEVIL" OR
-                 "%SOURCE_RES" STR_EQ "PLANGOOD"
+                 "%SOURCE_RES" STR_EQ "devaevil" OR
+                 "%SOURCE_RES" STR_EQ "devagood" OR
+                 "%SOURCE_RES" STR_EQ "planevil" OR
+                 "%SOURCE_RES" STR_EQ "plangood"
 
 END
 
