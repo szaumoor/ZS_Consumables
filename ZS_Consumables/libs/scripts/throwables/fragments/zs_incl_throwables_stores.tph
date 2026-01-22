@@ -910,4 +910,12 @@ END ELSE BEGIN
 
     BUT_ONLY IF_EXISTS
 
+    COPY_EXISTING ~waukeen.sto~ ~override~ // severed hand ghost merchant iwdee
+
+        PATCH_IF zs_cons_add_holy_water BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 50 STR_VAR item_name = ~zscshlw0~ END // holy water
+        END
+
+    BUT_ONLY IF_EXISTS
+
 END

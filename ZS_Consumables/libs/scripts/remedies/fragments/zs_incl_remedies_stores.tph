@@ -418,4 +418,24 @@ END ELSE BEGIN
 
     BUT_ONLY IF_EXISTS
 
+    COPY_EXISTING ~waukeen.sto~ ~override~ // severed hand ghost merchant iwdee
+
+        PATCH_IF zs_cons_add_basilisk_oil BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsbsk0~ END // basilisk oil
+        END
+
+        PATCH_IF zs_cons_add_remedial_solution BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscsrms0~ END // remedial solution
+        END
+
+        PATCH_IF zs_cons_add_angelic_reprieve BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsarp0~ END // angelic reprieve
+        END
+
+        PATCH_IF zs_cons_add_angelic_slumber BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsasl0~ END // angelic slumber
+        END
+
+    BUT_ONLY IF_EXISTS
+
 END
