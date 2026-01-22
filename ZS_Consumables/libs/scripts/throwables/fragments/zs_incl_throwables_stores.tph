@@ -779,7 +779,11 @@ END ELSE BEGIN
         END
 
         PATCH_IF zs_cons_add_grease_bottle BEGIN
-            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 16  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+        END
+
+        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 15  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
         END
 
         PATCH_IF zs_cons_add_web_grenade BEGIN
@@ -827,6 +831,10 @@ END ELSE BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 9  STR_VAR item_name = ~zscsgrs0~  END // grease bottle
         END
 
+        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 7  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+        END
+
         PATCH_IF zs_cons_add_web_grenade BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscsweb0~  END // web grenade
         END
@@ -854,6 +862,38 @@ END ELSE BEGIN
 
         PATCH_IF zs_cons_add_pixie_dust BEGIN
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscspxd0~  END // pixie dust
+        END
+
+        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 6  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
+        END
+
+    BUT_ONLY IF_EXISTS
+
+    COPY_EXISTING ~ldd_nym.sto~ ~override~ // severed hand ghost merchant iwdee
+
+        PATCH_IF zs_cons_add_choking_powder BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsckp0~  END // choking powder
+        END
+
+        PATCH_IF zs_cons_add_grease_bottle BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsgrs0~  END // grease bottle
+        END
+
+        PATCH_IF zs_cons_add_web_grenade BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsweb0~  END // web grenade
+        END
+
+        PATCH_IF zs_cons_add_pixie_dust BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4 STR_VAR item_name = ~zscspxd0~  END // pixie dust
+        END
+
+        PATCH_IF zs_cons_add_acid_vial BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsacv0~  END // acid vial
+        END
+
+        PATCH_IF zs_cons_add_tanglefoot_bag BEGIN
+            LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscstgf0~  END // tanglefoot bag
         END
 
     BUT_ONLY IF_EXISTS

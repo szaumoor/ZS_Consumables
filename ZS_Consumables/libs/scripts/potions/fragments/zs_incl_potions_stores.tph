@@ -151,5 +151,11 @@ END ELSE BEGIN
         LPF ADD_STORE_ITEM_EX INT_VAR stack = 14 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
 
     BUT_ONLY IF_EXISTS
+
+    COPY_EXISTING ~ldd_nym.sto~ ~override~ // severed hand ghost merchant iwdee
+
+        LPF ADD_STORE_ITEM_EX INT_VAR stack = 7 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
+
+    BUT_ONLY IF_EXISTS
     
 END
