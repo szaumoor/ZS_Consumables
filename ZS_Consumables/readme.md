@@ -4,6 +4,8 @@
 
 This provides a variety of consumable items for use in the game, enhancing gameplay and offering new strategies for players. Many are taken or inspired by other games and media such as BG3, NWN, and The Witcher. The mod distributes the items among vanilla stores as well as manually placed on some NPCs and automatically in the loot of some enemies randomly.
 
+Check out the configuration file to tailor your experience somewhat.
+
 ## New consumables types
 
 All consumables are distributed and priced in a way that tries to serve as balance for their power. Use the configuration file to override any prices you want, as well as distribution, if it applies.
