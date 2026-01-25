@@ -4,7 +4,7 @@
 OUTER_SET zs_cons_add_random_redistribution_cre = "1"
 
 // This is the maximum number of noxious oils a thief or fighter/thief can possibly get if matched
-OUTER_SET zs_cons_thief_noxious_oil_assignment_max = "2"
+OUTER_SET zs_cons_thief_oil_assignment_max = "2"
 
 // probabilities a thief gets at least noxious oil
 OUTER_SET zs_cons_thief_noxious_oil_assignment_chances = "15"
@@ -14,11 +14,11 @@ OUTER_SET zs_cons_thief_noxious_oil_assignment_chances = "15"
 OUTER_SET zs_cons_thief_caustic_oil_assignment_chances = "10"
 
 // probabilities a thief gets drow soporific oil too, *IF* the thief gets matched for noxious oil. This is rolled separately
-OUTER_SET zs_cons_thief_drow_poison_assignment_chances = "15"
+OUTER_SET zs_cons_thief_drow_poison_assignment_chances = "10"
 
 // probabilities of injecting one elemental or arcane oil to pure warrior classes and classes with mage classes, sorcerers, and bards, respectively
-OUTER_SET zs_cons_fighter_elemental_assignment_chances = "15"
-OUTER_SET zs_cons_mage_arcane_oil_assignment_chances   = "15"
+OUTER_SET zs_cons_fighter_elemental_assignment_chances = "10"
+OUTER_SET zs_cons_mage_arcane_oil_assignment_chances   = "10"
 
 // Price configurations \\
 OUTER_SET zs_cons_oil_price_caustic       = "500"

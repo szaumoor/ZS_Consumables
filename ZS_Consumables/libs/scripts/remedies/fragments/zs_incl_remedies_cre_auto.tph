@@ -9,11 +9,34 @@ ACTION_IF zs_cons_add_random_redistribution_cre BEGIN
                     LPF CAN_DROP_STUFF RET can_drop_stuff = result END // and has droppable items, i.e. can hold oil
 
                     PATCH_IF NOT is_summon AND can_drop_stuff BEGIN
+                        SET class = BYTE_AT(0x273)
+                        SET kit = SHORT_AT 0x246 | (SHORT_AT 0x244) << 16
+                        SET race = BYTE_AT(0x272)
+                        SET general = BYTE_AT(0x271)
 
-                        PATCH_IF zs_cons_add_remedial_solution AND BYTE_AT(0x271) = general_humanoid BEGIN
+                        PATCH_IF zs_cons_add_remedial_solution AND 
+                                 general = general_humanoid AND
+                                 race != race_goblin AND
+                                 (
+                                    class = class_cleric OR
+                                    class = class_fighter_cleric OR
+                                    class = class_fighter OR
+                                    class = class_cleric_mage OR
+                                    class = class_cleric_thief OR
+                                    class = class_fighter_mage_cleric OR
+                                    class = class_druid OR
+                                    class = class_fighter_druid OR
+                                    class = class_shaman OR 
+                                    class = class_ranger OR
+                                    class = class_cleric_ranger OR
+                                   (class = class_monk AND kit != kit_dark_moon) OR
+                                   (class = class_paladin AND kit != kit_blackguard)
+                                 )
+
+                        BEGIN
 
                             SET chance = RANDOM(1 100)
-                            PATCH_IF chance <= 5 BEGIN
+                            PATCH_IF chance <= 8 BEGIN
                                 ADD_CRE_ITEM ~zscsrms0~ (1) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // remedial solution
                             END
 
