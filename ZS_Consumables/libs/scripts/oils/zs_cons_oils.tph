@@ -4,7 +4,7 @@ END
 
 INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils.tph~
 
-PRINT "Distributing oils to NPCs and stores..."
+PRINT "[INFO]: Distributing oils to NPCs and stores..."
 SILENT
 
 INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils_stores.tph~
@@ -12,7 +12,7 @@ INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils_cre_manual.tph~
 INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/fragments/zs_incl_oils_cre_auto.tph~
 
 VERBOSE
-PRINT "Finished distributing oils to NPCs and stores."
+PRINT "[INFO]: Finished distributing oils to NPCs and stores."
 
 ACTION_IF zs_cons_add_pod_patch AND MOD_IS_INSTALLED "zbpod.tp2" "0" BEGIN
     PRINT "Pits of Despair detected, adding oils to the store."

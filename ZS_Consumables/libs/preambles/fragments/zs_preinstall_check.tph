@@ -9,22 +9,22 @@ ACTION_IF !VARIABLE_IS_SET ~zs_preinstall_check~ BEGIN
     ACTION_IF is_bgee BEGIN
 
         ACTION_IF includes_sod BEGIN
-            PRINT "Baldur's Gate: Enhanced Edition with Siege of Dragonspear detected."
+            PRINT "[INFO]: Baldur's Gate: Enhanced Edition with Siege of Dragonspear detected."
         END ELSE BEGIN
-            PRINT "Baldur's Gate: Enhanced Edition without Siege of Dragonspear detected."
+            PRINT "[INFO]: Baldur's Gate: Enhanced Edition without Siege of Dragonspear detected."
         END
 
     END ELSE ACTION_IF is_bg2ee BEGIN
 
-        PRINT "Baldur's Gate II: Enhanced Edition detected."
+        PRINT "[INFO]: Baldur's Gate II: Enhanced Edition detected."
 
     END ELSE ACTION_IF is_iwdee BEGIN
 
-        PRINT "Icewind Dale: Enhanced Edition detected."
+        PRINT "[INFO]: Icewind Dale: Enhanced Edition detected."
 
     END ELSE ACTION_IF is_eet BEGIN
 
-        PRINT "Enhanced Edition Trilogy detected."
+        PRINT "[INFO]: Enhanced Edition Trilogy detected."
 
     END
 
@@ -36,7 +36,7 @@ ACTION_IF !VARIABLE_IS_SET ~zs_preinstall_check~ BEGIN
     OUTER_SET has_eefixpack = MOD_IS_INSTALLED "eefixpack.tp2" "0"
 
     ACTION_IF has_eefixpack BEGIN
-        PRINT "EEFixpack detected."
+        PRINT "[INFO]: EEFixpack detected."
     END
 
     OUTER_SET zs_preinstall_check = 1

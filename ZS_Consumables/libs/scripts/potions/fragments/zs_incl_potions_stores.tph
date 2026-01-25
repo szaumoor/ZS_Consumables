@@ -20,20 +20,20 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~bernard.sto~ BEGIN // copper coronet bernard
         COPY_EXISTING ~bernard.sto~  ~override~
-                    ~bernard2.sto~ ~override~
-                    ~bernard3.sto~ ~override~
-                    ~bernard4.sto~ ~override~
-                    ~bernard5.sto~ ~override~
-                    ~bernard6.sto~ ~override~
-                    ~hendak.sto~   ~override~ //hendak
-                    ~lehtinan.sto~ ~override~ //lehtinan
+                      ~bernard2.sto~ ~override~
+                      ~bernard3.sto~ ~override~
+                      ~bernard4.sto~ ~override~
+                      ~bernard5.sto~ ~override~
+                      ~bernard6.sto~ ~override~
+                      ~hendak.sto~   ~override~ //hendak
+                      ~lehtinan.sto~ ~override~ //lehtinan
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
         BUT_ONLY
     END
 
     ACTION_IF FILE_EXISTS_IN_GAME ~trgeni01.sto~ BEGIN // trademeet genie
         COPY_EXISTING ~trgeni01.sto~ ~override~ //trademeet genie
-                    ~trcar04.sto~ ~override~ // caravan merchant
+                      ~trcar04.sto~ ~override~ // caravan merchant
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
         BUT_ONLY
     END
@@ -58,7 +58,7 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~stoblack.sto~ BEGIN // BLACK LILY
         COPY_EXISTING ~stoblack.sto~ ~override~ // black lily
-                    ~stosilen.sto~ ~override~ // silence
+                      ~stosilen.sto~ ~override~ // silence
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
         BUT_ONLY
     END
@@ -89,7 +89,7 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ BEGIN // HIGH HEDGE
         COPY_EXISTING ~highhedg.sto~ ~override~ // high hedge
-                    ~sto0703.sto~  ~override~ // sorcerous sundries
+                      ~sto0703.sto~  ~override~ // sorcerous sundries
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 12 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
         BUT_ONLY
     END
@@ -102,14 +102,14 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~amsmug01.sto~ BEGIN // AMEKTHRAN SMUGGLERS
         COPY_EXISTING ~amsmug01.sto~ ~override~ // amekthran smugglers
-                    ~amsmug02.sto~ ~override~ // amekthran smugglers
+                      ~amsmug02.sto~ ~override~ // amekthran smugglers
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
         BUT_ONLY
     END
 
     ACTION_IF FILE_EXISTS_IN_GAME ~25spell.sto~ BEGIN // ARCANA ARCHIVES
         COPY_EXISTING ~25spell.sto~  ~override~ // arcana archives
-                    ~25spell2.sto~ ~override~ // arcana archives
+                      ~25spell2.sto~ ~override~ // arcana archives
             LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsmnl0~ END // levitation potion
         BUT_ONLY
     END

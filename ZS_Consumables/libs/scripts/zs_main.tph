@@ -1,19 +1,24 @@
 ACTION_IF zs_cons_install_oils BEGIN
+    PRINT "[INFO]: Oils selected, commencing injection into the game..."
     INCLUDE ~%MOD_FOLDER%/libs/scripts/oils/zs_cons_oils.tph~
 END
 
 ACTION_IF zs_cons_install_elixirs BEGIN
+    PRINT "[INFO]: Elixirs selected, commencing injection into the game..."
     INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/zs_cons_elixirs.tph~
 END
 
 ACTION_IF zs_cons_install_potions BEGIN
+    PRINT "[INFO]: Potions selected, commencing injection into the game..."
     INCLUDE ~%MOD_FOLDER%/libs/scripts/potions/zs_cons_potions.tph~
 END
 
 ACTION_IF zs_cons_install_remedies BEGIN
+    PRINT "[INFO]: Remedies selected, commencing injection into the game..."
     INCLUDE ~%MOD_FOLDER%/libs/scripts/remedies/zs_cons_remedies.tph~
 END
 
 ACTION_IF zs_cons_install_throwables BEGIN
+    PRINT "[INFO]: Throwables selected, commencing injection into the game..."
     INCLUDE ~%MOD_FOLDER%/libs/scripts/throwables/zs_cons_throwables.tph~
 END

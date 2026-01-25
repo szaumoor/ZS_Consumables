@@ -20,7 +20,7 @@ ACTION_IF zs_cons_add_soporific_oil BEGIN
 
     COPY_EXISTING ~udphae01.cre~ ~override~ // phaere
                   ~udphae02.cre~ ~override~ // phaere
-                  ~cuphaer.cre~ ~override~ // phaere
+                  ~cuphaer.cre~ ~override~  // phaere
                   ~udsola01.cre~ ~override~ // solaufein
                   ~udsola02.cre~ ~override~ // solaufein
                   ~dadrow10.cre~ ~override~ // drow torturer

@@ -1,4 +1,5 @@
 ACTION_IF NOT GAME_IS "iwdee" BEGIN
+
     ACTION_IF FILE_EXISTS_IN_GAME ~ppstor01.sto~ BEGIN // storekeep brynnlaw
         COPY_EXISTING ~ppstor01.sto~ ~override~ // storekeep brynnlaw
 
@@ -50,8 +51,8 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~bhelm.sto~ BEGIN //helm's temple
         COPY_EXISTING ~bhelm.sto~   ~override~ //helm's temple
-                    ~temhelm.sto~ ~override~ //helm's temple
-                    ~tem4802.sto~ ~override~ //helm's temple
+                      ~temhelm.sto~ ~override~ //helm's temple
+                      ~tem4802.sto~ ~override~ //helm's temple
 
             PATCH_IF zs_cons_add_angelic_reprieve BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsarp0~ END // angelic reprieve
@@ -98,7 +99,7 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~dawnmas.sto~ BEGIN // DAWNMASTER's temple
         COPY_EXISTING ~dawnmas.sto~ ~override~ //dawnmaster's temple
-                    ~temlath.sto~ ~override~ //lathander's temple
+                      ~temlath.sto~ ~override~ //lathander's temple
 
             PATCH_IF zs_cons_add_remedial_solution BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsrms0~ END // remedial solution
@@ -109,7 +110,7 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~trgeni01.sto~ BEGIN // trademeet genie
         COPY_EXISTING ~trgeni01.sto~ ~override~ //trademeet genie
-                    ~trcar04.sto~ ~override~ // caravan merchant
+                      ~trcar04.sto~ ~override~ // caravan merchant
 
             PATCH_IF zs_cons_add_angelic_reprieve BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsarp0~ END // angelic reprieve
@@ -124,7 +125,7 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~temsup.sto~ BEGIN // waukeen's temple
         COPY_EXISTING ~temsup.sto~   ~override~ //waukeen's temple
-                    ~amcler02.sto~ ~override~ // waukeen's temple (tob)
+                      ~amcler02.sto~ ~override~ // waukeen's temple (tob)
 
             PATCH_IF zs_cons_add_angelic_reprieve BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 1 STR_VAR item_name = ~zscsarp0~ END // angelic reprieve
@@ -223,7 +224,7 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ BEGIN // HIGH HEDGE
         COPY_EXISTING ~highhedg.sto~ ~override~ // high hedge
-                    ~sto0703.sto~  ~override~ // sorcerous sundries
+                      ~sto0703.sto~  ~override~ // sorcerous sundries
 
             PATCH_IF zs_cons_add_basilisk_oil BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 6 STR_VAR item_name = ~zscsbsk0~ END // basilisk oil
@@ -244,7 +245,7 @@ ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~AMSMUG01.sto~ BEGIN // AMEKTHRAN SMUGGLERS
         COPY_EXISTING ~amsmug01.sto~ ~override~ // amekthran smugglers
-                    ~amsmug02.sto~ ~override~ // amekthran smugglers
+                      ~amsmug02.sto~ ~override~ // amekthran smugglers
 
             PATCH_IF zs_cons_add_angelic_reprieve BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 2 STR_VAR item_name = ~zscsarp0~ END // angelic reprieve
