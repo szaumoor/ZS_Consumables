@@ -1,10 +1,10 @@
  ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~shthstor.sto~ BEGIN // shadow thief fence RATELL
-        COPY_EXISTING ~shthstor.sto~  ~override~ //shadow thief fence ratell
-                      ~roger.sto~     ~override~  // roger the fence
-                      ~jayes.sto~     ~override~  // jayes the fence
-                      ~trthf02.sto~   ~override~  // kich fence (trademeet)
+        COPY_EXISTING ~shthstor.sto~ ~override~ //shadow thief fence ratell
+                      ~roger.sto~    ~override~  // roger the fence
+                      ~jayes.sto~    ~override~  // jayes the fence
+                      ~trthf02.sto~  ~override~  // kich fence (trademeet)
 
             PATCH_IF zs_cons_add_acid_vial BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 8 STR_VAR item_name = ~zscsacv0~  END // acid vial
@@ -121,13 +121,13 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~bernard.sto~ BEGIN // copper coronet bernard
         COPY_EXISTING ~bernard.sto~  ~override~
-                    ~bernard2.sto~ ~override~
-                    ~bernard3.sto~ ~override~
-                    ~bernard4.sto~ ~override~
-                    ~bernard5.sto~ ~override~
-                    ~bernard6.sto~ ~override~
-                    ~hendak.sto~   ~override~ //hendak
-                    ~lehtinan.sto~ ~override~ //lehtinan
+                      ~bernard2.sto~ ~override~
+                      ~bernard3.sto~ ~override~
+                      ~bernard4.sto~ ~override~
+                      ~bernard5.sto~ ~override~
+                      ~bernard6.sto~ ~override~
+                      ~hendak.sto~   ~override~ //hendak
+                      ~lehtinan.sto~ ~override~ //lehtinan
 
             PATCH_IF zs_cons_add_alchemist_fire BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 3 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
@@ -150,8 +150,8 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~bhelm.sto~ BEGIN //helm's temple
         COPY_EXISTING ~bhelm.sto~   ~override~ //helm's temple
-                    ~temhelm.sto~ ~override~ //helm's temple
-                    ~tem4802.sto~ ~override~ //helm's temple
+                      ~temhelm.sto~ ~override~ //helm's temple
+                      ~tem4802.sto~ ~override~ //helm's temple
 
             PATCH_IF zs_cons_add_holy_water BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 5  STR_VAR item_name = ~zscshlw0~  END // holy water
@@ -202,7 +202,7 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~dawnmas.sto~ BEGIN // DAWNMASTER's temple
         COPY_EXISTING ~dawnmas.sto~ ~override~ //dawnmaster's temple
-                    ~temlath.sto~ ~override~ //lathander's temple
+                      ~temlath.sto~ ~override~ //lathander's temple
 
             PATCH_IF zs_cons_add_holy_water BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 20 STR_VAR item_name = ~zscshlw0~  END // holy water
@@ -230,7 +230,7 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~trgeni01.sto~ BEGIN // trademeet genie
         COPY_EXISTING ~trgeni01.sto~ ~override~ //trademeet genie
-                    ~trcar04.sto~ ~override~ // caravan merchant
+                      ~trcar04.sto~ ~override~ // caravan merchant
 
             PATCH_IF zs_cons_add_web_grenade BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 4  STR_VAR item_name = ~zscsweb0~  END // web grenade
@@ -249,7 +249,7 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~temsup.sto~ BEGIN // waukeen's temple
         COPY_EXISTING ~temsup.sto~   ~override~ //waukeen's temple
-                    ~amcler02.sto~ ~override~ // waukeen's temple (tob)
+                      ~amcler02.sto~ ~override~ // waukeen's temple (tob)
 
             PATCH_IF zs_cons_add_holy_water BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 10 STR_VAR item_name = ~zscshlw0~  END // holy water
@@ -343,7 +343,7 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~stoblack.sto~ BEGIN // BLACK LILY
         COPY_EXISTING ~stoblack.sto~ ~override~ // black lily
-                    ~stosilen.sto~ ~override~ // silence
+                      ~stosilen.sto~ ~override~ // silence
 
             PATCH_IF zs_cons_add_choking_powder BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 5 STR_VAR item_name = ~zscsckp0~ END // choking powder
@@ -496,7 +496,7 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ BEGIN // HIGH HEDGE
         COPY_EXISTING ~highhedg.sto~ ~override~ // high hedge
-                    ~sto0703.sto~  ~override~ // sorcerous sundries
+                      ~sto0703.sto~  ~override~ // sorcerous sundries
 
             PATCH_IF zs_cons_add_alchemist_fire BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 14 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
@@ -551,7 +551,7 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~amsmug01.sto~ BEGIN // AMEKTHRAN SMUGGLERS
         COPY_EXISTING ~amsmug01.sto~ ~override~ // amekthran smugglers
-                    ~amsmug02.sto~ ~override~ // amekthran smugglers
+                      ~amsmug02.sto~ ~override~ // amekthran smugglers
 
             PATCH_IF zs_cons_add_alchemist_fire BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 15 STR_VAR item_name = ~zscsalf0~ END // alchemist fire
@@ -586,7 +586,7 @@
 
     ACTION_IF FILE_EXISTS_IN_GAME ~25spell.sto~ BEGIN // ARCANA ARCHIVES
         COPY_EXISTING ~25spell.sto~  ~override~ // arcana archives
-                    ~25spell2.sto~ ~override~ // arcana archives
+                      ~25spell2.sto~ ~override~ // arcana archives
 
             PATCH_IF zs_cons_add_alchemist_fire BEGIN
                 LPF ADD_STORE_ITEM_EX INT_VAR stack = 24 STR_VAR item_name = ~zscsalf0~ END // alchemist fire

@@ -1,10 +1,11 @@
 INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs.tph~
 
-PRINT "Distributing elixirs to stores and NPCs (no NPCs for now)..."
+PRINT "[INFO]: Distributing elixirs to stores and NPCs (no NPCs for now)..."
 SILENT
 
 INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs_stores.tph~
 INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs_cre_manual.tph~
 INCLUDE ~%MOD_FOLDER%/libs/scripts/elixirs/fragments/zs_incl_elixirs_cre_auto.tph~
 
+PRINT "[INFO]: Finished distributing elixirs to NPCs and stores."
 VERBOSE

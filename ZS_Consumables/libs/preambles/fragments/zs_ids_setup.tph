@@ -1,5 +1,5 @@
 ACTION_IF !VARIABLE_IS_SET zs_ids_setup BEGIN
-    PRINT "IDS setup running"
+    PRINT "[INFO]: IDS setup running"
     OUTER_SET race_ankheg          = IDS_OF_SYMBOL(race ANKHEG)
     OUTER_SET race_antisolar       = IDS_OF_SYMBOL(race ANTISOLAR)
     OUTER_SET race_basilisk        = IDS_OF_SYMBOL(race BASILISK)
