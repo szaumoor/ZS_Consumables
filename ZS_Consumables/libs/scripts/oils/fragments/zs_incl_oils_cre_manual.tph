@@ -20,7 +20,7 @@ ACTION_IF zs_cons_add_soporific_oil BEGIN
 
     COPY_EXISTING ~udphae01.cre~ ~override~ // phaere
                   ~udphae02.cre~ ~override~ // phaere
-                  ~cuphaer.cre~ ~override~  // phaere
+                  ~cuphaer.cre~  ~override~  // phaere
                   ~udsola01.cre~ ~override~ // solaufein
                   ~udsola02.cre~ ~override~ // solaufein
                   ~dadrow10.cre~ ~override~ // drow torturer
@@ -33,7 +33,7 @@ ACTION_IF zs_cons_add_soporific_oil BEGIN
 
 END
 
-COPY_EXISTING ~bddrowas.CRE~ ~override~ // SOD drow assassin
+COPY_EXISTING ~bddrowas.cre~ ~override~ // SOD drow assassin
 
     PATCH_IF zs_cons_add_soporific_oil BEGIN
         ADD_CRE_ITEM ~zscsps02~ #5 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
@@ -47,7 +47,7 @@ BUT_ONLY IF_EXISTS
 
 ACTION_IF zs_cons_add_soporific_oil BEGIN
 
-    COPY_EXISTING ~bmugg1.CRE~ ~override~
+    COPY_EXISTING ~bmugg1.cre~ ~override~
         ADD_CRE_ITEM ~zscsps02~ #1 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     BUT_ONLY IF_EXISTS
 
@@ -119,7 +119,7 @@ ACTION_IF zs_cons_add_dragon_bile_oil BEGIN
         ADD_CRE_ITEM ~zscsps03~ #5 #0 #0 ~unstealable~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // dragon bile
     BUT_ONLY IF_EXISTS
 
-    COPY_EXISTING ~bdmorent.CRE~ ~override~
+    COPY_EXISTING ~bdmorent.cre~ ~override~
         ADD_CRE_ITEM ~zscsps03~ #3 #0 #0 ~unstealable~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // dragon bile
     BUT_ONLY IF_EXISTS
 

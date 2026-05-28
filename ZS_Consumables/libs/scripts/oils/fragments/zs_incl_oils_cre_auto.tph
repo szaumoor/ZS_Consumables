@@ -14,7 +14,11 @@ SILENT
                         SET general = BYTE_AT(0x271)
                         SET race = BYTE_AT(0x272)
                         
-                        PATCH_IF general = general_humanoid AND race != race_goblin BEGIN
+                        PATCH_IF general = general_humanoid AND
+                                 race != race_goblin        AND
+                                 race != race_hobgoblin     AND
+                                 race != race_kobold 
+                        BEGIN
 
                             SET class = BYTE_AT(0x273)
                             PATCH_IF class = class_thief OR class = class_fighter_thief BEGIN

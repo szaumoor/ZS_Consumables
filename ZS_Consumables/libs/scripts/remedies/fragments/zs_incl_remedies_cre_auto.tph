@@ -15,8 +15,10 @@ ACTION_IF zs_cons_add_random_redistribution_cre BEGIN
                         SET general = BYTE_AT(0x271)
 
                         PATCH_IF zs_cons_add_remedial_solution AND 
-                                 general = general_humanoid AND
-                                 race != race_goblin AND
+                                 general = general_humanoid    AND
+                                 race != race_goblin           AND
+                                 race != race_hobgoblin        AND
+                                 race != race_kobold           AND
                                  (
                                     class = class_cleric OR
                                     class = class_fighter_cleric OR
