@@ -53,7 +53,7 @@ ACTION_IF zs_cons_add_soporific_oil BEGIN
 
 END
 
-COPY_EXISTING ~bdgass1.CRE~ ~override~
+COPY_EXISTING ~bdgass1.cre~ ~override~
     PATCH_IF zs_cons_add_soporific_oil BEGIN
         ADD_CRE_ITEM ~zscsps02~ #1 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     END

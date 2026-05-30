@@ -156,7 +156,7 @@ BEGIN
       PATCH_IF (NOT found) BEGIN
         // Adding new sale entry
         PATCH_IF NOT IS_SILENT BEGIN
-            PATCH_PRINT ~Patching %item_name%.ITM into store...~
+            PATCH_PRINT ~Patching %item_name%.itm into store...~
         END
         LPF ~__A7_EVAL_POSITION~
         INT_VAR
@@ -200,7 +200,7 @@ BEGIN
           PATCH_WARN ~ADD_STORE_ITEM_EX: Could not determine item position.  Skipping...~
         END
       END ELSE BEGIN
-        PATCH_PRINT ~%item_name%.ITM is already in the store.  Skipping...~
+        PATCH_PRINT ~%item_name%.itm is already in the store.  Skipping...~
       END
     END
   END
