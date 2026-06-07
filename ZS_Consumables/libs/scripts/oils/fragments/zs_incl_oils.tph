@@ -98,7 +98,7 @@ ACTION_IF zs_cons_add_dragon_bile_oil BEGIN
 
     COPY ~%MOD_FOLDER%/items/oils/dragon_bile~ ~override~
     COPY_EXISTING ~zscsps03.itm~ ~override~
-        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1020) id_ref_desc=RESOLVE_STR_REF(@1021) price=zs_cons_oil_price_dragonbile    END
+        LPF ALTER_ITEM INT_VAR id_ref_name=RESOLVE_STR_REF(@1020) id_ref_desc=RESOLVE_STR_REF(@1021) price=zs_cons_oil_price_dragonbile END
         LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@2002) END
 
 END
