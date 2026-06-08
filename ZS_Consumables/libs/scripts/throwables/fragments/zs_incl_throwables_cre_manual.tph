@@ -10,19 +10,6 @@ COPY_EXISTING ~udphae01.cre~ ~override~ // phaere
               ~dadrow6.cre~  ~override~ // drow leader
 
         SET random = RANDOM(1 3)
-        PATCH_MATCH random
-            WITH
-            1
-            BEGIN
-                ADD_CRE_ITEM ~zscsweb0~ #1 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // web grenade
-            END
-            2
-            BEGIN
-                ADD_CRE_ITEM ~zscsweb0~ #2 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
-            END
-            3
-            BEGIN
-                ADD_CRE_ITEM ~zscsweb0~ #3 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
-            END DEFAULT END
+        ADD_CRE_ITEM ~zscsweb0~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // web grenade
 
 BUT_ONLY IF_EXISTS

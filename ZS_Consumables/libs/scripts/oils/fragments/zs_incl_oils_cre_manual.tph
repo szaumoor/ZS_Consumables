@@ -1,17 +1,20 @@
 ACTION_IF zs_cons_add_kuotoan_oil BEGIN
 
     COPY_EXISTING ~udprince.cre~ ~override~ // kuotoan prince
-        ADD_CRE_ITEM ~zscsps05~ #10 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        SET random = RANDOM (5 10)
+        ADD_CRE_ITEM ~zscsps05~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     BUT_ONLY IF_EXISTS
 
     COPY_EXISTING ~kuolie01.cre~ ~override~ // kuotoan lieutenant
                   ~udkuo01.cre~  ~override~ // kuotoan leader
-        ADD_CRE_ITEM ~zscsps05~ #3 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        SET random = RANDOM(1 3)
+        ADD_CRE_ITEM ~zscsps05~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     BUT_ONLY IF_EXISTS
 
     COPY_EXISTING ~kuocap01.cre~ ~override~ // kuotoan captain (fighter)
                   ~kuocle20.cre~ ~override~ // kuotoan captain (cleric)
-        ADD_CRE_ITEM ~zscsps05~ #2 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        SET random = RANDOM(1 2)
+        ADD_CRE_ITEM ~zscsps05~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     BUT_ONLY IF_EXISTS
 
 END
@@ -28,7 +31,10 @@ ACTION_IF zs_cons_add_soporific_oil BEGIN
                   ~dadrow8.cre~  ~override~ // drow torturer
                   ~dadrow9.cre~  ~override~ // drow torturer
                   ~dadrow6.cre~  ~override~ // drow leader
-        ADD_CRE_ITEM ~zscsps02~ #2 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        SET random = RANDOM(0 2)
+        PATCH_IF random > 0 BEGIN
+            ADD_CRE_ITEM ~zscsps02~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        END
     BUT_ONLY IF_EXISTS
 
 END
@@ -36,7 +42,8 @@ END
 COPY_EXISTING ~bddrowas.cre~ ~override~ // SOD drow assassin
 
     PATCH_IF zs_cons_add_soporific_oil BEGIN
-        ADD_CRE_ITEM ~zscsps02~ #5 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        SET random = RANDOM(2 4)
+        ADD_CRE_ITEM ~zscsps02~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     END
 
     PATCH_IF zs_cons_add_noxious_oil BEGIN
@@ -85,7 +92,8 @@ BUT_ONLY IF_EXISTS
 ACTION_IF zs_cons_add_noxious_oil BEGIN
 
     COPY_EXISTING ~sevpat05.cre~ ~override~
-        ADD_CRE_ITEM ~zscsps01~ #3 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        SET random = RANDOM(1 3)
+        ADD_CRE_ITEM ~zscsps01~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     BUT_ONLY IF_EXISTS
 
 END
@@ -93,7 +101,8 @@ END
 COPY_EXISTING ~chalcy02.cre~ ~override~
 
     PATCH_IF zs_cons_add_noxious_oil BEGIN
-        ADD_CRE_ITEM ~zscsps01~ #5 #0 #0 ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
+        SET random = RANDOM(2 5)
+        ADD_CRE_ITEM ~zscsps01~ (random) (0) (0) ~none~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~
     END
 
     PATCH_IF zs_cons_add_dragon_bile_oil BEGIN
@@ -116,11 +125,13 @@ ACTION_IF zs_cons_add_dragon_bile_oil BEGIN
                   ~firkra02.cre~ ~override~
                   ~udsilver.cre~ ~override~
                   ~bazdra02.cre~ ~override~
-        ADD_CRE_ITEM ~zscsps03~ #5 #0 #0 ~unstealable~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // dragon bile
+        SET random = RANDOM (2 5)
+        ADD_CRE_ITEM ~zscsps03~ (random) (0) (0) ~unstealable~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // dragon bile
     BUT_ONLY IF_EXISTS
 
     COPY_EXISTING ~bdmorent.cre~ ~override~
-        ADD_CRE_ITEM ~zscsps03~ #3 #0 #0 ~unstealable~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // dragon bile
+        SET random = RANDOM(1 3)
+        ADD_CRE_ITEM ~zscsps03~ (random) (0) (0) ~unstealable~ ~inv4 inv5 inv6 inv7 inv8 inv9 inv10 inv11 inv12 inv13 inv14 inv15 inv16~ // dragon bile
     BUT_ONLY IF_EXISTS
 
 END
