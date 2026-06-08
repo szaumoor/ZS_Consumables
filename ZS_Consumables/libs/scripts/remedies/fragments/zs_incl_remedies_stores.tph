@@ -1,22 +1,3 @@
-/**
- * Just a small function to give exceptionally low chances of having an increased stock of some high-value remedies
- * Passing a random range to base_amount and target_amount can also increase complexity.
- */
-DEFINE_PATCH_FUNCTION resolve_amount
-INT_VAR
-    chance = "-1"
-    base_amount = 1
-    target_amount = 2
-RET
-    amount
-BEGIN
-    PATCH_IF chance < 1 OR chance > 100 BEGIN PATCH_FAIL "Error using resolve_amount function" END
-
-    SET chance_for_two = RANDOM(1 100)
-    SET amount = base_amount
-    PATCH_IF chance_for_two <= chance BEGIN SET amount = target_amount END
-END
-
 ACTION_IF NOT GAME_IS "iwdee" BEGIN
 
     ACTION_IF FILE_EXISTS_IN_GAME ~ppstor01.sto~ BEGIN // storekeep brynnlaw

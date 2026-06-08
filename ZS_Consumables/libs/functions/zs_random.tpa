@@ -1,0 +1,27 @@
+/**
+ * Just a small function to give exceptionally low chances of having an increased stock of some high-value remedies
+ * Passing a random range to base_amount and target_amount can also increase complexity.
+ */
+DEFINE_PATCH_FUNCTION resolve_amount
+INT_VAR
+    chance = "-1"
+    base_amount = 1
+    target_amount = 2
+RET
+    amount
+BEGIN
+    PATCH_IF chance < 1 OR chance > 100 BEGIN PATCH_FAIL "Error using resolve_amount function" END
+
+    SET chance_for_two = RANDOM(1 100)
+    SET amount = base_amount
+    PATCH_IF chance_for_two <= chance BEGIN SET amount = target_amount END
+END
+
+/**
+ * Macro version of the function of the same name.
+ */
+DEFINE_PATCH_MACRO resolve_amount BEGIN
+    LOCAL_SET chance_for_two = RANDOM(1 100)    
+    SET amount = base_amount
+    PATCH_IF chance_for_two <= chance BEGIN SET amount = target_amount END
+END
